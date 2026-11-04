@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>일룸 Collective 교육 자료실</title>
+<style>
+  :root {
+    --bg: #faf9f7;
+    --card-bg: #ffffff;
+    --text: #1f1d1b;
+    --muted: #6b655f;
+    --border: #e7e2dc;
+    --accent: #8a6d4b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17140f;
+      --card-bg: #221e18;
+      --text: #f1ede6;
+      --muted: #a89f93;
+      --border: #332d24;
+      --accent: #cba877;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 48px 24px 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+  }
+  header p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+  section { margin-top: 40px; }
+  section h2 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  a.card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  a.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card .emoji { font-size: 1.4rem; }
+  .card .title {
+    display: block;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .card .desc {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>일룸 Collective 교육 자료실</h1>
+  <p>매장 교육용 비교·안내 자료 모음입니다. 항목을 눌러 내용을 확인하세요.</p>
+</header>
+<main>
+
+  <section>
+    <h2>매트리스 비교</h2>
+    <div class="grid">
+      <a class="card" href="pages/haven-midnight.html">
+        <span class="emoji">🌙</span>
+        <span class="title">헤이븐 디럭스 × 미드나잇</span>
+        <span class="desc">헤이븐 디럭스 vs 슬로우베드 미드나잇(뉴문/하프문/풀문)</span>
+      </a>
+      <a class="card" href="pages/haven-twilight.html">
+        <span class="emoji">🛏️</span>
+        <span class="title">헤이븐 × 트와일라잇</span>
+        <span class="desc">헤이븐과 트와일라잇 매트리스 비교</span>
+      </a>
+      <a class="card" href="pages/daily-moonray.html">
+        <span class="emoji">🌇</span>
+        <span class="title">데일리 × 이브닝 문레이</span>
+        <span class="desc">일룸 데일리(1년 보증) vs 슬로우베드 이브닝 시리즈 문레이(5년 보증)</span>
+      </a>
+      <a class="card" href="pages/kids-mattress-nuk-daily-coco-cushino.html">
+        <span class="emoji">🧸</span>
+        <span class="title">누크 × 데일리 × 코코 × 쿠시노</span>
+        <span class="desc">키즈 매트리스 라인업 비교</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>토퍼 비교</h2>
+    <div class="grid">
+      <a class="card" href="pages/topper-haven-allround-maximum.html">
+        <span class="emoji">🛏️</span>
+        <span class="title">헤이븐 멀티 × 올라운드 × 맥시멈</span>
+        <span class="desc">헤이븐 멀티토퍼 vs 슬로우베드 올라운드/그라운드밸런스/맥시멈</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>모션베드 비교</h2>
+    <div class="grid">
+      <a class="card" href="pages/motion-casual-draw-evening.html">
+        <span class="emoji">🛏️</span>
+        <span class="title">캐주얼 × 드로우 × 이브닝모션</span>
+        <span class="desc">모션베드 라인업 비교 (1/2)</span>
+      </a>
+      <a class="card" href="pages/motion-arjian-basel-more-moonray-halfmoon.html">
+        <span class="emoji">🛏️</span>
+        <span class="title">아르지안 × 바젤 × 모어 × 문레이 × 하프문</span>
+        <span class="desc">모션베드 라인업 비교 (2/2)</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>소재 · 패브릭</h2>
+    <div class="grid">
+      <a class="card" href="pages/alloso-leather-swatch.html">
+        <span class="emoji">🤎</span>
+        <span class="title">알로소 레더 스와치</span>
+        <span class="desc">3등급 · 6품번 · 30컬러 가죽 스와치</span>
+      </a>
+      <a class="card" href="pages/fabric-swatch-sheet.html">
+        <span class="emoji">🧵</span>
+        <span class="title">패브릭 스와치 시트</span>
+        <span class="desc">패브릭 소재 스와치 모음</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>세일즈톡</h2>
+    <div class="grid">
+      <a class="card" href="pages/salestalk.html">
+        <span class="emoji">🛋️</span>
+        <span class="title">주간 세일즈톡</span>
+        <span class="desc">주간 세일즈톡 허브</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+<footer>
+  일룸 Collective Mall 대전둔산2F 매장 내부 교육 자료
+</footer>
+</body>
+</html>

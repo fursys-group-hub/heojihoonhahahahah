@@ -1,0 +1,581 @@
+<!doctype html><html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"cred":"query","capabilities":{"artifact":"artifact.CVa6a1-R.js","assets":"assets.DG69nuOE.js","comments":"comments.BnsN5UXJ.js","db":"db.CCPy_cYa.js","desktop":"desktop.DuQm2Hig.js","dictation":"dictation.C9bJoIZV.js","downloads":"downloads.BLg1QCW0.js","embed":"embed.DL8CVLpf.js","endpoints":"endpoints.Cgd32w2P.js","files":"files.BWjhUR2a.js","mcp":"mcp.RT0IhfK0.js","network":"network.B5UA9Su4.js","paste":"paste.BXT-6GsY.js","permissions":"permissions.YN66judO.js","reads":"reads.Ch7Jwxh7.js","room":"room.DcZfm17Q.js","sample":"sample.DwGzO02I.js","self":"artifact.CVa6a1-R.js","tts":"tts.DT7xqCtz.js","user":"user.DWCNmu2k.js"},"transforms":"_transforms.Oqg9ra7w.js","comments":"_comments._RoG4m2E.js","translate":"_translate.DnEmLa3t.js","ldx":"_ldx.CwGHU7dr.js"}                                                                                                                                                                                   </script><script>(function(){"use strict";function pr(t){return t==="cookie"||t==="query"?t:void 0}function mr(t){return typeof t=="number"&&Number.isSafeInteger(t)&&t>0?t:void 0}var so=3e5;function vr(t,e){try{const r=t("navigation")[0],n=[r.responseStart,r.redirectEnd-r.redirectStart,r.domContentLoadedEventStart,e(),r.connectEnd-r.domainLookupStart,r.responseStart-r.requestStart];r.requestStart>0||(n.length=4);for(let a=0;a<n.length;a++)if(n[a]>=0&&n[a]<=3e5)n[a]=n[a]|0;else{if(a<4)return;n.length=4}return n}catch{return}}var _r=["light","dark","system"],yr=/^[A-Za-z0-9_-]{1,64}$/,Ot=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,gr=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function wr(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||gr.has(e)}var Pt="data-ldx-props";function br(t,e){if(e.toLowerCase()===Pt)return!0;const r=t.getAttribute(Pt);if(r===null)return!1;try{const n=JSON.parse(r);if(n===null||typeof n!="object"||Array.isArray(n))return!0;const a=e.toLowerCase();return Object.keys(n).some(s=>s.toLowerCase()===a)}catch{return!0}}var io="http://www.w3.org/1999/xhtml",Er="http://www.w3.org/2000/svg",Sr=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),kr=new Set(["script","style"]);function Ar(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!Sr.has(e):t.namespaceURI===Er?!kr.has(e):!1}function at(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function Rr(t,e){const r=t.length,n=e.length;let a=0;for(;a<r&&a<n&&at(t.charCodeAt(a),e.charCodeAt(a));)a++;let s=0;for(;s<r-a&&s<n-a&&at(t.charCodeAt(r-1-s),e.charCodeAt(n-1-s));)s++;return{p:a,s}}function Tr(t,e){const r=t.firstChild;if(t.childNodes.length!==1||r===null||r.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const n=r.data,a=n.length,s=e.length,{p:l,s:u}=Rr(n,e);l===a&&u===0&&a===s||r.replaceData(l,a-l-u,e.slice(l,s-u));const A=r.data,E=t.ownerDocument.getSelection?.()??null,v=E!==null&&E.rangeCount>0&&(E.anchorNode===r||E.focusNode===r)?{anchor:E.anchorNode,anchorOffset:E.anchorOffset,focus:E.focusNode,focusOffset:E.focusOffset}:null;let h=-1,R=-1;for(let g=0;g<A.length&&g<e.length;g++){const O=A.charCodeAt(g),S=e.charCodeAt(g);O!==S&&at(O,S)&&(h<0&&(h=g),R=g)}const P=h>=0;if(P&&r.replaceData(h,R-h+1,e.slice(h,R+1)),P&&v!==null&&v.anchor!==null&&v.focus!==null)try{E.setBaseAndExtent(v.anchor,v.anchorOffset,v.focus,v.focusOffset)}catch{}}var Lr=new Set(["html","head","body","frameset"]);function Or(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&Lr.has(t.localName)}function Pr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!yr.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[r,n]of Object.entries(e.attrsSet))if(!Ot.test(r)||typeof n!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const r of e.attrsRemoved)if(typeof r!="string"||!Ot.test(r))return!1}return!0}function Mr(t,e){if(t===null||typeof t!="object")return!1;const{seq:r,elements:n}=t;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(n)||n.length===0||n.length>64)return!1;for(let a=0;a<n.length;a++)if(!e(n[a]))return!1;return!0}function Nr(t){return t===null||typeof t!="object"?!1:Mr(t.__frame_patch,Pr)}function Cr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function Fr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function Hr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function Ir(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const r=e.theme;return typeof r=="string"&&_r.includes(r)}var jr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],xr=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function Dr(t){return typeof t=="string"&&xr.includes(t)?t:"other"}var Br=Object.freeze({until:null,now:!1}),qr="__claude_hot",Ur="__claude_hot_in",Kr=/^__claude_hot(?:_in)?(?::|$)/,Mt=/^[0-9a-z]{1,32}$/,st=t=>t===void 0?qr:"__claude_hot:"+t,Me=t=>t===void 0?Ur:"__claude_hot_in:"+t;function $r(t,e){const r=[];for(let n=0;n<t.length;n++){const a=t.key(n);a!==null&&a!==e&&Kr.test(a)&&r.push(a)}for(const n of r)t.removeItem(n)}function zr(t){let e=null;try{e=q(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!Mt.test(e.k)?null:ve(e.g)?{k:e.k,g:e.g}:{k:e.k}}var lo=262144,Gr=3e3,Wr=5e3,Nt=/^[a-z0-9._:-]{1,64}$/,Vr=["none","hot-restart","hard-reload"],Xr=["asset","doc","added","removed"],Yr=1500,Jr=/^[0-9a-f]{64}$/;function q(t){return t!==null&&typeof t=="object"?t:null}function ve(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function Ct(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function Zr(t){return t===void 0||typeof t=="string"&&Nt.test(t)}function Ft(t){const e=q(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function it(t){const e=q(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Ct(e.seq)&&typeof e.handoff=="string"&&jr.includes(e.handoff)&&Zr(e.note)}function Ht(t){const e=q(t);return e!==null&&ve(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||it(e.from))}function Qr(t){const e=q(t);return e!==null&&e.kv===1&&ve(e.gen)&&it(e.from)&&Object.hasOwn(e,"data")}function en(t){const e=q(t);return e!==null&&e.__frame_hot_snapshot===!0&&ve(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||Ft(e.deadline))&&Ct(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function tn(t){const e=q(t);return e!==null&&e.__frame_hot_start===!0&&ve(e.gen)&&it(e.from)}function rn(t){return typeof t=="string"&&t.length>=1&&t.length<=128}function It(t){return q(t)!==null&&!Array.isArray(t)}function nn(t){const e=q(t);return e!==null&&e.__frame_cap_grant===!0&&typeof e.cap=="string"&&rn(e.ver)&&(e.grant===void 0||It(e.grant))&&(e.budgets===void 0||It(e.budgets)&&Object.values(e.budgets).every(Number.isFinite))&&(e.brokerGen===void 0||ve(e.brokerGen))}function on(t){const e=q(t);return e!==null&&e.__frame_cap_rewired===!0&&(e.caps===void 0||Array.isArray(e.caps)&&e.caps.every(r=>typeof r=="string"))&&(e.brokerGen===void 0||ve(e.brokerGen))}function We(t){const e=q(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function jt(t){if(t==null||typeof t=="string")return!0;const e=q(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function an(t){const e=q(t);return e!==null&&typeof e.path=="string"&&Xr.includes(e.kind)&&jt(e.from)&&jt(e.to)}function sn(t){return t===null?null:Object.freeze(t.filter(an))}function ln(t){const e=q(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&We(e.from)&&We(e.to)&&(e.changed===null||Array.isArray(e.changed))&&Vr.includes(e.required)&&Ft(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Jr.test(e.preflight))}function cn(t){const e=q(t);return e!==null&&e.__frame_hot_readdress===!0&&We(e.from)&&We(e.to)}var _e=/^[\w.-]+\.js$/;function un(t,e,r){return r?"inert":typeof e=="string"&&_e.test(e)?t?[e]:"inert":t?"inert":"framed"}var xt=Object.freeze({[Symbol("claude.hot.restart")]:!0});function Dt(t,e){let r;try{r=t??sessionStorage}catch{return null}const n=st(e?.k),a=Me(e?.k);let s=null;try{s=r.getItem(n)}catch{}try{r.removeItem(n)}catch{}try{$r(r,a)}catch{}let l=null;if(s!==null&&!(e!==null&&e.g===void 0))try{const u=JSON.parse(s);Qr(u)&&(e===null||u.gen===e.g)&&(l=u)}catch{}if(l===null)try{r.removeItem(a)}catch{}return l}function Bt(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var fn=/^[^/\\?#]{1,128}$/,lt=t=>fn.test(t)&&t!=="."&&t!=="..";function qt(t,e,r){const n=new URL(t),a="/_f/"+e+"/";if(!e||!n.pathname.startsWith(a)||!lt(r))return null;const s=n.search.slice(1).split("&").filter(l=>!/^__frame_t(?:=|$)/.test(l)).join("&");return n.origin+"/_f/"+r+"/"+n.pathname.slice(a.length)+(s?"?"+s:"")+n.hash}var Ve="{}";function Ne(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function Ut(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function Kt(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function dn(t,e,r,n=null){const a=setTimeout,s=clearTimeout,l=queueMicrotask,u=performance.now.bind(performance),A=new TextEncoder;let E=null,v=null;try{E=history,v=E.replaceState.bind(E)}catch{}const h=(...o)=>{try{console.warn(...o)}catch{}};let R=Bt(),P=null;try{P=sessionStorage}catch{}const g={storage:P,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,priors:[],key:n?.k};let O=n?.k;const S=typeof requestAnimationFrame=="function"?requestAnimationFrame:o=>a(()=>o(u()),16);let p=e?.data??{},B=Ne(e?.from),z=e?.gen??0,G=e!==null,J=!1,W=!1,D=null,T=!1;const x=new AbortController;let V=null,j=null,ne=null,ge=!1,se=()=>{};const X=new Promise(o=>{se=o});let we=!1,Qe=!1,Ae=!1,c,m=null,w=!1,M=!1,H=!1,U=!1,K=!1,oe=!1;const le=o=>{for(const f of[st(o),Me(o)])try{P?.removeItem(f)}catch{}},$=(o,f)=>{try{f!==null&&r.post(o,f)}catch{}},be=()=>K||=H&&(j===null||U),ie=()=>{const o={__frame_hot:!0,ready:j!==null,accept:ne!==null,demand:!0};oe=!K,oe&&(o.booting=!0),we&&(o.readData=!0),Ae&&(o.threw=!0),m?.assess&&(o.preflight=!0),$(o,D)};let xe=!1,De=!1,me=!1,Be=!1;const ce=()=>{xe||!T||me||(xe=!0,$({__frame_reveal_hold:!0},"*"))},Re=()=>new Promise(o=>{let f,d=0;const y=N=>{if(f===void 0)f=N;else if(N!==f||++d>=8){o();return}try{S(y)}catch{o()}};try{S(y)}catch{o()}}),qe=()=>{me=!0,$({__frame_reveal_ready:!0},"*")},Ue=o=>{De||(De=!0,o.then(f=>{if(f===!1)return;let d=null;try{d=m?.settle?.()??null}catch{}return(d===null?Re():new Promise(y=>{a(y,50),Promise.resolve(d).then(y,y)}).then(Re)).then(qe)}))},Ke=()=>{if(Be||!me)return;Be=!0;const o=()=>{try{m?.afterReveal?.()}catch{}};o(),Re().then(()=>{o(),qe()})},Ee=(o=!1)=>{if(ge||j===null||!G||!W)return;ge=!0;const f=j,d=p;l(()=>{let y;try{y=f(d)}catch(C){throw se(!1),C}let N=!1;try{N=typeof y?.then=="function"}catch{}if(!N){se(!0);return}Promise.resolve(y).then(()=>se(!0),C=>{se(!1),l(()=>{throw C})})}),Ue(o?X:r.dcl.then(()=>X))},Se=o=>typeof o=="string"&&Nt.test(o)?o:void 0,$e=o=>{const f={__frame_hot_restart:!0},d=Se(o?.note);d!==void 0&&(f.note=d),o?.required==="hard-reload"&&(f.required="hard-reload"),$(f,D)},et=Object.freeze({get data(){return W||(Qe=!0),!G&&!we&&(we=!0,W&&ie()),p},get from(){return B},get gen(){return z},signal:x.signal,snapshot(o){typeof o=="function"&&(V=o)},ready(o){typeof o!="function"||j!==null||(j=o,ce(),ie(),J&&$({__frame_hot_ready:!0,gen:z},D),Ee())},accept(o){typeof o=="function"&&(ne=o,ie())},restart(o){const f={note:o?.note,required:o?.required};if(W){$e(f);return}const d=c;c={note:Se(d?.note)??f.note,required:d?.required==="hard-reload"||f.required==="hard-reload"?"hard-reload":void 0}}});let ae=null,Te=()=>{};const tt=new Promise(o=>{Te=o});let Et=null;const ze=()=>Et??=r.dcl.then(()=>{let o=!1;try{o=ae!==null&&ae.expect()}catch{}if(!o)return;const f=ae.maxMs;return new Promise(d=>{tt.then(d),a(d,f)})}),Ge=()=>{if(!w||M||m===null)return;M=!0;const o=m;ze().then(()=>{try{me||o.afterStart(Kt(e),!1)}catch{}})},i=o=>{e!==null&&Qe&&(we=!0),p={},B=null,z=0;try{P?.removeItem(Me(n?.k))}catch{}e!==null&&!o&&Ue(r.dcl.then(()=>j!==null?X:void 0))},_=()=>{w=!0,Ue(ze().then(()=>j!==null?X:void 0)),Ge()};try{addEventListener("error",()=>{Ae||j!==null||(Ae=!0,ie())})}catch{}const b=()=>{a(()=>{!K&&be()&&oe&&ie()},0)};try{H=document.readyState==="complete",H||addEventListener("load",()=>{H=!0,b()},{once:!0})}catch{H=!0}be(),X.then(()=>{U=!0,b()});let k=-1,te,Y,Z=!0,St=!1,kt,rt=null;const At=o=>{const f=rt===null;rt=Z&&o[0]!=="withheld"?o:["withheld",o[1],Ve];let d=o[0];if(Z&&d!=="withheld"){const N={ver:R,handoff:d};te!==void 0&&(N.seq=te),Y!==void 0&&(N.note=Y);try{if(P===null)throw new Error("no storage");P.setItem(st(O),'{"kv":1,"gen":'+k+',"from":'+JSON.stringify(N)+(kt!==void 0?',"k":'+JSON.stringify(kt):"")+',"data":'+(d==="ok"?o[2]:Ve)+"}")}catch{d="unavailable"}}else{d="withheld",le(O);try{m?.release?.()}catch{}}const y={__frame_hot_snapshotted:!0,gen:k,handoff:d,bytes:o[1]};o[3]!==void 0&&(y.errName=o[3]),$(y,D),f&&(d==="snapshot_error"||d==="unclonable"||d==="oversize")&&h("claude.hot: snapshot",d,o[3])},Le=o=>{try{return Dr(o?.name)}catch{return"other"}},Oe=(o,f,d=0)=>At(f===void 0?[o,d,Ve]:[o,d,Ve,Le(f)]),Jn=o=>{if(o.gen<=k)return;const f=k>=0;if(k=o.gen,te=o.seq,Y=Se(o.note),typeof o.key=="string"&&Mt.test(o.key)&&o.key!==O&&(le(O),O=o.key),Z&&=o.handoff!==!1,f){rt!==null?At(rt):St&&$({__frame_hot_held:!0,gen:k},D);return}x.abort();const d=Object.freeze({handoff:Z,timeoutMs:o.timeoutMs,deadline:o.deadline??Br}),y=V,N=()=>{if(Z)try{kt=m?.capture()}catch{}if(y===null){Oe("empty");return}let L=!1;const Q=a(()=>{L||(L=!0,Oe("snapshot_timeout"))},Math.max(0,d.timeoutMs));Promise.resolve().then(()=>y(d)).then(Pe=>{if(L)return;L=!0,s(Q);let ue;try{ue=JSON.stringify(Pe)}catch(Rt){Oe("unclonable",Rt);return}if(typeof ue!="string"){Oe("unclonable");return}let fe=ue.length;try{fe=A.encode(ue).length}catch{}if(fe>262144){Oe("oversize",void 0,fe);return}At(["ok",fe,ue])},Pe=>{L||(L=!0,s(Q),Oe("snapshot_error",Pe))})};let C=null;try{C=m?.holdForIme()??null}catch{}if(C===null)N();else{St=!0,$({__frame_hot_held:!0,gen:k},D);const L=()=>{St=!1,N()};C.then(L,L)}},Zn=o=>{if(!J||G||j===null||o.gen!==z)return;let f=null;try{f=Dt(P,n&&{k:n.k,g:o.gen})}catch{}if(f!==null&&f.gen!==o.gen){f=null;try{P?.removeItem(Me(n?.k))}catch{}}p=f?.data??{},B=Ut(Ne(f?.from??o.from),Ne(o.from)),f!==null&&(z=f.gen),G=!0,J=!1;const d=Kt(f);X.then(y=>{try{y&&m?.afterStart(d,!0)}catch{}}),Ee(!0)},ur=o=>{const f=R,d=g.entry;let y="",N,C=null;try{if(y=location.href,N=E.state,C=qt(y,f,o),C!==null)if(v(N,"",C),location.pathname.startsWith("/_f/"+o+"/"))C=location.href;else return{failed:"navigate event canceled"}}catch(L){return{failed:Le(L)}}R=g.ver=o,g.priors.push(f)>8&&g.priors.splice(1,1);try{g.entry=qt(d,f,o)??d}catch{}return[C,f,d,y,N]},Qn=({from:o,to:f})=>{let d,y;if(!lt(f.ver))d="adopt_failed",y="not a version path segment";else if(f.ver===R)d="adopted";else if(!R||o.ver!==R)d="stale";else{const C=ur(f.ver);"failed"in C?(d="adopt_failed",y=C.failed):d=C[0]===null?"adopt_skipped":"adopted"}y!==void 0&&h(`claude.hot: could not move this page's URL to its new version folder /_f/${f.ver}/ (${y})`);const N={__frame_hot_readdressed:!0,to:f.ver,at:R,outcome:d};$(N,D)};let nt=0;const eo=o=>{const f=ne;if(f===null||o.id<=nt)return;nt=o.id;const d=m?.assess;if(o.preflight===void 0||d===void 0){fr(o,f);return}let y=!1;const N=Q=>{y||(y=!0,s(L),o.id===nt&&fr(o,f,Q))},C=()=>N(d.timeout(o)),L=a(C,Yr+100);d.run(o,window).then(N,C)},fr=(o,f,d)=>{let y,N=!1,C=!1,L,Q,Pe=null;const ue=I=>{if(C)return!1;if(L!==void 0&&L!==I)return h(`claude.hot: u.${I}() ignored - u.${L}() was called first`),!1;const de=L===void 0;return L=I,de},fe=I=>{L="restart",h(`claude.hot: ${I} - restarting`)},Rt=()=>{if(!ue("adopt")||o.id!==nt)return;const I=o.to.ver;if(ot.required!=="none"){fe(`u.adopt() needs required 'none', it is '${ot.required}'`);return}if(!lt(I)){fe("u.adopt() cannot address this version");return}if(!R||I===R)return;const de=ur(I);if("failed"in de){Q="adopt_failed",fe(`adopt_failed ${de.failed}; URL not changed`);return}const[re,Lt,no,hr,oo]=de;re===null?(Q="adopt_skipped",h(`claude.hot: adopt_skipped - page already left /_f/${Lt}/; URL not changed, update still applied`)):Q="adopted",Pe=()=>{if(R===I){if(re!==null)try{if(location.href!==re)h("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(v(oo,"",hr),location.href!==hr){h("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}Q="adopt_reverted",h("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(ao){h(`claude.hot: adopt_revert_failed ${Le(ao)} - URL still at the new version`);return}R=g.ver=Lt,g.entry=no,g.priors[g.priors.length-1]===Lt&&g.priors.pop(),re===null&&(Q=void 0)}}},ot=Object.freeze({from:{ver:o.from.ver,seq:o.from.seq},to:{ver:o.to.ver,seq:o.to.seq},changed:sn(o.changed),required:o.required,deadline:o.deadline,adopt:Rt,defer(){return ue("defer")&&ot.deadline.now&&fe("u.defer() past the deadline"),xt},restart(I){return ue("restart"),L==="restart"&&!C&&(y??=Se(I?.note),N||=I?.required==="hard-reload"),xt},...d?.update}),to=(I,de)=>{C=!0,I==="threw"?(Pe?.(),y??=Le(de).toLowerCase()):L===void 0&&h(I==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const re={__frame_hot_verdict:!0,id:o.id};re.verdict=I==="threw"||L===void 0||L==="restart"?"restart":L==="adopt"?"applied":"deferred",re.verdict==="restart"&&(N&&(re.required="hard-reload"),y!==void 0&&(re.note=y)),Q!==void 0&&(re.verdict==="applied"||Q!=="adopted")&&(re.adopt=Q),$(Object.assign(re,d?.verdict),D)};let dr=!1;const Tt=(I,de)=>dr?!1:(dr=!0,s(ro),to(I,de),!0),ro=a(()=>Tt("timeout"),o.verdictTimeoutMs);Promise.resolve().then(()=>f(ot)).then(()=>Tt("settled"),I=>{!Tt("threw",I)&&L==="adopt"&&$e({note:Le(I).toLowerCase()}),h("claude.hot: accept",Le(I))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:et,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:et,boot:g,afterConnect(){T=!0,(e!==null||j!==null)&&ce()},onInit(o,f){D=f,W=!0;const d=Ht(o)?o:null;d?.phase==="final"&&e!==null&&e.gen===d.gen?(G=!0,B=Ut(B,Ne(d.from)),_()):(J=d?.phase==="pending",i(J),G=!J,z=d?.gen??0,B=Ne(d?.from)),ie(),oe&&a(()=>{K||(K=!0,ie())},Wr),J&&j!==null&&$({__frame_hot_ready:!0,gen:z},f),c!==void 0&&($e(c),c=void 0),Ee()},onNoInit(){W=!0,i(!1),G=!0,Ee()},onShell(o){return o?.__frame_revealed===!0?(Ke(),!1):en(o)?(Jn(o),!0):tn(o)?(Zn(o),!0):ln(o)?(eo(o),!0):cn(o)?(Qn(o),!0):!1},attachExtras(o){m=o,Ge(),o.assess&&ie()},inSlot:()=>Me(O),hydration(o,f){ae??={expect:o,maxMs:f}},hydrated(){Te()},carried(){return G?p:{}},presented:()=>me}}var co="frame_ldx_runtime",hn="frame_ldx_build",uo="script#an-form",pn=256;function ct(t,e,r){for(const n of t)r(n)&&t.delete(n);t.size>=pn&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function Ce(t,e,r,n){try{const a=t[e];if(typeof a!="function")return;t[e]=function(...s){if(n){let u;try{u=n(this)}catch{}if(u!==void 0)return u}const l=a.apply(this,s);try{r?.(this)}catch{}return l}}catch{}}var mn=()=>{},ut;function vn(){if(ut)return ut;const t={media:new Set,contexts:new Set,wakeLocks:new Set,gate:null,refuse:null,onStart:null,onStop:null};ut=t;const e=l=>t.gate?.(l),r=l=>{t.onStop?.(l)},n=window.HTMLMediaElement?.prototype;n&&(Ce(n,"play",l=>{ct(t.media,l,u=>u.paused),t.onStart?.(l)},e),Ce(n,"pause",r));const a=window.AudioContext,s=window.AudioNode?.prototype;a&&s&&(Ce(s,"connect",l=>{const u=l.context;u instanceof a&&(ct(t.contexts,u,A=>A.state==="closed"),t.onStart?.(u))}),Ce(a.prototype,"resume",void 0,e),Ce(a.prototype,"suspend",r));try{const l=window.WakeLock?.prototype,u=l?.request;l&&typeof u=="function"&&(l.request=function(...A){if(t.refuse)return t.refuse();const E=u.apply(this,A);return Promise.resolve(E).then(v=>{ct(t.wakeLocks,v,h=>h.released),t.onStart?.(v)},mn),E})}catch{}return t}function _n(t){let e=window;for(let r=0;e.parent&&e.parent!==e&&r<8;r++)if(e=e.parent,t(e))return!0;return!1}function yn(){let t=null;const e=()=>t??parent,r=n=>t?n===t:_n(a=>a===n);return{post(n,a){if(t){e().postMessage(n,a);return}let s=parent;for(let l=0;l<8&&(s.postMessage(n,a),!(!s.parent||s.parent===s));l++)s=s.parent},on(n){const a=s=>{const l=s.source;r(l)&&n(s.data,s.origin,s.isTrusted,()=>{t??=l})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:n=>({post(a,s){if(s?.activation){e().postMessage(a,{targetOrigin:n,includeUserActivation:!0});return}if(s?.transfer){e().postMessage(a,n,s.transfer);return}e().postMessage(a,n)},on(a,s){const l=u=>{r(u.source)&&u.origin===n&&a(u.data,u)};return addEventListener("message",l,s),()=>removeEventListener("message",l,s)}})}}function gn(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var wn=500,bn=2e4,En="data-token-reads",Sn="data-frame-refused-watch",kn="data-frame-unsupported",An=/(?:^|\s)stylesheet(?:\s|$)/i;function Rn(t,e){let r="";if(t instanceof HTMLScriptElement?r=t.src:t instanceof HTMLLinkElement&&An.test(t.rel)&&(r=t.href),!r)return null;try{const n=new URL(r);return n.origin===location.origin&&n.pathname.startsWith(e)?n.origin+n.pathname:null}catch{return null}}function Tn(t,e,r){if(!t||e!=="query")return;const n="/_f/"+t+"/";document.documentElement.setAttribute(Sn,"");const a=location.href,s=fetch,l=setTimeout,u={method:"HEAD",cache:"no-store",credentials:"same-origin"},A=g=>g.ok||g.status===304;let E=!1,v=!1;const h=()=>removeEventListener("error",P,!0),R=async g=>{const O=await s(g,u);if(A(O))v=!0;else if(O.status===403){const S=await s(a,u);if(A(S)){const p=(await s(g,u)).status;p===403?(v=!0,document.documentElement.setAttribute(kn,""),r()):p<500&&(v=!0)}else S.status>=400&&S.status<500&&(v=!0)}},P=g=>{if(v||E)return;if(document.documentElement.hasAttribute(En)){v=!0,h();return}const O=Rn(g.target,n);O&&(E=!0,l(()=>{R(O).catch(()=>{}).finally(()=>{E=!1,v&&h()})},wn))};addEventListener("error",P,!0),addEventListener("load",h,{once:!0}),l(h,bn)}var $t="__frame_scroll",zt="__frame_scroll_framed",Ln=150,On=310,Pn=160,Mn=3e4,Gt="p,h1,h2,h3,h4,h5,h6,li,pre,blockquote,tr,dt,dd,figcaption,summary",Wt=()=>innerWidth<=On&&innerHeight<=Pn,Vt=t=>{const e=document.createTreeWalker(t,NodeFilter.SHOW_TEXT);let r="";for(;r.length<600&&e.nextNode();)r+=e.currentNode.nodeValue.slice(0,600-r.length);const n=r.replace(/\s+/g," ").trim().slice(0,120);let a=2166136261;for(let s=0;s<n.length;s++)a=Math.imul(a^n.charCodeAt(s),16777619);return n.length>11?a>>>0||1:0},Xt=t=>{for(let e=t;e&&e!==document.scrollingElement;e=e.parentElement){const r=getComputedStyle(e).position;if(r==="fixed"||r==="sticky"||e!==t&&e.scrollTop)return!1}return!0},Nn=()=>{const t=[],e=[];try{for(let r=0;r<16;r++){const n=document.elementFromPoint(innerWidth/(r%2?4:2),innerHeight*(r>>1)/8+1);let a=n?.closest(Gt)??n;for(;a&&!a.matches(Gt)&&![...a.childNodes].some(l=>l.nodeType===3&&l.nodeValue?.trim());)a=a.parentElement;const s=a&&!e.includes(a)?Vt(a):0;s&&!t.some(l=>l[0]===s&&l[2]===a.tagName)&&Xt(a)&&(e.push(a),t.push([s,Math.round(a.getBoundingClientRect().top),a.tagName]))}}catch{}return t.sort((r,n)=>+(r[1]<0)-+(n[1]<0)),t.length?t.slice(0,3):void 0},Cn=t=>{try{for(const[e,r,n]of t.a??[]){const a=document.getElementsByTagName(n);let s;for(let u=0;u<a.length&&a.length<5e3;u++)Vt(a[u])===e&&(s=s===void 0||s?.contains(a[u])?a[u]:null);const l=s?.getBoundingClientRect();if(l?.height&&s.checkVisibility?.()!==!1&&Xt(s)&&isFinite(r))return Math.max(0,Math.round(scrollY+l.top-r))}}catch{}return t.y};function Fn(){try{const t=location.ancestorOrigins;return t&&(origin==="null"||t[0]!==origin)?{frame:null}:{frame:frameElement??null,nested:t&&t[1]===origin}}catch{return{frame:null}}}function Hn(){const{frame:t,nested:e}=Fn(),r=t!==null,n=()=>{try{return t.inert===!0||(e??!!t?.ownerDocument.defaultView?.frameElement)}catch{return!0}};let a;const s=()=>{if(a===void 0)try{a=location.pathname.replace(/^\/_f\/[^/]{1,128}\//,"")}catch{a=null}return a};let l=0,u=!1,A=!1,E=!1,v={y:0},h=null;const R=T=>{try{if(!r){sessionStorage.setItem($t,JSON.stringify(T));return}const x=s();x!==null&&!n()&&sessionStorage.setItem(zt,JSON.stringify({...T,p:x}))}catch{}},P=T=>{if(clearTimeout(l),h===null)return;const x=h;h=null,R({y:x,a:T&&x>0?Nn():void 0})},g=()=>{if(u){u=!1;return}A=!0,h=scrollY,clearTimeout(l),l=setTimeout(P,Ln,!0)};try{addEventListener("scroll",g,{passive:!0}),addEventListener("pagehide",()=>P())}catch{}const O=()=>{if(r&&n())return null;const T=r?zt:$t;let x;try{x=sessionStorage.getItem(T)}catch{return null}if(x===null)return null;let V;try{V=JSON.parse(x)}catch{V=null}const{y:j,a:ne,p:ge}=V??{};if(!(typeof j=="number"&&Number.isFinite(j)&&j>=0)){try{sessionStorage.removeItem(T)}catch{}return null}if(r&&ge!==s())return null;const se=X=>Array.isArray(X)&&typeof X[0]=="number"&&Number.isFinite(X[1])&&typeof X[2]=="string";return{y:j,a:Array.isArray(ne)&&ne.length<4&&ne.every(se)?ne:void 0}};let S=!1,p=-1;const B=T=>{try{const x=scrollY,V=Cn(T);scrollTo({top:V,left:0,behavior:"instant"}),v=Wt()?T:{y:V,a:T.a},E=!0,clearTimeout(l),h=null,R(v),p=scrollY,p!==x&&(u=!0);const j=V!==T.y&&document.readyState!=="complete";(p!==V||j)&&!S&&(S=!0,addEventListener("load",()=>{try{scrollY===p&&B(O()??v)}catch{}},{once:!0}))}catch{}},z=()=>{try{return!!location.hash}catch{return!0}};let G=!1;const J=()=>{try{if(G||!Wt())return;G=!0;const T=Date.now(),x=()=>{try{removeEventListener("resize",x)}catch{}Date.now()-T>Mn||A||z()||B(O()??v)};addEventListener("resize",x)}catch{}};let W=!1,D=!1;return{restore(){if(W)return;if(W=!0,r&&O()===null){R({y:0});return}if(z())return;const T=O();T!==null&&(B(T),J())},promoted(){if(D||(D=!0,z()))return;const T=O();T!==null?(B(T),J()):E&&B(v)}}}function In(t,e,r,n){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:A=>A})??null}catch{}const s=window.Worker,l=s?.prototype,u=Object.freeze({Worker:s,workerOn:l?.addEventListener,workerPost:l?.postMessage,workerTerminate:l?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});r(t).then(A=>A?.bootTopLevel?A.bootTopLevel(u,n):n.settle()).catch(()=>n.settle())}var fo="modulepreload",ho=function(t){return"/"+t},po={},mo=function(e){return e.pathname.endsWith(".css")},vo=function(e,r,n){if(r in e)return e[r];const a=n();if(!a){e[r]=void 0;return}const s=a.then(()=>{e[r]=void 0},l=>{throw e[r]=void 0,l});return e[r]=s,s},jn=function(e,r,n){let a=Promise.resolve();function s(l){const u=new Event("vite:preloadError",{cancelable:!0});if(u.payload=l,window.dispatchEvent(u),!u.defaultPrevented)throw l}return a.then(l=>{for(const u of l||[])u.status==="rejected"&&s(u.reason);return e().catch(s)})},xn=window===top,Yt=Object.getOwnPropertyDescriptor(window,"claude"),Xe=un(xn,window.__FRAME_PREAMBLE?.topLevel,Yt?.writable===!1),ft=typeof Xe=="object"&&Xe[0],F=ft?gn():yn();(function(){const t=Object.defineProperty,e=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let n=0;for(let a=0;a<r.length;a++){const s=r[a];try{t(e,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[s]}catch{}try{t(e,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[s]=="function"&&n++}if(n&&Xe==="framed")try{F.post({__frame_rtc_lockdown_failed:n},"*")}catch{}})();var Jt=1e4,Dn=2e3,dt=2e3,ht=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]),Bn="https://*.";function Zt(t){for(const e of ht)if(e.endsWith(":*"))try{const r=new URL(t);if(`${r.protocol}//${r.hostname}:*`===e)return!0}catch{}else if(e.startsWith(Bn)){if(qn(e.slice(10),t))return!0}else if(t===e)return!0;return!1}function qn(t,e){if(!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(t))return!1;let r;try{r=new URL(e)}catch{return!1}if(r.protocol!=="https:"||r.port!==""||r.origin!==e)return!1;const n=r.hostname;if(!n.endsWith(`.${t}`))return!1;const a=n.slice(0,n.length-t.length-1);return/^[a-z0-9-]+$/.test(a)}var Fe=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),He=window.__FRAME_PREAMBLE?.transforms,pt=window.__FRAME_PREAMBLE?.comments,mt=window.__FRAME_PREAMBLE?.translate,ye=window.__FRAME_PREAMBLE?.ldx,Ye=pr(window.__FRAME_PREAMBLE?.cred),Qt=(()=>{try{const[t]=performance.getEntriesByType("navigation"),e=t?.serverTiming?.find(r=>r.name==="frame-cred-exp");return e!==void 0&&/^\d{1,15}$/.test(e.description)?mr(Number(e.description)):void 0}catch{return}})();function er(t){return jn(()=>import("/_runtime/"+t),void 0)}var Ie=new Set,tr=setTimeout,Un=fetch,Kn=AbortController,$n=800+800*Math.random(),zn=3e3,Je=null,rr=new Map;function Gn(t,e){let r=rr.get(t);return r||rr.set(t,r=Wn(t,e)),r}function Wn(t,e){if(Je?.has(t))return Promise.resolve("csp");if(navigator.onLine===!1)return Promise.resolve("offline");const r=new Kn;let n=!1;return tr(()=>{n=!0,r.abort()},zn),Un("/_runtime/"+t,{signal:r.signal}).then(a=>(r.abort(),a.ok?/javascript/i.test(a.headers.get("content-type")??"")?e instanceof Error&&/:\d+:\d+\)?$/m.test(e.stack??"")?"eval":"served":"mime":"http"),()=>n?"timeout":Je?.has(t)?"csp":"net")}function he(t){if(!Je){const e=Je=new Set;try{document.addEventListener("securitypolicyviolation",r=>{const n=/\/_runtime\/([^/?#]+)/.exec(r.blockedURI);n&&r.disposition!=="report"&&e.add(n[1])})}catch{}}return er(t).catch(()=>new Promise(e=>tr(e,$n)).then(()=>er(t+"?r=1")).then(e=>(e!==void 0&&Ie.add(t),e)))}function nr(t,e,r){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},brokerGen:t.brokerGen,transforms:new Map,shellOrigin:e,shell:r,mount:bt,hooks:Ze,pipe:()=>({wrap:(n,a)=>(...s)=>{try{return a(...s)}catch(l){return Promise.reject(l)}}})}}var ke=null,ee=null;function or(t,e,r){try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var vt=!1,Ze={editBefore:null,edit:null};function Vn(t,e,r=!1){const n=[];let a;if(r)try{Ze.editBefore?.(t)}catch{}for(const s of t.elements){const l=document.querySelector(`[data-id="${s.target}"]`);if(!l){a=s.target;break}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(u=>!wr(u)||br(l,u))){a=s.target;break}if(s.text!==void 0&&(!Ar(l)||Or(l))){a=s.target;break}for(const[u,A]of Object.entries(s.attrsSet??{}))if(!sr(l,u)){try{l.setAttribute(u,A)}catch{}ar(l,u,A)}for(const u of s.attrsRemoved??[])sr(l,u)||(l.removeAttribute(u),ar(l,u,null));typeof s.text=="string"&&Tr(l,s.text),n.push(s.target)}if(r)try{Ze.edit?.(t.seq,n,a)}catch{}if(a!==void 0){F.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:n}}))}catch{}}function ar(t,e,r){if(!(t instanceof HTMLInputElement))return;const n=e.toLowerCase();n==="checked"?t.checked=r!==null:n==="value"&&t.type!=="file"&&(t.value=r??"")}function sr(t,e){const r=e.toLowerCase(),n=t;return r==="data-id"||(r==="value"||r==="checked")&&(n.__artifactSecret===!0||/^(password|hidden|file)$/.test(n.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${n.autocomplete??""}`))}function ir(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,vt=!0):vt&&(delete e.dataset.theme,e.style.colorScheme="",vt=!1)}var pe=new Map,lr=(t,e)=>Array.isArray(t)&&t.includes(e),_t=null;function yt(){let t;const e={u:new Promise(r=>{t=r}),r:r=>{e.done=!0,t(r)},done:!1,nulled:!1};return e}function je(t,e){t.nulled=!0,t.ver=e,t.r(null)}function gt(t,e){for(const[r,n]of pe)n.done||(e&&n.asked?e(r,n):je(n,t))}function Xn(){for(const t of pe.values())if(t.asked&&!t.done)return!0;return!1}var Yn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),wt=!1,bt=(t,e)=>{let r=pe.get(t);if(r?.nulled&&wt)r=yt(),pe.set(t,r);else if(!r||r.done){r?.nulled&&ee&&F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},ee);return}const n=typeof e=="function"?Object.setPrototypeOf(e,Yn):Object.assign(Object.create(null),e);typeof n.then=="function"&&delete n.then,r.want=void 0,r.r(Object.freeze(n))};function cr(){const t=Yt?.value??{};or(window,"claude",t);for(const e of Object.keys(Fe)){if(t[e]!==void 0){or(t,e,t[e]);continue}pe.set(e,yt())}if(t.use===void 0){const e=r=>{if(typeof r!="string"||!Object.hasOwn(Fe,r))return Promise.resolve(null);let n=pe.get(r);return n?(_t&&(n.nulled||n.want!==void 0)&&(n=_t(r,n)),n.asked=!0,n.u):Promise.resolve(t[r]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(Xe==="framed"){let t;const e=He&&_e.test(He)?he(He).catch(c=>{t={f:He,e:c}}):Promise.resolve(void 0),r=c=>{if(c.type==="auxclick"&&c.button!==1)return;const m=c.target,w=m&&m.closest?m.closest("a[href],area[href]"):null;if(!w)return;const M=w.getAttribute("href");if(!M)return;let H;try{H=new URL(M,document.baseURI)}catch{return}if((H.protocol==="http:"||H.protocol==="https:")&&H.origin!==location.origin){c.preventDefault();const U=(w.getAttribute("target")??"").toLowerCase(),K=c.type==="auxclick"||c.metaKey||c.ctrlKey||c.shiftKey||c.altKey||!["","_self","_top","_parent"].includes(U);F.post({__frame_nav:!0,url:H.href,newTab:K},"*")}};addEventListener("click",r,!0),addEventListener("auxclick",r,!0);const n={},a=c=>{c.isTrusted&&(n.pointer=!0)},s=c=>{c.isTrusted&&(n.click=!0)};addEventListener("pointermove",a,{capture:!0,passive:!0}),addEventListener("click",s,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",c=>l.cb?.(c),!0);const u={cb:null};addEventListener("keydown",c=>u.cb?.(c));const A=vn();e.then(c=>c?.installEscapeForward?.(l,m=>{ee&&F.post(m,ee)})),e.then(c=>{try{c?.installFocusKeep?.()}catch{}}),e.then(c=>{if(!c?.wireNav)return;const m=F.port("*");c.wireNav(m,()=>p&&Object.hasOwn(p,"nativeNewTab")?p.nativeNewTab:void 0),removeEventListener("click",r,!0),removeEventListener("auxclick",r,!0),removeEventListener("pointermove",a,!0),removeEventListener("click",s,!0),c.wireEngagement?.(n,m,A)});let E=null;try{E=Hn()}catch{}const v=document.readyState==="loading"?new Promise(c=>document.addEventListener("DOMContentLoaded",()=>c(),{once:!0})):Promise.resolve();let h="dcl",R=!1;v.then(()=>{R=!0});let P=null,g=null;try{g=zr(window.name),P=Dt(null,g)}catch{}const O=cr();let S=null;try{S=dn(O,P,{post:(c,m)=>F.post(c,m),dcl:v},g)}catch{}e.then(c=>{try{S&&c?.installHotExtras?.(S)}catch{}});let p=null;const B=()=>lr(p?.flags,"frame_ldx_runtime")&&!!ye&&_e.test(ye)&&document.querySelector("script#an-form")!==null;try{S?.hydration(B,Gr)}catch{}let z=null,G=0;const J=F.on((c,m,w,M)=>{Zt(m)&&Cr(c)&&(M(),p=c.__frame_init,ee=m,J(),clearTimeout(G),z?.())});if(Ye){const c=Qt===void 0?{__frame_cred:Ye}:{__frame_cred:Ye,exp:Qt};for(const m of ht)try{m.includes("*")||F.post(c,m)}catch{}}F.post({__frame_connect:!0},"*");try{S?.afterConnect()}catch{}const W=setTimeout,D=clearTimeout,T=()=>new Promise(c=>W(c,0));let x=()=>NaN,V=()=>[];try{x=performance.now.bind(performance),V=performance.getEntriesByType.bind(performance)}catch{}let j=0;const ne=()=>{try{F.post({__frame_alive:!0},"*")}catch{}j=W(ne,Dn)},ge=()=>D(j);ne(),addEventListener("load",ge,{once:!0});const se=new Promise(c=>{z=c,G=setTimeout(()=>{J(),c()},Jt)}),X=new WeakSet;addEventListener("error",c=>{c.target&&X.add(c.target)},!0);try{Tn(Bt(),Ye,()=>{e.then(c=>{try{c?.drawRefusedNotice?.()}catch{}})})}catch{}const we=()=>{let c=[];try{c=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(w=>!w.sheet&&!w.disabled&&!X.has(w)&&w.getAttribute("href")&&URL.canParse(w.href)&&(!w.media||matchMedia(w.media).matches))}catch{}let m=c.length;return m===0?Promise.resolve():new Promise(w=>{try{const M=dt-x();M>0&&(h="sheets");const H=W(w,M>0?M<dt?M:dt:0),U=()=>{--m===0&&(D(H),w())};for(const K of c)K.addEventListener("load",U,{once:!0}),K.addEventListener("error",U,{once:!0})}catch{w()}})};v.then(()=>{try{E?.restore()}catch{}});const Qe=Promise.all([se,v,e]).then(c=>{if(p?.hostOverlays!==!0||!ee)return;const m=c[2],w=U=>{try{return U?.()===!0}catch{return!1}},M={cover:w(m?.declaresCover),...p.hostSides===!0&&{sides:w(m?.declaresSides)},...m?.answerLayoutCheck&&{checks:!0}};if(F.post({__frame_layout:M},ee),p.hostBackground!==!0)return;const H=ee;return T().then(we).then(()=>{try{m?.watchBackground?.(U=>F.post({__frame_layout:{...M,background:U}},H))}catch{}})}),Ae={cb:null};F.on((c,m)=>{if(Zt(m)&&Fr(c)){try{E?.promoted()}catch{}Ae.cb?.()}}),se.then(async()=>{if(!p||!ee){gt();try{S?.onNoInit()}catch{}return}if(ir(p.theme),p.hostVisible===!1&&e.then(i=>i?.applyHostVisible?.(!1,A)),p.hostKeys!==void 0){const i=ee,_=p.hostKeys;e.then(b=>b?.installHostKeyForward?.(u,_,k=>F.post(k,i)))}try{S?.onInit(p.hot,ee)}catch{}let c;const m=()=>{try{!c&&ye&&B()&&(c=he(ye),c.then(i=>i?.prefetch?.()).catch(()=>{}))}catch{}};m(),v.then(m);const w=ee,M=F.port(w),H=(i,_)=>F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:i,phase:_}},w),U=(i,_,b)=>{new Promise(k=>k(Gn(_,b))).then(k=>H(i,k),()=>H(i))},K=i=>F.post({__frame_cap_recovered:{cap:i}},w);let oe=p.brokerGen;const le=()=>S?.boot.ver??"",$=le(),be=(i,_)=>{const b=le();D(_.t),_.sent=!0,_.want=b,_.t=W(()=>{_.done||(_.sent=!1,je(_,b))},Jt),F.post({__frame_cap_want:!0,cap:i,ver:b},w)},ie=(i,_)=>{const b=pe.get(i.cap),k=Fe[i.cap];if(!_||!b||b.done||b.want!==i.ver||!_e.test(k))return;if(D(b.t),b.want=void 0,oe=i.brokerGen??oe,i.ver!==le()){be(i.cap,b);return}if(!i.grant||i.cap==="network"){je(b,i.ver);return}const te=ke,Y=ke={...te,capabilities:{...te.capabilities,[i.cap]:i.grant},capBudgets:{...te.capBudgets,[i.cap]:{...te.capBudgets[i.cap],...i.budgets}}};he(k).then(Z=>{Ie.has(k)&&K(i.cap),Y.brokerGen=oe,wt=!0;try{Z?.install?.(Y)}catch{H(i.cap,"install")}finally{wt=!1}},Z=>U(i.cap,k,Z)).then(()=>{b.done||je(b,i.ver)})};let xe=!1,De=!1;F.on((i,_,b)=>{if(_!==w)return;try{if(S?.onShell(i))return}catch{}if(Ir(i)&&ir(i.__frame_theme.theme),nn(i)&&ie(i,b),b&&on(i)&&(oe=i.brokerGen??oe),Hr(i)){const Y=i.__frame_host_visible.visible;e.then(Z=>Z?.applyHostVisible?.(Y,A))}i?.__frame_native_new_tab_off&&delete p?.nativeNewTab,i?.__frame_layout_check&&e.then(Y=>Y?.answerLayoutCheck?.(i,Z=>F.post({__frame_layout_verdict:Z},w))),Nr(i)&&Vn(i.__frame_patch,w,b);const k=i?.__fc_mode;k&&typeof k=="object"&&!xe&&pt&&_e.test(pt)&&(xe=!0,he(pt).then(Y=>Y.install?.(w,k.on===!0,M)).catch(()=>{}));const te=i?.__ft_cmd;te&&typeof te=="object"&&!De&&mt&&_e.test(mt)&&(De=!0,he(mt).then(Y=>Y.install?.(w,te,M)).catch(()=>{}))});const me=Object.keys(p.capabilities??{}),Be=me.filter(i=>Object.hasOwn(Fe,i)).map(i=>[i,Fe[i]]).filter(i=>typeof i[1]=="string"&&_e.test(i[1])),ce=w;let Re=!1,qe=()=>{};const Ue=new Promise(i=>{qe=()=>{Re=!0,i()}}),Ke=()=>(Re||(h="caps"),Ue),Ee=P!==null||Ht(p.hot)||p.hostVisible===!1||p.hostOverlays===!0;R&&(h="init");const Se=p.hostBackground===!0,$e=v.then(()=>(Se&&Ke(),Se?Qe:void 0)).then(()=>Ee?Ke():T()).then(we).then(()=>{let i=!0;try{i=Ee||Xn()}catch{}return i?Ke():void 0}).then(()=>{ge();const i=vr(V,x);F.post(i?{__frame_ready:!0,nav:i,gate:h}:{__frame_ready:!0,gate:h},ce),e.then(_=>{_?.installSizeReporter?.(ce,Ae,M),_?.installPaintReporter?.(M)})}),et=await Promise.allSettled(Be.map(([,i])=>he(i))),ae=await e;if(ae?.buildBoot||(t?U("_transforms",t.f,t.e):H("_transforms")),ae?.buildBoot)try{ke=ae.buildBoot(p,ae.TRANSFORMS??{},{shellOrigin:ce,mount:bt,hooks:Ze,shell:M},i=>F.post({__frame_cap_telemetry:i},ce))}catch{H("_transforms","install"),ke=nr(p,ce,M)}else ke=nr(p,ce,M);ae?.buildBoot&&Ie.has(He??"")&&K("_transforms");const Te=ke;Te.brokerGen=oe;try{ae?.installAnchorMirror?.(M)}catch{}et.forEach((i,_)=>{const[b,k]=Be[_];if(i.status!=="fulfilled"){U(b,k,i.reason);return}Ie.has(k)&&K(b);try{i.value?.install?.(Te)}catch{H(b,"install")}});const tt=p.capWants===!0,Et=p.usable,ze=i=>!!le()&&lr(Et,i)&&!me.includes(i);tt&&(_t=(i,_)=>{const b=le();if(!b)return _;if(!_.nulled)return _.want!==b&&be(i,_),_;if(b===_.ver&&(_.sent||!ze(i)))return _;const k=yt();return pe.set(i,k),be(i,k),k}),gt($,tt?(i,_)=>le()!==$||ze(i)?be(i,_):je(_,$):void 0),qe(),await $e;let Ge=!1;try{Ge=B()}catch{}ye&&Ge?(c??he(ye)).then(i=>i?.boot?.({shellOrigin:w,build:Te.flags.has(hn),hot:S?.hot??null,carried:S?.carried(),presented:()=>S?.presented()??!0})).catch(()=>!1).then(i=>{S?.hydrated(),i!==!0?H("_ldx"):Ie.has(ye)&&K("_ldx")}):S?.hydrated()})}else ft&&(cr(),In(ft,ht,he,{settle:gt,mount:bt}))})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>아르지안 × 바젤 × 모어 × 문레이 × 하프문</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;800;900&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #f1efe8;
+    --bg-soft: #e8e5db;
+    --surface: #fdfcf9;
+    --surface-raised: #ffffff;
+    --ink: #1d2023;
+    --ink-2: #53575b;
+    --ink-muted: #8a8c86;
+    --border: rgba(29,32,35,0.12);
+    --border-strong: rgba(29,32,35,0.24);
+    --accent: #2f635f;
+    --accent-ink: #f3f6f5;
+    --warm: #ac7a3c;
+    --warm-soft: #ecdfc4;
+    --gap-ink: #c0432f;
+
+    --c-basel:    #1baf7a;
+    --c-argean:   #c98200;
+    --c-more:     #4a3aa7;
+    --c-moonray:  #1e8a1e;
+    --c-halfmoon: #c23e7a;
+
+    --c-basel-bg:    #dcf1e7;
+    --c-argean-bg:   #f7e7cc;
+    --c-more-bg:     #e6e2f6;
+    --c-moonray-bg:  #dcefdc;
+    --c-halfmoon-bg: #f8dbe9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme: dark;
+      --bg: #15181a;
+      --bg-soft: #1b1f21;
+      --surface: #1c2022;
+      --surface-raised: #212527;
+      --ink: #f0f1ee;
+      --ink-2: #c2c5c1;
+      --ink-muted: #8d918c;
+      --border: rgba(255,255,255,0.12);
+      --border-strong: rgba(255,255,255,0.24);
+      --accent: #74a39e;
+      --accent-ink: #0f1414;
+      --warm: #d9a05c;
+      --warm-soft: #3a2f1a;
+      --gap-ink: #e07a68;
+
+      --c-basel:    #2bc48d;
+      --c-argean:   #e0a233;
+      --c-more:     #9085e9;
+      --c-moonray:  #4caf4c;
+      --c-halfmoon: #d9699e;
+
+      --c-basel-bg:    #15362a;
+      --c-argean-bg:   #3a2d12;
+      --c-more-bg:     #272147;
+      --c-moonray-bg:  #163016;
+      --c-halfmoon-bg: #3a1d2b;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg: #15181a;
+    --bg-soft: #1b1f21;
+    --surface: #1c2022;
+    --surface-raised: #212527;
+    --ink: #f0f1ee;
+    --ink-2: #c2c5c1;
+    --ink-muted: #8d918c;
+    --border: rgba(255,255,255,0.12);
+    --border-strong: rgba(255,255,255,0.24);
+    --accent: #74a39e;
+    --accent-ink: #0f1414;
+    --warm: #d9a05c;
+    --warm-soft: #3a2f1a;
+    --gap-ink: #e07a68;
+
+    --c-basel:    #2bc48d;
+    --c-argean:   #e0a233;
+    --c-more:     #9085e9;
+    --c-moonray:  #4caf4c;
+    --c-halfmoon: #d9699e;
+
+    --c-basel-bg:    #15362a;
+    --c-argean-bg:   #3a2d12;
+    --c-more-bg:     #272147;
+    --c-moonray-bg:  #163016;
+    --c-halfmoon-bg: #3a1d2b;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans KR", -apple-system, "Malgun Gothic", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{
+    font-family: "Gothic A1", -apple-system, "Malgun Gothic", sans-serif;
+    font-weight: 800;
+    text-wrap: balance;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .mono{ font-family: "IBM Plex Mono", Consolas, monospace; font-variant-numeric: tabular-nums; }
+  .wrap{ max-width: 1150px; margin: 0 auto; padding: 0 24px 100px; }
+
+  header.mast{
+    padding: 54px 24px 38px;
+    border-bottom: 1px solid var(--border);
+    background:
+      linear-gradient(120deg, var(--c-argean-bg) 0%, transparent 35%),
+      linear-gradient(240deg, var(--c-halfmoon-bg) 0%, transparent 35%),
+      var(--bg-soft);
+  }
+  .mast-inner{ max-width: 1150px; margin: 0 auto; }
+  .eyebrow{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-muted); margin-bottom: 14px;
+  }
+  h1.title{ font-size: clamp(30px, 4.6vw, 44px); line-height: 1.28; }
+  .subtitle{ margin-top: 14px; max-width: 66ch; color: var(--ink-2); font-size: 16px; }
+  .notice{
+    margin-top: 20px; display:inline-flex; gap:8px; align-items:flex-start;
+    font-size: 13.5px; color: var(--warm); background: var(--warm-soft);
+    border: 1px dashed var(--warm); border-radius: 9px; padding: 10px 14px; max-width: 72ch;
+  }
+  .chipline{ display:flex; flex-wrap:wrap; gap:9px; margin-top: 24px; }
+  .chip{
+    display:inline-flex; align-items:center; gap:7px;
+    padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface-raised);
+    font-size: 13px; color: var(--ink-2);
+  }
+  .dot{ width:9px; height:9px; border-radius:50%; flex: none; }
+
+  section{ padding-top: 60px; }
+  .section-head{ margin-bottom: 26px; }
+  .section-kicker{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 8px; font-weight: 500;
+  }
+  .section-head h2{ font-size: 26px; }
+  .section-note{ margin-top: 8px; color: var(--ink-2); font-size: 15px; max-width: 70ch; }
+
+  .tech-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:14px; }
+  @media (max-width: 900px){ .tech-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 520px){ .tech-grid{ grid-template-columns: 1fr; } }
+  .tech-card{
+    background: var(--surface-raised); border:1px solid var(--border); border-radius: 12px;
+    padding: 16px 16px 14px;
+  }
+  .tech-card .k{ font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.06em; }
+  .tech-card h3{ font-size: 15.5px; margin-top:4px; font-weight:700; }
+  .tech-card p{ margin:8px 0 0; font-size:13px; color:var(--ink-2); }
+
+  .card-grid{ display:grid; grid-template-columns: repeat(5,1fr); gap:13px; }
+  @media (max-width: 1040px){ .card-grid{ grid-template-columns: repeat(3,1fr); } }
+  @media (max-width: 680px){ .card-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 420px){ .card-grid{ grid-template-columns: 1fr; } }
+  .pcard{
+    background: var(--surface-raised); border:1px solid var(--border); border-radius: 14px;
+    padding: 18px 15px 16px; display:flex; flex-direction:column; gap:9px; position:relative; overflow:hidden;
+  }
+  .pcard::before{ content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--bar-color); }
+  .pcard .brand{ font-size:11.5px; color:var(--ink-muted); }
+  .pcard h3{ font-size:18px; margin-top:1px; }
+  .pcard .status{
+    align-self:flex-start; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    padding:3px 8px; border-radius:6px; background:var(--tag-bg); color:var(--bar-color); font-weight:600;
+  }
+  .pcard .desc{ font-size:13px; color:var(--ink-2); flex-grow:1; }
+  .pcard .feat{ font-size:12px; color: var(--ink-muted); border-top:1px solid var(--border); padding-top:8px; }
+  .flag{
+    display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--warm);
+    border:1px dashed var(--warm); border-radius:6px; padding:3px 7px; margin-top:2px; background:var(--warm-soft);
+  }
+
+  .tbl-scroll{ overflow-x:auto; border:1px solid var(--border); border-radius:12px; background:var(--surface-raised); }
+  table{ border-collapse:collapse; width:100%; min-width:640px; font-size:13.5px; }
+  thead th{
+    text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--ink-muted);
+    padding:13px 15px; border-bottom:1px solid var(--border-strong); background:var(--bg-soft);
+    position:sticky; top:0;
+  }
+  thead th:first-child{ position:sticky; left:0; z-index:2; }
+  tbody th{
+    text-align:left; font-weight:700; padding:12px 15px; font-size:13px;
+    border-bottom:1px solid var(--border); white-space:nowrap;
+    background:var(--surface-raised); position:sticky; left:0;
+  }
+  tbody td{ padding:12px 15px; border-bottom:1px solid var(--border); color:var(--ink-2); vertical-align:top; }
+  tbody tr:last-child td, tbody tr:last-child th{ border-bottom:none; }
+  .col-head{ display:flex; align-items:center; gap:7px; }
+  .gap-note{ color: var(--ink-muted); font-size:12px; font-style:normal; }
+
+  /* angle silhouette diagrams */
+  .angle-diagram-grid{ display:grid; grid-template-columns: repeat(5,1fr); gap:12px; margin-bottom:34px; }
+  @media (max-width: 1040px){ .angle-diagram-grid{ grid-template-columns: repeat(3,1fr); } }
+  @media (max-width: 680px){ .angle-diagram-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 420px){ .angle-diagram-grid{ grid-template-columns: 1fr; } }
+  .angle-diagram-card{ background:var(--surface-raised); border:1px solid var(--border); border-radius:12px; padding:12px 10px 10px; text-align:center; }
+  .angle-diagram-card svg{ width:100%; height:auto; display:block; }
+  .angle-diagram-card .name{ font-size:13px; font-weight:700; margin-top:4px; }
+  .angle-diagram-card .name .b{ font-weight:400; color:var(--ink-muted); font-size:10.5px; margin-left:4px; }
+  .angle-diagram-card .vals{ font-size:11.5px; color:var(--ink-2); margin-top:2px; font-family:"IBM Plex Mono",monospace; }
+
+  .angle-list{ display:flex; flex-direction:column; gap:13px; }
+  .angle-row{ display:grid; grid-template-columns: 110px 1fr 150px; align-items:center; gap:14px; }
+  @media (max-width: 520px){ .angle-row{ grid-template-columns: 86px 1fr 110px; gap:8px; } }
+  .angle-label{ font-size:13.5px; font-weight:700; }
+  .angle-label .b{ display:block; font-size:11px; color:var(--ink-muted); font-weight:400; margin-top:1px; }
+  .angle-track{ background:var(--bg-soft); border:1px solid var(--border); border-radius:7px; height:24px; overflow:hidden; }
+  .angle-fill{ height:100%; border-radius:7px 2px 2px 7px; }
+  .angle-val{ font-size:13px; color:var(--ink-2); white-space:nowrap; }
+  .angle-val .gap-note{ display:block; font-size:10.5px; }
+
+  .guide-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; }
+  @media (max-width: 720px){ .guide-grid{ grid-template-columns:1fr; } }
+  .guide-card{ border:1px solid var(--border); border-radius:12px; padding:17px 19px; background:var(--surface-raised); border-left:4px solid var(--bar-color); }
+  .guide-card .q{ font-size:13.5px; color:var(--ink-2); margin-bottom:9px; }
+  .guide-card .a{ display:flex; align-items:baseline; gap:8px; }
+  .guide-card .a strong{ font-family:"Gothic A1",sans-serif; font-size:17px; font-weight:800; }
+  .guide-card .a span{ font-size:11.5px; color:var(--ink-muted); }
+
+  footer{
+    margin-top:68px; padding-top:22px; border-top:1px solid var(--border);
+    color:var(--ink-muted); font-size:12.5px; display:flex; flex-direction:column; gap:6px;
+  }
+  .caution-list{ margin:0; padding-left:18px; }
+  .caution-list li{ margin-bottom:4px; }
+</style>
+
+<header class="mast">
+  <div class="mast-inner">
+    <div class="eyebrow">대전둔산컬렉티브 · 모션베드 비교자료 2/2 · 2026.10.29 기준</div>
+    <h1 class="title">아르지안 × 바젤 × 모어 × 문레이 × 하프문</h1>
+    <p class="subtitle">일룸 아르지안·바젤·모어(모션베드)와 슬로우베드 문레이·하프문(모션 매트리스)을 비교합니다.</p>
+    <div class="notice">📐 가격은 포함하지 않았습니다 — 구조·모션 사양·각도 비교에 집중한 자료입니다.</div>
+    <div class="chipline">
+      <span class="chip"><span class="dot" style="background:var(--c-argean)"></span>아르지안 (일룸)</span>
+      <span class="chip"><span class="dot" style="background:var(--c-basel)"></span>바젤 (일룸)</span>
+      <span class="chip"><span class="dot" style="background:var(--c-more)"></span>모어 (일룸)</span>
+      <span class="chip"><span class="dot" style="background:var(--c-moonray)"></span>문레이 (슬로우베드)</span>
+      <span class="chip"><span class="dot" style="background:var(--c-halfmoon)"></span>하프문 (슬로우베드)</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- COMMON TECH -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Shared Technology</div>
+      <h2>일룸 모션베드, 공통 기반기술</h2>
+      <p class="section-note">아르지안·바젤·모어가 공유하는 핵심 요소입니다. 제품별 차이는 아래 비교표에서 확인하세요.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="k">Motor</div>
+        <h3>덴마크 리낙(LINAK)</h3>
+        <p>의료·산업용 액추에이터 세계 1위. 병원 침대·재활 기구와 동일 계열 부품으로, 조용한 작동음과 내구성이 검증되어 있습니다.</p>
+      </div>
+      <div class="tech-card">
+        <div class="k">A/S</div>
+        <h3>모터 5년 · 컨트롤박스 3년</h3>
+        <p>전선·어댑터 등 소모품은 1년. 타사 모션베드(대개 중국 OEM, 1~2년 보증) 대비 긴 보증 기간이 리낙 채택의 핵심 근거입니다.</p>
+      </div>
+      <div class="tech-card">
+        <div class="k">Posture</div>
+        <h3>무중력 자세 · Wall-Hugging</h3>
+        <p>등판을 세워도 벽과의 간격이 유지되는 월허깅 구조, 체중을 분산하는 무중력 자세 프리셋을 기본 제공합니다(모델별 프리셋 구성은 상이).</p>
+      </div>
+      <div class="tech-card">
+        <div class="k">App</div>
+        <h3>Bed Control™</h3>
+        <p>리낙 제공 앱으로 블루투스 제어, 선호자세 저장. Android 5.0+ / iOS 10.0+. 마사지 기능은 모델에 따라 미지원.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Overview</div>
+      <h2>한눈에 보기</h2>
+    </div>
+    <div class="card-grid">
+
+      <div class="pcard" style="--bar-color:var(--c-argean); --tag-bg:var(--c-argean-bg);">
+        <span class="brand">일룸</span>
+        <h3>아르지안</h3>
+        <span class="status">베스트셀러</span>
+        <p class="desc">자사 모션베드 매출 1위 스테디셀러. 등판 0~63°·다리 0~39°의 넓은 가동범위와 5분절 지지판, 월허깅 구조가 특징입니다.</p>
+        <p class="feat">등판 0~63° · 다리 0~39° · 최대 동작하중 230kg(편측)</p>
+        <span class="flag">⚠ 프레임 내장재(소재) 상세만 미확인</span>
+      </div>
+
+      <div class="pcard" style="--bar-color:var(--c-basel); --tag-bg:var(--c-basel-bg);">
+        <span class="brand">일룸</span>
+        <h3>바젤</h3>
+        <span class="status">디자인형 · 운영중</span>
+        <p class="desc">심플리화이트 컬러와 헤드보드 무드등(3단계 조도, 취침예약)으로 호텔 침실 분위기를 내는 디자인 중심 모션베드.</p>
+        <p class="feat">등판 0~63° · 다리 0~39° (아르지안과 동일) · 선반형·일반형 패널 확장 가능</p>
+      </div>
+
+      <div class="pcard" style="--bar-color:var(--c-more); --tag-bg:var(--c-more-bg);">
+        <span class="brand">일룸 · 2026 신규</span>
+        <h3>모어 <span style="font-size:11px;font-weight:400;color:var(--ink-muted)">MORE THAN REST</span></h3>
+        <span class="status">다리형 모션 · 운영중</span>
+        <p class="desc">애쉬 원목 다리(145mm)로 로봇청소기도 드나드는 호텔 침실 라인. 헤이븐 플렉서블 매트리스를 일체형으로 빌트인했습니다.</p>
+        <p class="feat">등판 0~66° · 다리판 0~30° · 트윈 배치 시 침대 사이 간격 0~400mm 조절</p>
+      </div>
+
+      <div class="pcard" style="--bar-color:var(--c-moonray); --tag-bg:var(--c-moonray-bg);">
+        <span class="brand">슬로우베드 · 이브닝 라인</span>
+        <h3>문레이</h3>
+        <span class="status">모션 매트리스 일체형</span>
+        <p class="desc">프레임과 모션 기능이 매트리스에 내장된 구조. 스테인리스 스프링 또는 레코텍 폼 중 물성을 선택할 수 있습니다.</p>
+        <p class="feat">등판 67° · 허벅지판 39° · 다리판 10°</p>
+      </div>
+
+      <div class="pcard" style="--bar-color:var(--c-halfmoon); --tag-bg:var(--c-halfmoon-bg);">
+        <span class="brand">슬로우베드 · 미드나잇 라인</span>
+        <h3>하프문</h3>
+        <span class="status">모션 매트리스 일체형</span>
+        <p class="desc">34cm 깊이의 유로탑 디자인과 일자 점프 퀼팅이 특징인 모션 매트리스. 302H 스테인리스 포켓스프링 적용.</p>
+        <p class="feat">등/허리부 67° · 다리부 39°</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPEC TABLE -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Specification</div>
+      <h2>일룸 모션베드 상세 스펙 비교</h2>
+    </div>
+    <div class="tbl-scroll">
+      <table style="min-width:860px;">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th><span class="col-head"><span class="dot" style="background:var(--c-argean)"></span>아르지안</span></th>
+            <th><span class="col-head"><span class="dot" style="background:var(--c-basel)"></span>바젤</span></th>
+            <th><span class="col-head"><span class="dot" style="background:var(--c-more)"></span>모어</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>포지셔닝</th>
+            <td>자사 모션 매출 1위</td>
+            <td>호텔 무드 디자인형</td>
+            <td>신혼·1인가구 진입가 전략</td>
+          </tr>
+          <tr>
+            <th>프레임 구조</th>
+            <td>헤드형 / 무헤드형(모션용) 선택, 넉다운(모듈 분리 출고·현장조립) 옵션</td>
+            <td>박스형 + 확장 패널 2종</td>
+            <td>다리형 (일반형·박스형은 추후 출시)</td>
+          </tr>
+          <tr>
+            <th>헤드 옵션</th>
+            <td>헤드형(5분절 지지판 — 머리·등·다리 개별 각도조절) / 무헤드형(모션용)</td>
+            <td>헤드보드 무드등 내장 (3단계 조도·취침예약)</td>
+            <td>헤드보드형(887mm) / 무헤드형(482mm)</td>
+          </tr>
+          <tr>
+            <th>모션 각도</th>
+            <td>등판 0~63° · 다리(허벅지) 0~39° <span class="gap-note">(3모터 적용 시 머리판 0~26° 추가)</span>, 메모리 자세 최대 6개 저장</td>
+            <td>등판 0~63° · 다리 0~39° <span class="gap-note">(아르지안과 동일 — 담당자 확인)</span></td>
+            <td>등판 0~66° · 다리판 0~30°</td>
+          </tr>
+          <tr>
+            <th>최대 하중</th>
+            <td>시험하중 S/SS 120kg·Q 210kg(4만회 반복) / 최대 동작하중(편측) 230kg → 성인 4인(약 340kg)까지 작동 가능(초과 시 모터 락 해제, 서서히 플랫 전환되어 파손 방지)</td>
+            <td>S/SS 120kg · Q 210kg 기준 4만회 반복 테스트</td>
+            <td>180kg 하중 2만회 밴딩 · 54kg 2만회 충격 테스트 통과</td>
+          </tr>
+          <tr>
+            <th>매트리스</th>
+            <td>별매 (모션 매트리스 별도 구매)</td>
+            <td>별매</td>
+            <td>헤이븐 플렉서블(스프링/메모리폼) 일체형, SS 1100×2000×230mm — 단독 교체 가능</td>
+          </tr>
+          <tr>
+            <th>프레임 소재</th>
+            <td class="gap-note">자료 없음 (내장재 상세 미확인)</td>
+            <td>헤드보드·바닥판 18T PB+LPM, 조명부 알루미늄+플라스틱</td>
+            <td>애쉬 원목 다리 145mm · 샌드오크(SO) 톤</td>
+          </tr>
+          <tr>
+            <th>사이즈 (SS 기준)</th>
+            <td class="mono">1104 × 2004 × 300mm (모션용 기준 — S 904×2004×300 / Q 1504×2004×300)</td>
+            <td class="mono">1141 × 2170 × 1100.5mm (헤드보드·무드등 포함 전고)</td>
+            <td class="mono">헤드형 1280×2225×887mm / 무헤드형 1280×2060×482mm</td>
+          </tr>
+          <tr>
+            <th>안전 설계</th>
+            <td>등판 세이프 커버(메커니즘 비노출), 월허깅(Wall-Hugging), 분리형 지지판(모듈형, 각도조절 시 패브릭 안접힘)</td>
+            <td>모서리 둥근 마감, 지지판 모서리 스펀지 마감</td>
+            <td class="gap-note">자료 없음</td>
+          </tr>
+          <tr>
+            <th>비고</th>
+            <td>넉다운(모듈 분리) 출고 시 오염·파손 A/S 효율적</td>
+            <td>패널 확장형(선반형/일반형 L·R), 침대 2대 배치 시 틈 2~3cm 발생</td>
+            <td>2026.06 다리형 모션 1차 출시, 다리형 일반·박스형은 2027년 상반기까지 순차 출시 예정. 트윈 배치 시 프레임이 매트리스보다 좌우 100mm씩 넓어 간격을 0~400mm로 조절 가능</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SLOU BED MOONRAY & HALFMOON -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Slou Bed · Motion Mattress</div>
+      <h2>슬로우베드 — 문레이 · 하프문 모션 매트리스</h2>
+      <p class="section-note">일룸이 아닌 슬로우베드 브랜드의 모션 매트리스입니다. 프레임과 모션 기능이 매트리스에 내장된 구조로, 문레이(이브닝 라인)와 하프문(미드나잇 라인) 모두 별도 모션 프레임 없이 바닥 기본형·다리형으로 사용할 수 있습니다. 서로 다른 제품이며, 모션 각도만 같습니다.</p>
+    </div>
+
+    <h3 style="font-size:15px; margin-bottom:12px;"><span class="dot" style="background:var(--c-moonray); display:inline-block; margin-right:6px;"></span>문레이 (이브닝 라인)</h3>
+    <div class="tbl-scroll">
+      <table style="min-width:640px;">
+        <tbody>
+          <tr><th>물성 선택</th><td><strong>스테인리스 스프링</strong> (302H, Medium firm) 또는 <strong>레코텍 폼</strong> (Medium soft) 중 선택</td></tr>
+          <tr><th>층 구조 (4단)</th><td>플러시폼 20mm → 엘라스틱폼/레코텍폼 30~40mm → 3D서스펜션폼 30~40mm → 스테인리스스프링 140mm / 베이스폼 120mm</td></tr>
+          <tr><th>사이즈</th><td class="mono">SS 1100×2000 · Q 1500×2000, 전체높이 380mm (저상형 415mm / 플로팅형 535mm 프레임 조합 시)</td></tr>
+          <tr><th>무게</th><td class="mono">SS 62~67kg · Q 80~89kg (스프링/폼 타입별 상이)</td></tr>
+          <tr><th>모션 각도</th><td>등판 최대 67° (무중력 22.5°·조용한 숙면 22.5°·영화시청 67°) · 허벅지판 39° · 다리판 10°</td></tr>
+          <tr><th>모터</th><td>리낙(LINAK), 소비전력 대기 0.1W / 작동 최대 132W, 모터 5년·소모품 1년 무상 A/S(정품 인증 조건)</td></tr>
+          <tr><th>프레임 옵션</th><td>모듈형 패브릭 프레임 3색(마론·시나몬·버치 원목) — 헤드/무헤드, 저상형/플로팅형, 다리 결합형 선택 조합</td></tr>
+          <tr><th>커버·위생</th><td>지퍼형 분리 세탁 가능 상단 커버, Sanitized 항균 패딩 8oz, 매트리스 측면 리모컨 보관 주머니</td></tr>
+          <tr><th>인증·품질</th><td>180kg 하중 2만회 벤딩 테스트, 54kg 2만회 충격 테스트, 42가지 품질테스트, KOTITI 라돈·토론 등 방사성물질 8종 안전 인증</td></tr>
+          <tr><th>스위치</th><td>매트리스 내장형 스위치(별도 페어링 불필요) — S/SS는 좌/우 선택, Q는 우측 고정</td></tr>
+          <tr><th>구성품</th><td>모션 매트리스 본체 + 리모컨 + 리모컨 주머니 + AAA 건전지 2EA + M10 글라이더 4EA</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:15px; margin:28px 0 12px;"><span class="dot" style="background:var(--c-halfmoon); display:inline-block; margin-right:6px;"></span>하프문 (미드나잇 라인)</h3>
+    <div class="tbl-scroll">
+      <table style="min-width:640px;">
+        <tbody>
+          <tr><th>디자인·경도</th><td>34cm 깊이의 유로탑(Euro-top) 볼륨감, 일자 점프 퀼팅 커버. 경도 Medium Firm(소프트~펌 5단계 중 4단계)</td></tr>
+          <tr><th>층 구조 (8단)</th><td>새니타이즈 항균 커버 → 울트라 리사이클 패딩 → 스마트셀 패딩 → 에센셜폼 → 3D 서스펜션폼 → 레코텍 메모리폼 → 3D 밸런스드 서스펜션폼 → 1조닝 포켓스프링(302H 스테인리스) → 폼케이스</td></tr>
+          <tr><th>스프링</th><td>302H 스테인리스 포켓스프링(1조닝, 미디엄) — 100kg 하중 56만회 수직압출시험 통과, 녹슬지 않음</td></tr>
+          <tr><th>사이즈</th><td class="mono">SS 저상형 1100×2000×380 / 다리형 1100×2000×500 · Q 저상형 1500×2000×380 / 다리형 1500×2000×500mm (다리형은 다리 별도구매, 글라이더 포함)</td></tr>
+          <tr><th>무게</th><td class="mono">SS 66.5kg · Q 92.0kg</td></tr>
+          <tr><th>모션 각도</th><td>등/허리부 최대 67° · 다리부 최대 39° (자세 5종: 무중력·숙면·피로회복·기본180°·모션다리 추가)</td></tr>
+          <tr><th>원단·소재</th><td>상단 그레이 멜란지(레이온 81%+폴리에스터 19%), 측면 리사이클 그레이(폴리에스터 100%, 리젠 원사 50%). Smartcel™ sensitive(천연 항균 셀룰로오스), EU Ecolabel 울트라 리사이클 패딩(ADVANSA 기술)</td></tr>
+          <tr><th>인증·품질</th><td>KOTITI 방사성물질 SAFE 인증(8종), 42가지 품질테스트, 리모컨 MSIP-CRI-LKR-HC201 등 KC 적합인증 다수</td></tr>
+          <tr><th>스위치</th><td>S/SS는 눕는 기준 좌/우 선택, Q는 우측 고정 (설치 시 콘센트 1구 필요)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="section-note" style="margin-top:12px;">※ 하프문 모션 매트리스는 일반(정적) 하프문 매트리스와 동일 계열 소재로 제작되었으나, 모션 매커니즘이 추가되어 소재별 사용 비율에는 차이가 있습니다(제조사 명시).</p>
+
+    <div class="notice" style="margin-top:20px; display:flex;">⚠ <span style="margin-left:4px;"><strong>문레이·하프문 공통 주의사항.</strong> ① 일반 프레임에 올리면 하중 집중으로 파손 위험 — 전용 모션 프레임 또는 바닥 기본형·다리형만 사용. ② 방수기능 없음 — 별도 프로텍터 권장. ③ 모션 작동·각도 조절 상태에서 온열장판·온수매트 사용 절대 금지(화재 위험). ④ 설계·퀼팅 차이로 다른 모션 제품과 나란히 배치 시 규격이 다를 수 있음(프레임 호환 불가, 다리형 다리만 교차 가능).</span></div>
+  </section>
+
+  <!-- ANGLE COMPARE -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Motion Angle</div>
+      <h2>모션 각도 비교</h2>
+      <p class="section-note">아르지안·바젤·모어(일룸) + 문레이·하프문(슬로우베드)의 등판·다리판 최대 가동각입니다.</p>
+    </div>
+
+    <h3 style="font-size:15px; margin-bottom:6px;">자세 실루엣 — 최대 각도일 때 모습</h3>
+    <p class="section-note" style="margin-top:0; margin-bottom:14px;">옆에서 본 매트리스 모습입니다. 왼쪽이 등판(백레스트), 오른쪽이 다리판, 가운데 회색 막대가 프레임, 점선은 평평하게 눕힌 기준선입니다.</p>
+    <div class="angle-diagram-grid">
+      <div class="angle-diagram-card">
+        <svg viewBox="0 0 200 120"><line x1="15" y1="90" x2="185" y2="90" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/><rect x="58" y="94" width="84" height="7" rx="2" fill="var(--ink-muted)" opacity="0.25"/><line x1="68" y1="101" x2="68" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="88" y1="101" x2="88" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="112" y1="101" x2="112" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="132" y1="101" x2="132" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><polyline points="45.03,40.99 70,90 130,90 161.08,64.83" fill="none" stroke="var(--c-argean)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><line x1="85" y1="83" x2="85" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="100" y1="83" x2="100" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="115" y1="83" x2="115" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><text x="40" y="30" font-size="11" font-weight="700" fill="var(--c-argean)" text-anchor="middle">63°</text><text x="170" y="57" font-size="11" font-weight="700" fill="var(--c-argean)" text-anchor="middle">39°</text></svg>
+        <div class="name">아르지안<span class="b">일룸</span></div>
+        <div class="vals">등 63° · 다리 39°</div>
+      </div>
+      <div class="angle-diagram-card">
+        <svg viewBox="0 0 200 120"><line x1="15" y1="90" x2="185" y2="90" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/><rect x="58" y="94" width="84" height="7" rx="2" fill="var(--ink-muted)" opacity="0.25"/><line x1="68" y1="101" x2="68" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="88" y1="101" x2="88" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="112" y1="101" x2="112" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="132" y1="101" x2="132" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><polyline points="45.03,40.99 70,90 130,90 161.08,64.83" fill="none" stroke="var(--c-basel)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><line x1="85" y1="83" x2="85" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="100" y1="83" x2="100" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="115" y1="83" x2="115" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><text x="40" y="30" font-size="11" font-weight="700" fill="var(--c-basel)" text-anchor="middle">63°</text><text x="170" y="57" font-size="11" font-weight="700" fill="var(--c-basel)" text-anchor="middle">39°</text></svg>
+        <div class="name">바젤<span class="b">일룸</span></div>
+        <div class="vals">등 63° · 다리 39°</div>
+      </div>
+      <div class="angle-diagram-card">
+        <svg viewBox="0 0 200 120"><line x1="15" y1="90" x2="185" y2="90" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/><rect x="58" y="94" width="84" height="7" rx="2" fill="var(--ink-muted)" opacity="0.25"/><line x1="68" y1="101" x2="68" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="88" y1="101" x2="88" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="112" y1="101" x2="112" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="132" y1="101" x2="132" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><polyline points="47.63,39.76 70,90 130,90 164.64,70" fill="none" stroke="var(--c-more)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><line x1="85" y1="83" x2="85" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="100" y1="83" x2="100" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="115" y1="83" x2="115" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><text x="43" y="29" font-size="11" font-weight="700" fill="var(--c-more)" text-anchor="middle">66°</text><text x="175" y="64" font-size="11" font-weight="700" fill="var(--c-more)" text-anchor="middle">30°</text></svg>
+        <div class="name">모어<span class="b">일룸</span></div>
+        <div class="vals">등 66° · 다리 30°</div>
+      </div>
+      <div class="angle-diagram-card">
+        <svg viewBox="0 0 200 120"><line x1="15" y1="90" x2="185" y2="90" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/><rect x="58" y="94" width="84" height="7" rx="2" fill="var(--ink-muted)" opacity="0.25"/><line x1="68" y1="101" x2="68" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="88" y1="101" x2="88" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="112" y1="101" x2="112" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="132" y1="101" x2="132" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><polyline points="48.51,39.37 70,90 130,90 161.08,64.83" fill="none" stroke="var(--c-moonray)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><line x1="85" y1="83" x2="85" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="100" y1="83" x2="100" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="115" y1="83" x2="115" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><text x="44" y="28" font-size="11" font-weight="700" fill="var(--c-moonray)" text-anchor="middle">67°</text><text x="170" y="57" font-size="11" font-weight="700" fill="var(--c-moonray)" text-anchor="middle">39°</text></svg>
+        <div class="name">문레이<span class="b">슬로우베드</span></div>
+        <div class="vals">등 67° · 다리 39°</div>
+      </div>
+      <div class="angle-diagram-card">
+        <svg viewBox="0 0 200 120"><line x1="15" y1="90" x2="185" y2="90" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="3 3"/><rect x="58" y="94" width="84" height="7" rx="2" fill="var(--ink-muted)" opacity="0.25"/><line x1="68" y1="101" x2="68" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="88" y1="101" x2="88" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="112" y1="101" x2="112" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><line x1="132" y1="101" x2="132" y2="111" stroke="var(--ink-muted)" stroke-width="3" stroke-linecap="round"/><polyline points="48.51,39.37 70,90 130,90 161.08,64.83" fill="none" stroke="var(--c-halfmoon)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><line x1="85" y1="83" x2="85" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="100" y1="83" x2="100" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><line x1="115" y1="83" x2="115" y2="97" stroke="var(--surface-raised)" stroke-width="2" opacity="0.85"/><text x="44" y="28" font-size="11" font-weight="700" fill="var(--c-halfmoon)" text-anchor="middle">67°</text><text x="170" y="57" font-size="11" font-weight="700" fill="var(--c-halfmoon)" text-anchor="middle">39°</text></svg>
+        <div class="name">하프문<span class="b">슬로우베드</span></div>
+        <div class="vals">등 67° · 다리 39°</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:15px; margin-bottom:14px;">등판(백레스트) 최대 각도</h3>
+    <div class="angle-list">
+      <div class="angle-row"><div class="angle-label">문레이<span class="b">슬로우베드</span></div><div class="angle-track"><div class="angle-fill" style="width:95.7%; background:var(--c-moonray);"></div></div><div class="angle-val mono">67°</div></div>
+      <div class="angle-row"><div class="angle-label">하프문<span class="b">슬로우베드</span></div><div class="angle-track"><div class="angle-fill" style="width:95.7%; background:var(--c-halfmoon);"></div></div><div class="angle-val mono">67°<span class="gap-note">(문레이와 수치 동일, 다른 제품)</span></div></div>
+      <div class="angle-row"><div class="angle-label">모어<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:94.3%; background:var(--c-more);"></div></div><div class="angle-val mono">66°</div></div>
+      <div class="angle-row"><div class="angle-label">아르지안<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:90%; background:var(--c-argean);"></div></div><div class="angle-val mono">63°</div></div>
+      <div class="angle-row"><div class="angle-label">바젤<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:90%; background:var(--c-basel);"></div></div><div class="angle-val mono">63°<span class="gap-note">(아르지안과 동일)</span></div></div>
+    </div>
+
+    <h3 style="font-size:15px; margin:30px 0 14px;">다리판 최대 각도</h3>
+    <div class="angle-list">
+      <div class="angle-row"><div class="angle-label">아르지안<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:100%; background:var(--c-argean);"></div></div><div class="angle-val mono">39°</div></div>
+      <div class="angle-row"><div class="angle-label">바젤<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:100%; background:var(--c-basel);"></div></div><div class="angle-val mono">39°<span class="gap-note">(아르지안과 동일)</span></div></div>
+      <div class="angle-row"><div class="angle-label">문레이<span class="b">슬로우베드</span></div><div class="angle-track"><div class="angle-fill" style="width:100%; background:var(--c-moonray);"></div></div><div class="angle-val mono">39°<span class="gap-note">(허벅지판, 2.0 업그레이드)</span></div></div>
+      <div class="angle-row"><div class="angle-label">하프문<span class="b">슬로우베드</span></div><div class="angle-track"><div class="angle-fill" style="width:100%; background:var(--c-halfmoon);"></div></div><div class="angle-val mono">39°<span class="gap-note">(문레이와 수치 동일)</span></div></div>
+      <div class="angle-row"><div class="angle-label">모어<span class="b">일룸</span></div><div class="angle-track"><div class="angle-fill" style="width:76.9%; background:var(--c-more);"></div></div><div class="angle-val mono">30°</div></div>
+    </div>
+
+    <div style="margin-top:18px; border:1px solid var(--border); border-left:4px solid var(--c-argean); border-radius:10px; padding:14px 16px; background:var(--surface-raised); display:flex; flex-direction:column; gap:4px; max-width:70ch;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--c-argean); font-weight:700;">헤드+등판(상판) 최대각도 — 아르지안 3모터 헤드형 한정</div>
+      <div style="font-size:14px; color:var(--ink-2);">등판 63° + 머리판 26° = <strong style="color:var(--c-argean);">최대 89°</strong><span class="gap-note"> — 위 등판 단독 순위(63°)와는 별도 수치입니다. 숫자가 크다고 무조건 더 편한 것은 아니니 참고용으로만 안내하세요.</span></div>
+    </div>
+
+    <p class="section-note" style="margin-top:18px;">문레이·하프문은 등판(허리부 기준) 67°·허벅지판 39°·다리판 10° 3단 구조로, 아르지안·바젤의 "등판/다리판" 2단 구조와 분절 방식이 다릅니다.</p>
+  </section>
+
+  <!-- GUIDE -->
+  <section>
+    <div class="section-head">
+      <div class="section-kicker">Guide</div>
+      <h2>이럴 때 이 모션베드</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card" style="--bar-color:var(--c-argean)">
+        <div class="q">"모션베드 중에서 제일 많이 찾는, 검증된 제품을 원해요."</div>
+        <div class="a"><strong>아르지안</strong><span>자사 매출 1위 · 넓은 가동범위</span></div>
+      </div>
+      <div class="guide-card" style="--bar-color:var(--c-basel)">
+        <div class="q">"호텔 침실 같은 조명 무드를 원해요."</div>
+        <div class="a"><strong>바젤</strong><span>헤드보드 무드등 내장</span></div>
+      </div>
+      <div class="guide-card" style="--bar-color:var(--c-more)">
+        <div class="q">"신혼부부인데 각자 따로, 또 가까이 붙여 쓰고 싶어요."</div>
+        <div class="a"><strong>모어</strong><span>트윈 간격 0~400mm 조절</span></div>
+      </div>
+      <div class="guide-card" style="--bar-color:var(--c-moonray)">
+        <div class="q">"모던한 모듈형 프레임에 마음에 드는 패브릭을 고르고 싶어요."</div>
+        <div class="a"><strong>문레이</strong><span>프레임 3색 모듈 선택</span></div>
+      </div>
+      <div class="guide-card" style="--bar-color:var(--c-halfmoon)">
+        <div class="q">"폭신한 유로탑 느낌에 모션 기능까지 원해요."</div>
+        <div class="a"><strong>하프문</strong><span>34cm 유로탑 디자인</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>자료 출처: 일룸 사업기획/상품기획 자료, SLOU BED 이브닝 문레이·미드나잇 하프문 모션 매트리스 제품 소개자료(2026.10.29 수집) · 담당 허지훈</div>
+    <ul class="caution-list">
+      <li>이 자료에는 가격을 포함하지 않았습니다 — 구조·모션 사양·각도 비교에 집중했습니다.</li>
+      <li>아르지안은 각도·하중·안전설계까지 확인되었으나, 프레임 내장재(소재) 상세만 아직 미확인입니다. 바젤의 모션 각도는 담당자 확인으로 아르지안과 동일하게 반영했습니다.</li>
+      <li>문레이와 하프문은 모션 각도(등/허리부 67°·다리부 39°)는 같지만 서로 다른 제품입니다 — 디자인(유로탑 퀼팅)·층 구조·스프링 구성이 다르니 같은 제품으로 혼동하지 마세요.</li>
+      <li>모어는 2026년 6월 다리형 모션을 1차 출시했고, 다리형 일반·박스형 모션은 2027년 상반기까지 순차 출시 예정입니다(현재 미출시).</li>
+    </ul>
+  </footer>
+
+</div>
+
+</body></html>

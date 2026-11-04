@@ -1,0 +1,654 @@
+<!doctype html><html><head><!-- frame-runtime --><script>window.__FRAME_PREAMBLE={"v":1,"cred":"query","capabilities":{"artifact":"artifact.CVa6a1-R.js","assets":"assets.DG69nuOE.js","comments":"comments.BnsN5UXJ.js","db":"db.CCPy_cYa.js","desktop":"desktop.DuQm2Hig.js","dictation":"dictation.C9bJoIZV.js","downloads":"downloads.BLg1QCW0.js","embed":"embed.DL8CVLpf.js","endpoints":"endpoints.Cgd32w2P.js","files":"files.BWjhUR2a.js","mcp":"mcp.RT0IhfK0.js","network":"network.B5UA9Su4.js","paste":"paste.BXT-6GsY.js","permissions":"permissions.YN66judO.js","reads":"reads.Ch7Jwxh7.js","room":"room.DcZfm17Q.js","sample":"sample.DwGzO02I.js","self":"artifact.CVa6a1-R.js","tts":"tts.DT7xqCtz.js","user":"user.DWCNmu2k.js"},"transforms":"_transforms.Oqg9ra7w.js","comments":"_comments._RoG4m2E.js","translate":"_translate.DnEmLa3t.js","ldx":"_ldx.CwGHU7dr.js"}                                                                                                                                                                                   </script><script>(function(){"use strict";function pr(t){return t==="cookie"||t==="query"?t:void 0}function mr(t){return typeof t=="number"&&Number.isSafeInteger(t)&&t>0?t:void 0}var so=3e5;function vr(t,e){try{const r=t("navigation")[0],n=[r.responseStart,r.redirectEnd-r.redirectStart,r.domContentLoadedEventStart,e(),r.connectEnd-r.domainLookupStart,r.responseStart-r.requestStart];r.requestStart>0||(n.length=4);for(let a=0;a<n.length;a++)if(n[a]>=0&&n[a]<=3e5)n[a]=n[a]|0;else{if(a<4)return;n.length=4}return n}catch{return}}var _r=["light","dark","system"],yr=/^[A-Za-z0-9_-]{1,64}$/,Ot=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,gr=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function wr(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||gr.has(e)}var Pt="data-ldx-props";function br(t,e){if(e.toLowerCase()===Pt)return!0;const r=t.getAttribute(Pt);if(r===null)return!1;try{const n=JSON.parse(r);if(n===null||typeof n!="object"||Array.isArray(n))return!0;const a=e.toLowerCase();return Object.keys(n).some(s=>s.toLowerCase()===a)}catch{return!0}}var io="http://www.w3.org/1999/xhtml",Er="http://www.w3.org/2000/svg",Sr=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),kr=new Set(["script","style"]);function Ar(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!Sr.has(e):t.namespaceURI===Er?!kr.has(e):!1}function at(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function Rr(t,e){const r=t.length,n=e.length;let a=0;for(;a<r&&a<n&&at(t.charCodeAt(a),e.charCodeAt(a));)a++;let s=0;for(;s<r-a&&s<n-a&&at(t.charCodeAt(r-1-s),e.charCodeAt(n-1-s));)s++;return{p:a,s}}function Tr(t,e){const r=t.firstChild;if(t.childNodes.length!==1||r===null||r.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const n=r.data,a=n.length,s=e.length,{p:l,s:u}=Rr(n,e);l===a&&u===0&&a===s||r.replaceData(l,a-l-u,e.slice(l,s-u));const A=r.data,E=t.ownerDocument.getSelection?.()??null,v=E!==null&&E.rangeCount>0&&(E.anchorNode===r||E.focusNode===r)?{anchor:E.anchorNode,anchorOffset:E.anchorOffset,focus:E.focusNode,focusOffset:E.focusOffset}:null;let h=-1,R=-1;for(let g=0;g<A.length&&g<e.length;g++){const O=A.charCodeAt(g),S=e.charCodeAt(g);O!==S&&at(O,S)&&(h<0&&(h=g),R=g)}const P=h>=0;if(P&&r.replaceData(h,R-h+1,e.slice(h,R+1)),P&&v!==null&&v.anchor!==null&&v.focus!==null)try{E.setBaseAndExtent(v.anchor,v.anchorOffset,v.focus,v.focusOffset)}catch{}}var Lr=new Set(["html","head","body","frameset"]);function Or(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&Lr.has(t.localName)}function Pr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!yr.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[r,n]of Object.entries(e.attrsSet))if(!Ot.test(r)||typeof n!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const r of e.attrsRemoved)if(typeof r!="string"||!Ot.test(r))return!1}return!0}function Mr(t,e){if(t===null||typeof t!="object")return!1;const{seq:r,elements:n}=t;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(n)||n.length===0||n.length>64)return!1;for(let a=0;a<n.length;a++)if(!e(n[a]))return!1;return!0}function Nr(t){return t===null||typeof t!="object"?!1:Mr(t.__frame_patch,Pr)}function Cr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function Fr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function Hr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function Ir(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const r=e.theme;return typeof r=="string"&&_r.includes(r)}var jr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],xr=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function Dr(t){return typeof t=="string"&&xr.includes(t)?t:"other"}var Br=Object.freeze({until:null,now:!1}),qr="__claude_hot",Ur="__claude_hot_in",Kr=/^__claude_hot(?:_in)?(?::|$)/,Mt=/^[0-9a-z]{1,32}$/,st=t=>t===void 0?qr:"__claude_hot:"+t,Me=t=>t===void 0?Ur:"__claude_hot_in:"+t;function $r(t,e){const r=[];for(let n=0;n<t.length;n++){const a=t.key(n);a!==null&&a!==e&&Kr.test(a)&&r.push(a)}for(const n of r)t.removeItem(n)}function zr(t){let e=null;try{e=q(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!Mt.test(e.k)?null:ve(e.g)?{k:e.k,g:e.g}:{k:e.k}}var lo=262144,Gr=3e3,Wr=5e3,Nt=/^[a-z0-9._:-]{1,64}$/,Vr=["none","hot-restart","hard-reload"],Xr=["asset","doc","added","removed"],Yr=1500,Jr=/^[0-9a-f]{64}$/;function q(t){return t!==null&&typeof t=="object"?t:null}function ve(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function Ct(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function Zr(t){return t===void 0||typeof t=="string"&&Nt.test(t)}function Ft(t){const e=q(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function it(t){const e=q(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Ct(e.seq)&&typeof e.handoff=="string"&&jr.includes(e.handoff)&&Zr(e.note)}function Ht(t){const e=q(t);return e!==null&&ve(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||it(e.from))}function Qr(t){const e=q(t);return e!==null&&e.kv===1&&ve(e.gen)&&it(e.from)&&Object.hasOwn(e,"data")}function en(t){const e=q(t);return e!==null&&e.__frame_hot_snapshot===!0&&ve(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||Ft(e.deadline))&&Ct(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function tn(t){const e=q(t);return e!==null&&e.__frame_hot_start===!0&&ve(e.gen)&&it(e.from)}function rn(t){return typeof t=="string"&&t.length>=1&&t.length<=128}function It(t){return q(t)!==null&&!Array.isArray(t)}function nn(t){const e=q(t);return e!==null&&e.__frame_cap_grant===!0&&typeof e.cap=="string"&&rn(e.ver)&&(e.grant===void 0||It(e.grant))&&(e.budgets===void 0||It(e.budgets)&&Object.values(e.budgets).every(Number.isFinite))&&(e.brokerGen===void 0||ve(e.brokerGen))}function on(t){const e=q(t);return e!==null&&e.__frame_cap_rewired===!0&&(e.caps===void 0||Array.isArray(e.caps)&&e.caps.every(r=>typeof r=="string"))&&(e.brokerGen===void 0||ve(e.brokerGen))}function We(t){const e=q(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function jt(t){if(t==null||typeof t=="string")return!0;const e=q(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function an(t){const e=q(t);return e!==null&&typeof e.path=="string"&&Xr.includes(e.kind)&&jt(e.from)&&jt(e.to)}function sn(t){return t===null?null:Object.freeze(t.filter(an))}function ln(t){const e=q(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&We(e.from)&&We(e.to)&&(e.changed===null||Array.isArray(e.changed))&&Vr.includes(e.required)&&Ft(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Jr.test(e.preflight))}function cn(t){const e=q(t);return e!==null&&e.__frame_hot_readdress===!0&&We(e.from)&&We(e.to)}var _e=/^[\w.-]+\.js$/;function un(t,e,r){return r?"inert":typeof e=="string"&&_e.test(e)?t?[e]:"inert":t?"inert":"framed"}var xt=Object.freeze({[Symbol("claude.hot.restart")]:!0});function Dt(t,e){let r;try{r=t??sessionStorage}catch{return null}const n=st(e?.k),a=Me(e?.k);let s=null;try{s=r.getItem(n)}catch{}try{r.removeItem(n)}catch{}try{$r(r,a)}catch{}let l=null;if(s!==null&&!(e!==null&&e.g===void 0))try{const u=JSON.parse(s);Qr(u)&&(e===null||u.gen===e.g)&&(l=u)}catch{}if(l===null)try{r.removeItem(a)}catch{}return l}function Bt(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var fn=/^[^/\\?#]{1,128}$/,lt=t=>fn.test(t)&&t!=="."&&t!=="..";function qt(t,e,r){const n=new URL(t),a="/_f/"+e+"/";if(!e||!n.pathname.startsWith(a)||!lt(r))return null;const s=n.search.slice(1).split("&").filter(l=>!/^__frame_t(?:=|$)/.test(l)).join("&");return n.origin+"/_f/"+r+"/"+n.pathname.slice(a.length)+(s?"?"+s:"")+n.hash}var Ve="{}";function Ne(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function Ut(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function Kt(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function dn(t,e,r,n=null){const a=setTimeout,s=clearTimeout,l=queueMicrotask,u=performance.now.bind(performance),A=new TextEncoder;let E=null,v=null;try{E=history,v=E.replaceState.bind(E)}catch{}const h=(...o)=>{try{console.warn(...o)}catch{}};let R=Bt(),P=null;try{P=sessionStorage}catch{}const g={storage:P,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,priors:[],key:n?.k};let O=n?.k;const S=typeof requestAnimationFrame=="function"?requestAnimationFrame:o=>a(()=>o(u()),16);let p=e?.data??{},B=Ne(e?.from),z=e?.gen??0,G=e!==null,J=!1,W=!1,D=null,T=!1;const x=new AbortController;let V=null,j=null,ne=null,ge=!1,se=()=>{};const X=new Promise(o=>{se=o});let we=!1,Qe=!1,Ae=!1,c,m=null,w=!1,M=!1,H=!1,U=!1,K=!1,oe=!1;const le=o=>{for(const f of[st(o),Me(o)])try{P?.removeItem(f)}catch{}},$=(o,f)=>{try{f!==null&&r.post(o,f)}catch{}},be=()=>K||=H&&(j===null||U),ie=()=>{const o={__frame_hot:!0,ready:j!==null,accept:ne!==null,demand:!0};oe=!K,oe&&(o.booting=!0),we&&(o.readData=!0),Ae&&(o.threw=!0),m?.assess&&(o.preflight=!0),$(o,D)};let xe=!1,De=!1,me=!1,Be=!1;const ce=()=>{xe||!T||me||(xe=!0,$({__frame_reveal_hold:!0},"*"))},Re=()=>new Promise(o=>{let f,d=0;const y=N=>{if(f===void 0)f=N;else if(N!==f||++d>=8){o();return}try{S(y)}catch{o()}};try{S(y)}catch{o()}}),qe=()=>{me=!0,$({__frame_reveal_ready:!0},"*")},Ue=o=>{De||(De=!0,o.then(f=>{if(f===!1)return;let d=null;try{d=m?.settle?.()??null}catch{}return(d===null?Re():new Promise(y=>{a(y,50),Promise.resolve(d).then(y,y)}).then(Re)).then(qe)}))},Ke=()=>{if(Be||!me)return;Be=!0;const o=()=>{try{m?.afterReveal?.()}catch{}};o(),Re().then(()=>{o(),qe()})},Ee=(o=!1)=>{if(ge||j===null||!G||!W)return;ge=!0;const f=j,d=p;l(()=>{let y;try{y=f(d)}catch(C){throw se(!1),C}let N=!1;try{N=typeof y?.then=="function"}catch{}if(!N){se(!0);return}Promise.resolve(y).then(()=>se(!0),C=>{se(!1),l(()=>{throw C})})}),Ue(o?X:r.dcl.then(()=>X))},Se=o=>typeof o=="string"&&Nt.test(o)?o:void 0,$e=o=>{const f={__frame_hot_restart:!0},d=Se(o?.note);d!==void 0&&(f.note=d),o?.required==="hard-reload"&&(f.required="hard-reload"),$(f,D)},et=Object.freeze({get data(){return W||(Qe=!0),!G&&!we&&(we=!0,W&&ie()),p},get from(){return B},get gen(){return z},signal:x.signal,snapshot(o){typeof o=="function"&&(V=o)},ready(o){typeof o!="function"||j!==null||(j=o,ce(),ie(),J&&$({__frame_hot_ready:!0,gen:z},D),Ee())},accept(o){typeof o=="function"&&(ne=o,ie())},restart(o){const f={note:o?.note,required:o?.required};if(W){$e(f);return}const d=c;c={note:Se(d?.note)??f.note,required:d?.required==="hard-reload"||f.required==="hard-reload"?"hard-reload":void 0}}});let ae=null,Te=()=>{};const tt=new Promise(o=>{Te=o});let Et=null;const ze=()=>Et??=r.dcl.then(()=>{let o=!1;try{o=ae!==null&&ae.expect()}catch{}if(!o)return;const f=ae.maxMs;return new Promise(d=>{tt.then(d),a(d,f)})}),Ge=()=>{if(!w||M||m===null)return;M=!0;const o=m;ze().then(()=>{try{me||o.afterStart(Kt(e),!1)}catch{}})},i=o=>{e!==null&&Qe&&(we=!0),p={},B=null,z=0;try{P?.removeItem(Me(n?.k))}catch{}e!==null&&!o&&Ue(r.dcl.then(()=>j!==null?X:void 0))},_=()=>{w=!0,Ue(ze().then(()=>j!==null?X:void 0)),Ge()};try{addEventListener("error",()=>{Ae||j!==null||(Ae=!0,ie())})}catch{}const b=()=>{a(()=>{!K&&be()&&oe&&ie()},0)};try{H=document.readyState==="complete",H||addEventListener("load",()=>{H=!0,b()},{once:!0})}catch{H=!0}be(),X.then(()=>{U=!0,b()});let k=-1,te,Y,Z=!0,St=!1,kt,rt=null;const At=o=>{const f=rt===null;rt=Z&&o[0]!=="withheld"?o:["withheld",o[1],Ve];let d=o[0];if(Z&&d!=="withheld"){const N={ver:R,handoff:d};te!==void 0&&(N.seq=te),Y!==void 0&&(N.note=Y);try{if(P===null)throw new Error("no storage");P.setItem(st(O),'{"kv":1,"gen":'+k+',"from":'+JSON.stringify(N)+(kt!==void 0?',"k":'+JSON.stringify(kt):"")+',"data":'+(d==="ok"?o[2]:Ve)+"}")}catch{d="unavailable"}}else{d="withheld",le(O);try{m?.release?.()}catch{}}const y={__frame_hot_snapshotted:!0,gen:k,handoff:d,bytes:o[1]};o[3]!==void 0&&(y.errName=o[3]),$(y,D),f&&(d==="snapshot_error"||d==="unclonable"||d==="oversize")&&h("claude.hot: snapshot",d,o[3])},Le=o=>{try{return Dr(o?.name)}catch{return"other"}},Oe=(o,f,d=0)=>At(f===void 0?[o,d,Ve]:[o,d,Ve,Le(f)]),Jn=o=>{if(o.gen<=k)return;const f=k>=0;if(k=o.gen,te=o.seq,Y=Se(o.note),typeof o.key=="string"&&Mt.test(o.key)&&o.key!==O&&(le(O),O=o.key),Z&&=o.handoff!==!1,f){rt!==null?At(rt):St&&$({__frame_hot_held:!0,gen:k},D);return}x.abort();const d=Object.freeze({handoff:Z,timeoutMs:o.timeoutMs,deadline:o.deadline??Br}),y=V,N=()=>{if(Z)try{kt=m?.capture()}catch{}if(y===null){Oe("empty");return}let L=!1;const Q=a(()=>{L||(L=!0,Oe("snapshot_timeout"))},Math.max(0,d.timeoutMs));Promise.resolve().then(()=>y(d)).then(Pe=>{if(L)return;L=!0,s(Q);let ue;try{ue=JSON.stringify(Pe)}catch(Rt){Oe("unclonable",Rt);return}if(typeof ue!="string"){Oe("unclonable");return}let fe=ue.length;try{fe=A.encode(ue).length}catch{}if(fe>262144){Oe("oversize",void 0,fe);return}At(["ok",fe,ue])},Pe=>{L||(L=!0,s(Q),Oe("snapshot_error",Pe))})};let C=null;try{C=m?.holdForIme()??null}catch{}if(C===null)N();else{St=!0,$({__frame_hot_held:!0,gen:k},D);const L=()=>{St=!1,N()};C.then(L,L)}},Zn=o=>{if(!J||G||j===null||o.gen!==z)return;let f=null;try{f=Dt(P,n&&{k:n.k,g:o.gen})}catch{}if(f!==null&&f.gen!==o.gen){f=null;try{P?.removeItem(Me(n?.k))}catch{}}p=f?.data??{},B=Ut(Ne(f?.from??o.from),Ne(o.from)),f!==null&&(z=f.gen),G=!0,J=!1;const d=Kt(f);X.then(y=>{try{y&&m?.afterStart(d,!0)}catch{}}),Ee(!0)},ur=o=>{const f=R,d=g.entry;let y="",N,C=null;try{if(y=location.href,N=E.state,C=qt(y,f,o),C!==null)if(v(N,"",C),location.pathname.startsWith("/_f/"+o+"/"))C=location.href;else return{failed:"navigate event canceled"}}catch(L){return{failed:Le(L)}}R=g.ver=o,g.priors.push(f)>8&&g.priors.splice(1,1);try{g.entry=qt(d,f,o)??d}catch{}return[C,f,d,y,N]},Qn=({from:o,to:f})=>{let d,y;if(!lt(f.ver))d="adopt_failed",y="not a version path segment";else if(f.ver===R)d="adopted";else if(!R||o.ver!==R)d="stale";else{const C=ur(f.ver);"failed"in C?(d="adopt_failed",y=C.failed):d=C[0]===null?"adopt_skipped":"adopted"}y!==void 0&&h(`claude.hot: could not move this page's URL to its new version folder /_f/${f.ver}/ (${y})`);const N={__frame_hot_readdressed:!0,to:f.ver,at:R,outcome:d};$(N,D)};let nt=0;const eo=o=>{const f=ne;if(f===null||o.id<=nt)return;nt=o.id;const d=m?.assess;if(o.preflight===void 0||d===void 0){fr(o,f);return}let y=!1;const N=Q=>{y||(y=!0,s(L),o.id===nt&&fr(o,f,Q))},C=()=>N(d.timeout(o)),L=a(C,Yr+100);d.run(o,window).then(N,C)},fr=(o,f,d)=>{let y,N=!1,C=!1,L,Q,Pe=null;const ue=I=>{if(C)return!1;if(L!==void 0&&L!==I)return h(`claude.hot: u.${I}() ignored - u.${L}() was called first`),!1;const de=L===void 0;return L=I,de},fe=I=>{L="restart",h(`claude.hot: ${I} - restarting`)},Rt=()=>{if(!ue("adopt")||o.id!==nt)return;const I=o.to.ver;if(ot.required!=="none"){fe(`u.adopt() needs required 'none', it is '${ot.required}'`);return}if(!lt(I)){fe("u.adopt() cannot address this version");return}if(!R||I===R)return;const de=ur(I);if("failed"in de){Q="adopt_failed",fe(`adopt_failed ${de.failed}; URL not changed`);return}const[re,Lt,no,hr,oo]=de;re===null?(Q="adopt_skipped",h(`claude.hot: adopt_skipped - page already left /_f/${Lt}/; URL not changed, update still applied`)):Q="adopted",Pe=()=>{if(R===I){if(re!==null)try{if(location.href!==re)h("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(v(oo,"",hr),location.href!==hr){h("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}Q="adopt_reverted",h("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(ao){h(`claude.hot: adopt_revert_failed ${Le(ao)} - URL still at the new version`);return}R=g.ver=Lt,g.entry=no,g.priors[g.priors.length-1]===Lt&&g.priors.pop(),re===null&&(Q=void 0)}}},ot=Object.freeze({from:{ver:o.from.ver,seq:o.from.seq},to:{ver:o.to.ver,seq:o.to.seq},changed:sn(o.changed),required:o.required,deadline:o.deadline,adopt:Rt,defer(){return ue("defer")&&ot.deadline.now&&fe("u.defer() past the deadline"),xt},restart(I){return ue("restart"),L==="restart"&&!C&&(y??=Se(I?.note),N||=I?.required==="hard-reload"),xt},...d?.update}),to=(I,de)=>{C=!0,I==="threw"?(Pe?.(),y??=Le(de).toLowerCase()):L===void 0&&h(I==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const re={__frame_hot_verdict:!0,id:o.id};re.verdict=I==="threw"||L===void 0||L==="restart"?"restart":L==="adopt"?"applied":"deferred",re.verdict==="restart"&&(N&&(re.required="hard-reload"),y!==void 0&&(re.note=y)),Q!==void 0&&(re.verdict==="applied"||Q!=="adopted")&&(re.adopt=Q),$(Object.assign(re,d?.verdict),D)};let dr=!1;const Tt=(I,de)=>dr?!1:(dr=!0,s(ro),to(I,de),!0),ro=a(()=>Tt("timeout"),o.verdictTimeoutMs);Promise.resolve().then(()=>f(ot)).then(()=>Tt("settled"),I=>{!Tt("threw",I)&&L==="adopt"&&$e({note:Le(I).toLowerCase()}),h("claude.hot: accept",Le(I))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:et,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:et,boot:g,afterConnect(){T=!0,(e!==null||j!==null)&&ce()},onInit(o,f){D=f,W=!0;const d=Ht(o)?o:null;d?.phase==="final"&&e!==null&&e.gen===d.gen?(G=!0,B=Ut(B,Ne(d.from)),_()):(J=d?.phase==="pending",i(J),G=!J,z=d?.gen??0,B=Ne(d?.from)),ie(),oe&&a(()=>{K||(K=!0,ie())},Wr),J&&j!==null&&$({__frame_hot_ready:!0,gen:z},f),c!==void 0&&($e(c),c=void 0),Ee()},onNoInit(){W=!0,i(!1),G=!0,Ee()},onShell(o){return o?.__frame_revealed===!0?(Ke(),!1):en(o)?(Jn(o),!0):tn(o)?(Zn(o),!0):ln(o)?(eo(o),!0):cn(o)?(Qn(o),!0):!1},attachExtras(o){m=o,Ge(),o.assess&&ie()},inSlot:()=>Me(O),hydration(o,f){ae??={expect:o,maxMs:f}},hydrated(){Te()},carried(){return G?p:{}},presented:()=>me}}var co="frame_ldx_runtime",hn="frame_ldx_build",uo="script#an-form",pn=256;function ct(t,e,r){for(const n of t)r(n)&&t.delete(n);t.size>=pn&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function Ce(t,e,r,n){try{const a=t[e];if(typeof a!="function")return;t[e]=function(...s){if(n){let u;try{u=n(this)}catch{}if(u!==void 0)return u}const l=a.apply(this,s);try{r?.(this)}catch{}return l}}catch{}}var mn=()=>{},ut;function vn(){if(ut)return ut;const t={media:new Set,contexts:new Set,wakeLocks:new Set,gate:null,refuse:null,onStart:null,onStop:null};ut=t;const e=l=>t.gate?.(l),r=l=>{t.onStop?.(l)},n=window.HTMLMediaElement?.prototype;n&&(Ce(n,"play",l=>{ct(t.media,l,u=>u.paused),t.onStart?.(l)},e),Ce(n,"pause",r));const a=window.AudioContext,s=window.AudioNode?.prototype;a&&s&&(Ce(s,"connect",l=>{const u=l.context;u instanceof a&&(ct(t.contexts,u,A=>A.state==="closed"),t.onStart?.(u))}),Ce(a.prototype,"resume",void 0,e),Ce(a.prototype,"suspend",r));try{const l=window.WakeLock?.prototype,u=l?.request;l&&typeof u=="function"&&(l.request=function(...A){if(t.refuse)return t.refuse();const E=u.apply(this,A);return Promise.resolve(E).then(v=>{ct(t.wakeLocks,v,h=>h.released),t.onStart?.(v)},mn),E})}catch{}return t}function _n(t){let e=window;for(let r=0;e.parent&&e.parent!==e&&r<8;r++)if(e=e.parent,t(e))return!0;return!1}function yn(){let t=null;const e=()=>t??parent,r=n=>t?n===t:_n(a=>a===n);return{post(n,a){if(t){e().postMessage(n,a);return}let s=parent;for(let l=0;l<8&&(s.postMessage(n,a),!(!s.parent||s.parent===s));l++)s=s.parent},on(n){const a=s=>{const l=s.source;r(l)&&n(s.data,s.origin,s.isTrusted,()=>{t??=l})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:n=>({post(a,s){if(s?.activation){e().postMessage(a,{targetOrigin:n,includeUserActivation:!0});return}if(s?.transfer){e().postMessage(a,n,s.transfer);return}e().postMessage(a,n)},on(a,s){const l=u=>{r(u.source)&&u.origin===n&&a(u.data,u)};return addEventListener("message",l,s),()=>removeEventListener("message",l,s)}})}}function gn(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var wn=500,bn=2e4,En="data-token-reads",Sn="data-frame-refused-watch",kn="data-frame-unsupported",An=/(?:^|\s)stylesheet(?:\s|$)/i;function Rn(t,e){let r="";if(t instanceof HTMLScriptElement?r=t.src:t instanceof HTMLLinkElement&&An.test(t.rel)&&(r=t.href),!r)return null;try{const n=new URL(r);return n.origin===location.origin&&n.pathname.startsWith(e)?n.origin+n.pathname:null}catch{return null}}function Tn(t,e,r){if(!t||e!=="query")return;const n="/_f/"+t+"/";document.documentElement.setAttribute(Sn,"");const a=location.href,s=fetch,l=setTimeout,u={method:"HEAD",cache:"no-store",credentials:"same-origin"},A=g=>g.ok||g.status===304;let E=!1,v=!1;const h=()=>removeEventListener("error",P,!0),R=async g=>{const O=await s(g,u);if(A(O))v=!0;else if(O.status===403){const S=await s(a,u);if(A(S)){const p=(await s(g,u)).status;p===403?(v=!0,document.documentElement.setAttribute(kn,""),r()):p<500&&(v=!0)}else S.status>=400&&S.status<500&&(v=!0)}},P=g=>{if(v||E)return;if(document.documentElement.hasAttribute(En)){v=!0,h();return}const O=Rn(g.target,n);O&&(E=!0,l(()=>{R(O).catch(()=>{}).finally(()=>{E=!1,v&&h()})},wn))};addEventListener("error",P,!0),addEventListener("load",h,{once:!0}),l(h,bn)}var $t="__frame_scroll",zt="__frame_scroll_framed",Ln=150,On=310,Pn=160,Mn=3e4,Gt="p,h1,h2,h3,h4,h5,h6,li,pre,blockquote,tr,dt,dd,figcaption,summary",Wt=()=>innerWidth<=On&&innerHeight<=Pn,Vt=t=>{const e=document.createTreeWalker(t,NodeFilter.SHOW_TEXT);let r="";for(;r.length<600&&e.nextNode();)r+=e.currentNode.nodeValue.slice(0,600-r.length);const n=r.replace(/\s+/g," ").trim().slice(0,120);let a=2166136261;for(let s=0;s<n.length;s++)a=Math.imul(a^n.charCodeAt(s),16777619);return n.length>11?a>>>0||1:0},Xt=t=>{for(let e=t;e&&e!==document.scrollingElement;e=e.parentElement){const r=getComputedStyle(e).position;if(r==="fixed"||r==="sticky"||e!==t&&e.scrollTop)return!1}return!0},Nn=()=>{const t=[],e=[];try{for(let r=0;r<16;r++){const n=document.elementFromPoint(innerWidth/(r%2?4:2),innerHeight*(r>>1)/8+1);let a=n?.closest(Gt)??n;for(;a&&!a.matches(Gt)&&![...a.childNodes].some(l=>l.nodeType===3&&l.nodeValue?.trim());)a=a.parentElement;const s=a&&!e.includes(a)?Vt(a):0;s&&!t.some(l=>l[0]===s&&l[2]===a.tagName)&&Xt(a)&&(e.push(a),t.push([s,Math.round(a.getBoundingClientRect().top),a.tagName]))}}catch{}return t.sort((r,n)=>+(r[1]<0)-+(n[1]<0)),t.length?t.slice(0,3):void 0},Cn=t=>{try{for(const[e,r,n]of t.a??[]){const a=document.getElementsByTagName(n);let s;for(let u=0;u<a.length&&a.length<5e3;u++)Vt(a[u])===e&&(s=s===void 0||s?.contains(a[u])?a[u]:null);const l=s?.getBoundingClientRect();if(l?.height&&s.checkVisibility?.()!==!1&&Xt(s)&&isFinite(r))return Math.max(0,Math.round(scrollY+l.top-r))}}catch{}return t.y};function Fn(){try{const t=location.ancestorOrigins;return t&&(origin==="null"||t[0]!==origin)?{frame:null}:{frame:frameElement??null,nested:t&&t[1]===origin}}catch{return{frame:null}}}function Hn(){const{frame:t,nested:e}=Fn(),r=t!==null,n=()=>{try{return t.inert===!0||(e??!!t?.ownerDocument.defaultView?.frameElement)}catch{return!0}};let a;const s=()=>{if(a===void 0)try{a=location.pathname.replace(/^\/_f\/[^/]{1,128}\//,"")}catch{a=null}return a};let l=0,u=!1,A=!1,E=!1,v={y:0},h=null;const R=T=>{try{if(!r){sessionStorage.setItem($t,JSON.stringify(T));return}const x=s();x!==null&&!n()&&sessionStorage.setItem(zt,JSON.stringify({...T,p:x}))}catch{}},P=T=>{if(clearTimeout(l),h===null)return;const x=h;h=null,R({y:x,a:T&&x>0?Nn():void 0})},g=()=>{if(u){u=!1;return}A=!0,h=scrollY,clearTimeout(l),l=setTimeout(P,Ln,!0)};try{addEventListener("scroll",g,{passive:!0}),addEventListener("pagehide",()=>P())}catch{}const O=()=>{if(r&&n())return null;const T=r?zt:$t;let x;try{x=sessionStorage.getItem(T)}catch{return null}if(x===null)return null;let V;try{V=JSON.parse(x)}catch{V=null}const{y:j,a:ne,p:ge}=V??{};if(!(typeof j=="number"&&Number.isFinite(j)&&j>=0)){try{sessionStorage.removeItem(T)}catch{}return null}if(r&&ge!==s())return null;const se=X=>Array.isArray(X)&&typeof X[0]=="number"&&Number.isFinite(X[1])&&typeof X[2]=="string";return{y:j,a:Array.isArray(ne)&&ne.length<4&&ne.every(se)?ne:void 0}};let S=!1,p=-1;const B=T=>{try{const x=scrollY,V=Cn(T);scrollTo({top:V,left:0,behavior:"instant"}),v=Wt()?T:{y:V,a:T.a},E=!0,clearTimeout(l),h=null,R(v),p=scrollY,p!==x&&(u=!0);const j=V!==T.y&&document.readyState!=="complete";(p!==V||j)&&!S&&(S=!0,addEventListener("load",()=>{try{scrollY===p&&B(O()??v)}catch{}},{once:!0}))}catch{}},z=()=>{try{return!!location.hash}catch{return!0}};let G=!1;const J=()=>{try{if(G||!Wt())return;G=!0;const T=Date.now(),x=()=>{try{removeEventListener("resize",x)}catch{}Date.now()-T>Mn||A||z()||B(O()??v)};addEventListener("resize",x)}catch{}};let W=!1,D=!1;return{restore(){if(W)return;if(W=!0,r&&O()===null){R({y:0});return}if(z())return;const T=O();T!==null&&(B(T),J())},promoted(){if(D||(D=!0,z()))return;const T=O();T!==null?(B(T),J()):E&&B(v)}}}function In(t,e,r,n){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:A=>A})??null}catch{}const s=window.Worker,l=s?.prototype,u=Object.freeze({Worker:s,workerOn:l?.addEventListener,workerPost:l?.postMessage,workerTerminate:l?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});r(t).then(A=>A?.bootTopLevel?A.bootTopLevel(u,n):n.settle()).catch(()=>n.settle())}var fo="modulepreload",ho=function(t){return"/"+t},po={},mo=function(e){return e.pathname.endsWith(".css")},vo=function(e,r,n){if(r in e)return e[r];const a=n();if(!a){e[r]=void 0;return}const s=a.then(()=>{e[r]=void 0},l=>{throw e[r]=void 0,l});return e[r]=s,s},jn=function(e,r,n){let a=Promise.resolve();function s(l){const u=new Event("vite:preloadError",{cancelable:!0});if(u.payload=l,window.dispatchEvent(u),!u.defaultPrevented)throw l}return a.then(l=>{for(const u of l||[])u.status==="rejected"&&s(u.reason);return e().catch(s)})},xn=window===top,Yt=Object.getOwnPropertyDescriptor(window,"claude"),Xe=un(xn,window.__FRAME_PREAMBLE?.topLevel,Yt?.writable===!1),ft=typeof Xe=="object"&&Xe[0],F=ft?gn():yn();(function(){const t=Object.defineProperty,e=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let n=0;for(let a=0;a<r.length;a++){const s=r[a];try{t(e,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[s]}catch{}try{t(e,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[s]=="function"&&n++}if(n&&Xe==="framed")try{F.post({__frame_rtc_lockdown_failed:n},"*")}catch{}})();var Jt=1e4,Dn=2e3,dt=2e3,ht=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]),Bn="https://*.";function Zt(t){for(const e of ht)if(e.endsWith(":*"))try{const r=new URL(t);if(`${r.protocol}//${r.hostname}:*`===e)return!0}catch{}else if(e.startsWith(Bn)){if(qn(e.slice(10),t))return!0}else if(t===e)return!0;return!1}function qn(t,e){if(!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(t))return!1;let r;try{r=new URL(e)}catch{return!1}if(r.protocol!=="https:"||r.port!==""||r.origin!==e)return!1;const n=r.hostname;if(!n.endsWith(`.${t}`))return!1;const a=n.slice(0,n.length-t.length-1);return/^[a-z0-9-]+$/.test(a)}var Fe=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),He=window.__FRAME_PREAMBLE?.transforms,pt=window.__FRAME_PREAMBLE?.comments,mt=window.__FRAME_PREAMBLE?.translate,ye=window.__FRAME_PREAMBLE?.ldx,Ye=pr(window.__FRAME_PREAMBLE?.cred),Qt=(()=>{try{const[t]=performance.getEntriesByType("navigation"),e=t?.serverTiming?.find(r=>r.name==="frame-cred-exp");return e!==void 0&&/^\d{1,15}$/.test(e.description)?mr(Number(e.description)):void 0}catch{return}})();function er(t){return jn(()=>import("/_runtime/"+t),void 0)}var Ie=new Set,tr=setTimeout,Un=fetch,Kn=AbortController,$n=800+800*Math.random(),zn=3e3,Je=null,rr=new Map;function Gn(t,e){let r=rr.get(t);return r||rr.set(t,r=Wn(t,e)),r}function Wn(t,e){if(Je?.has(t))return Promise.resolve("csp");if(navigator.onLine===!1)return Promise.resolve("offline");const r=new Kn;let n=!1;return tr(()=>{n=!0,r.abort()},zn),Un("/_runtime/"+t,{signal:r.signal}).then(a=>(r.abort(),a.ok?/javascript/i.test(a.headers.get("content-type")??"")?e instanceof Error&&/:\d+:\d+\)?$/m.test(e.stack??"")?"eval":"served":"mime":"http"),()=>n?"timeout":Je?.has(t)?"csp":"net")}function he(t){if(!Je){const e=Je=new Set;try{document.addEventListener("securitypolicyviolation",r=>{const n=/\/_runtime\/([^/?#]+)/.exec(r.blockedURI);n&&r.disposition!=="report"&&e.add(n[1])})}catch{}}return er(t).catch(()=>new Promise(e=>tr(e,$n)).then(()=>er(t+"?r=1")).then(e=>(e!==void 0&&Ie.add(t),e)))}function nr(t,e,r){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},brokerGen:t.brokerGen,transforms:new Map,shellOrigin:e,shell:r,mount:bt,hooks:Ze,pipe:()=>({wrap:(n,a)=>(...s)=>{try{return a(...s)}catch(l){return Promise.reject(l)}}})}}var ke=null,ee=null;function or(t,e,r){try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var vt=!1,Ze={editBefore:null,edit:null};function Vn(t,e,r=!1){const n=[];let a;if(r)try{Ze.editBefore?.(t)}catch{}for(const s of t.elements){const l=document.querySelector(`[data-id="${s.target}"]`);if(!l){a=s.target;break}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(u=>!wr(u)||br(l,u))){a=s.target;break}if(s.text!==void 0&&(!Ar(l)||Or(l))){a=s.target;break}for(const[u,A]of Object.entries(s.attrsSet??{}))if(!sr(l,u)){try{l.setAttribute(u,A)}catch{}ar(l,u,A)}for(const u of s.attrsRemoved??[])sr(l,u)||(l.removeAttribute(u),ar(l,u,null));typeof s.text=="string"&&Tr(l,s.text),n.push(s.target)}if(r)try{Ze.edit?.(t.seq,n,a)}catch{}if(a!==void 0){F.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:n}}))}catch{}}function ar(t,e,r){if(!(t instanceof HTMLInputElement))return;const n=e.toLowerCase();n==="checked"?t.checked=r!==null:n==="value"&&t.type!=="file"&&(t.value=r??"")}function sr(t,e){const r=e.toLowerCase(),n=t;return r==="data-id"||(r==="value"||r==="checked")&&(n.__artifactSecret===!0||/^(password|hidden|file)$/.test(n.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${n.autocomplete??""}`))}function ir(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,vt=!0):vt&&(delete e.dataset.theme,e.style.colorScheme="",vt=!1)}var pe=new Map,lr=(t,e)=>Array.isArray(t)&&t.includes(e),_t=null;function yt(){let t;const e={u:new Promise(r=>{t=r}),r:r=>{e.done=!0,t(r)},done:!1,nulled:!1};return e}function je(t,e){t.nulled=!0,t.ver=e,t.r(null)}function gt(t,e){for(const[r,n]of pe)n.done||(e&&n.asked?e(r,n):je(n,t))}function Xn(){for(const t of pe.values())if(t.asked&&!t.done)return!0;return!1}var Yn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),wt=!1,bt=(t,e)=>{let r=pe.get(t);if(r?.nulled&&wt)r=yt(),pe.set(t,r);else if(!r||r.done){r?.nulled&&ee&&F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},ee);return}const n=typeof e=="function"?Object.setPrototypeOf(e,Yn):Object.assign(Object.create(null),e);typeof n.then=="function"&&delete n.then,r.want=void 0,r.r(Object.freeze(n))};function cr(){const t=Yt?.value??{};or(window,"claude",t);for(const e of Object.keys(Fe)){if(t[e]!==void 0){or(t,e,t[e]);continue}pe.set(e,yt())}if(t.use===void 0){const e=r=>{if(typeof r!="string"||!Object.hasOwn(Fe,r))return Promise.resolve(null);let n=pe.get(r);return n?(_t&&(n.nulled||n.want!==void 0)&&(n=_t(r,n)),n.asked=!0,n.u):Promise.resolve(t[r]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(Xe==="framed"){let t;const e=He&&_e.test(He)?he(He).catch(c=>{t={f:He,e:c}}):Promise.resolve(void 0),r=c=>{if(c.type==="auxclick"&&c.button!==1)return;const m=c.target,w=m&&m.closest?m.closest("a[href],area[href]"):null;if(!w)return;const M=w.getAttribute("href");if(!M)return;let H;try{H=new URL(M,document.baseURI)}catch{return}if((H.protocol==="http:"||H.protocol==="https:")&&H.origin!==location.origin){c.preventDefault();const U=(w.getAttribute("target")??"").toLowerCase(),K=c.type==="auxclick"||c.metaKey||c.ctrlKey||c.shiftKey||c.altKey||!["","_self","_top","_parent"].includes(U);F.post({__frame_nav:!0,url:H.href,newTab:K},"*")}};addEventListener("click",r,!0),addEventListener("auxclick",r,!0);const n={},a=c=>{c.isTrusted&&(n.pointer=!0)},s=c=>{c.isTrusted&&(n.click=!0)};addEventListener("pointermove",a,{capture:!0,passive:!0}),addEventListener("click",s,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",c=>l.cb?.(c),!0);const u={cb:null};addEventListener("keydown",c=>u.cb?.(c));const A=vn();e.then(c=>c?.installEscapeForward?.(l,m=>{ee&&F.post(m,ee)})),e.then(c=>{try{c?.installFocusKeep?.()}catch{}}),e.then(c=>{if(!c?.wireNav)return;const m=F.port("*");c.wireNav(m,()=>p&&Object.hasOwn(p,"nativeNewTab")?p.nativeNewTab:void 0),removeEventListener("click",r,!0),removeEventListener("auxclick",r,!0),removeEventListener("pointermove",a,!0),removeEventListener("click",s,!0),c.wireEngagement?.(n,m,A)});let E=null;try{E=Hn()}catch{}const v=document.readyState==="loading"?new Promise(c=>document.addEventListener("DOMContentLoaded",()=>c(),{once:!0})):Promise.resolve();let h="dcl",R=!1;v.then(()=>{R=!0});let P=null,g=null;try{g=zr(window.name),P=Dt(null,g)}catch{}const O=cr();let S=null;try{S=dn(O,P,{post:(c,m)=>F.post(c,m),dcl:v},g)}catch{}e.then(c=>{try{S&&c?.installHotExtras?.(S)}catch{}});let p=null;const B=()=>lr(p?.flags,"frame_ldx_runtime")&&!!ye&&_e.test(ye)&&document.querySelector("script#an-form")!==null;try{S?.hydration(B,Gr)}catch{}let z=null,G=0;const J=F.on((c,m,w,M)=>{Zt(m)&&Cr(c)&&(M(),p=c.__frame_init,ee=m,J(),clearTimeout(G),z?.())});if(Ye){const c=Qt===void 0?{__frame_cred:Ye}:{__frame_cred:Ye,exp:Qt};for(const m of ht)try{m.includes("*")||F.post(c,m)}catch{}}F.post({__frame_connect:!0},"*");try{S?.afterConnect()}catch{}const W=setTimeout,D=clearTimeout,T=()=>new Promise(c=>W(c,0));let x=()=>NaN,V=()=>[];try{x=performance.now.bind(performance),V=performance.getEntriesByType.bind(performance)}catch{}let j=0;const ne=()=>{try{F.post({__frame_alive:!0},"*")}catch{}j=W(ne,Dn)},ge=()=>D(j);ne(),addEventListener("load",ge,{once:!0});const se=new Promise(c=>{z=c,G=setTimeout(()=>{J(),c()},Jt)}),X=new WeakSet;addEventListener("error",c=>{c.target&&X.add(c.target)},!0);try{Tn(Bt(),Ye,()=>{e.then(c=>{try{c?.drawRefusedNotice?.()}catch{}})})}catch{}const we=()=>{let c=[];try{c=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(w=>!w.sheet&&!w.disabled&&!X.has(w)&&w.getAttribute("href")&&URL.canParse(w.href)&&(!w.media||matchMedia(w.media).matches))}catch{}let m=c.length;return m===0?Promise.resolve():new Promise(w=>{try{const M=dt-x();M>0&&(h="sheets");const H=W(w,M>0?M<dt?M:dt:0),U=()=>{--m===0&&(D(H),w())};for(const K of c)K.addEventListener("load",U,{once:!0}),K.addEventListener("error",U,{once:!0})}catch{w()}})};v.then(()=>{try{E?.restore()}catch{}});const Qe=Promise.all([se,v,e]).then(c=>{if(p?.hostOverlays!==!0||!ee)return;const m=c[2],w=U=>{try{return U?.()===!0}catch{return!1}},M={cover:w(m?.declaresCover),...p.hostSides===!0&&{sides:w(m?.declaresSides)},...m?.answerLayoutCheck&&{checks:!0}};if(F.post({__frame_layout:M},ee),p.hostBackground!==!0)return;const H=ee;return T().then(we).then(()=>{try{m?.watchBackground?.(U=>F.post({__frame_layout:{...M,background:U}},H))}catch{}})}),Ae={cb:null};F.on((c,m)=>{if(Zt(m)&&Fr(c)){try{E?.promoted()}catch{}Ae.cb?.()}}),se.then(async()=>{if(!p||!ee){gt();try{S?.onNoInit()}catch{}return}if(ir(p.theme),p.hostVisible===!1&&e.then(i=>i?.applyHostVisible?.(!1,A)),p.hostKeys!==void 0){const i=ee,_=p.hostKeys;e.then(b=>b?.installHostKeyForward?.(u,_,k=>F.post(k,i)))}try{S?.onInit(p.hot,ee)}catch{}let c;const m=()=>{try{!c&&ye&&B()&&(c=he(ye),c.then(i=>i?.prefetch?.()).catch(()=>{}))}catch{}};m(),v.then(m);const w=ee,M=F.port(w),H=(i,_)=>F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:i,phase:_}},w),U=(i,_,b)=>{new Promise(k=>k(Gn(_,b))).then(k=>H(i,k),()=>H(i))},K=i=>F.post({__frame_cap_recovered:{cap:i}},w);let oe=p.brokerGen;const le=()=>S?.boot.ver??"",$=le(),be=(i,_)=>{const b=le();D(_.t),_.sent=!0,_.want=b,_.t=W(()=>{_.done||(_.sent=!1,je(_,b))},Jt),F.post({__frame_cap_want:!0,cap:i,ver:b},w)},ie=(i,_)=>{const b=pe.get(i.cap),k=Fe[i.cap];if(!_||!b||b.done||b.want!==i.ver||!_e.test(k))return;if(D(b.t),b.want=void 0,oe=i.brokerGen??oe,i.ver!==le()){be(i.cap,b);return}if(!i.grant||i.cap==="network"){je(b,i.ver);return}const te=ke,Y=ke={...te,capabilities:{...te.capabilities,[i.cap]:i.grant},capBudgets:{...te.capBudgets,[i.cap]:{...te.capBudgets[i.cap],...i.budgets}}};he(k).then(Z=>{Ie.has(k)&&K(i.cap),Y.brokerGen=oe,wt=!0;try{Z?.install?.(Y)}catch{H(i.cap,"install")}finally{wt=!1}},Z=>U(i.cap,k,Z)).then(()=>{b.done||je(b,i.ver)})};let xe=!1,De=!1;F.on((i,_,b)=>{if(_!==w)return;try{if(S?.onShell(i))return}catch{}if(Ir(i)&&ir(i.__frame_theme.theme),nn(i)&&ie(i,b),b&&on(i)&&(oe=i.brokerGen??oe),Hr(i)){const Y=i.__frame_host_visible.visible;e.then(Z=>Z?.applyHostVisible?.(Y,A))}i?.__frame_native_new_tab_off&&delete p?.nativeNewTab,i?.__frame_layout_check&&e.then(Y=>Y?.answerLayoutCheck?.(i,Z=>F.post({__frame_layout_verdict:Z},w))),Nr(i)&&Vn(i.__frame_patch,w,b);const k=i?.__fc_mode;k&&typeof k=="object"&&!xe&&pt&&_e.test(pt)&&(xe=!0,he(pt).then(Y=>Y.install?.(w,k.on===!0,M)).catch(()=>{}));const te=i?.__ft_cmd;te&&typeof te=="object"&&!De&&mt&&_e.test(mt)&&(De=!0,he(mt).then(Y=>Y.install?.(w,te,M)).catch(()=>{}))});const me=Object.keys(p.capabilities??{}),Be=me.filter(i=>Object.hasOwn(Fe,i)).map(i=>[i,Fe[i]]).filter(i=>typeof i[1]=="string"&&_e.test(i[1])),ce=w;let Re=!1,qe=()=>{};const Ue=new Promise(i=>{qe=()=>{Re=!0,i()}}),Ke=()=>(Re||(h="caps"),Ue),Ee=P!==null||Ht(p.hot)||p.hostVisible===!1||p.hostOverlays===!0;R&&(h="init");const Se=p.hostBackground===!0,$e=v.then(()=>(Se&&Ke(),Se?Qe:void 0)).then(()=>Ee?Ke():T()).then(we).then(()=>{let i=!0;try{i=Ee||Xn()}catch{}return i?Ke():void 0}).then(()=>{ge();const i=vr(V,x);F.post(i?{__frame_ready:!0,nav:i,gate:h}:{__frame_ready:!0,gate:h},ce),e.then(_=>{_?.installSizeReporter?.(ce,Ae,M),_?.installPaintReporter?.(M)})}),et=await Promise.allSettled(Be.map(([,i])=>he(i))),ae=await e;if(ae?.buildBoot||(t?U("_transforms",t.f,t.e):H("_transforms")),ae?.buildBoot)try{ke=ae.buildBoot(p,ae.TRANSFORMS??{},{shellOrigin:ce,mount:bt,hooks:Ze,shell:M},i=>F.post({__frame_cap_telemetry:i},ce))}catch{H("_transforms","install"),ke=nr(p,ce,M)}else ke=nr(p,ce,M);ae?.buildBoot&&Ie.has(He??"")&&K("_transforms");const Te=ke;Te.brokerGen=oe;try{ae?.installAnchorMirror?.(M)}catch{}et.forEach((i,_)=>{const[b,k]=Be[_];if(i.status!=="fulfilled"){U(b,k,i.reason);return}Ie.has(k)&&K(b);try{i.value?.install?.(Te)}catch{H(b,"install")}});const tt=p.capWants===!0,Et=p.usable,ze=i=>!!le()&&lr(Et,i)&&!me.includes(i);tt&&(_t=(i,_)=>{const b=le();if(!b)return _;if(!_.nulled)return _.want!==b&&be(i,_),_;if(b===_.ver&&(_.sent||!ze(i)))return _;const k=yt();return pe.set(i,k),be(i,k),k}),gt($,tt?(i,_)=>le()!==$||ze(i)?be(i,_):je(_,$):void 0),qe(),await $e;let Ge=!1;try{Ge=B()}catch{}ye&&Ge?(c??he(ye)).then(i=>i?.boot?.({shellOrigin:w,build:Te.flags.has(hn),hot:S?.hot??null,carried:S?.carried(),presented:()=>S?.presented()??!0})).catch(()=>!1).then(i=>{S?.hydrated(),i!==!0?H("_ldx"):Ie.has(ye)&&K("_ldx")}):S?.hydrated()})}else ft&&(cr(),In(ft,ht,he,{settle:gt,mount:bt}))})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>헤이븐 디럭스 × 미드나잇</title>
+<style>
+:root{
+  --ink:#22243a;
+  --ink-soft:#52556e;
+  --paper:#eef0ec;
+  --surface:#ffffff;
+  --surface-sunk:#e4e7e1;
+  --line:#d8dcd4;
+  --haven:#a8661f;
+  --haven-soft:#f3e4d1;
+  --twilight:#54568f;
+  --twilight-soft:#e3e3ef;
+  --ok:#3d7a5c;
+  --ok-soft:#dcece3;
+  --warn:#a8463c;
+  --warn-soft:#f3dcd8;
+  --highlight:#ffe066;
+  --highlight-ink:#2b2306;
+  --newmoon:#6a5a9e;
+  --newmoon-soft:#e7e3f1;
+  --halfmoon:#3f7a74;
+  --halfmoon-soft:#dcece9;
+  --fullmoon:#8a4a3f;
+  --fullmoon-soft:#f1ddd8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e9e8f0;
+    --ink-soft:#b2b2c4;
+    --paper:#191a24;
+    --surface:#22232f;
+    --surface-sunk:#1c1d27;
+    --line:#343644;
+    --haven:#dba264;
+    --haven-soft:#3a2d1d;
+    --twilight:#a3a5db;
+    --twilight-soft:#2b2c42;
+    --ok:#7cc4a0;
+    --ok-soft:#1d3329;
+    --warn:#e2948a;
+    --warn-soft:#3a201d;
+    --newmoon:#b0a2dd;
+    --newmoon-soft:#302a47;
+    --halfmoon:#8ecac3;
+    --halfmoon-soft:#1e332f;
+    --fullmoon:#e0a699;
+    --fullmoon-soft:#3a251f;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e9e8f0;
+  --ink-soft:#b2b2c4;
+  --paper:#191a24;
+  --surface:#22232f;
+  --surface-sunk:#1c1d27;
+  --line:#343644;
+  --haven:#dba264;
+  --haven-soft:#3a2d1d;
+  --twilight:#a3a5db;
+  --twilight-soft:#2b2c42;
+  --ok:#7cc4a0;
+  --ok-soft:#1d3329;
+  --warn:#e2948a;
+  --warn-soft:#3a201d;
+  --newmoon:#b0a2dd;
+  --newmoon-soft:#302a47;
+  --halfmoon:#8ecac3;
+  --halfmoon-soft:#1e332f;
+  --fullmoon:#e0a699;
+  --fullmoon-soft:#3a251f;
+}
+
+*{box-sizing:border-box;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Work Sans',system-ui,sans-serif;
+  line-height:1.6;
+}
+.page{
+  max-width:1000px;
+  margin:0 auto;
+  padding:56px 24px 80px;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+h1,h2,h3{
+  font-family:'Fraunces',Georgia,serif;
+  text-wrap:balance;
+  margin:0;
+}
+.mono, .num{
+  font-family:'IBM Plex Mono',ui-monospace,monospace;
+  font-variant-numeric:tabular-nums;
+}
+
+.masthead{display:flex;flex-direction:column;gap:14px;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.masthead h1{
+  font-size:clamp(22px,2.6vw,28px);
+  font-weight:600;
+  letter-spacing:-.01em;
+}
+.ticking{
+  height:6px;
+  width:140px;
+  background:repeating-linear-gradient(
+    -45deg,
+    var(--haven) 0 6px,
+    var(--twilight) 6px 12px
+  );
+  border-radius:3px;
+  opacity:.85;
+}
+.dek{
+  max-width:66ch;
+  color:var(--ink-soft);
+  font-size:16.5px;
+}
+
+.profiles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+@media (max-width:720px){ .profiles{grid-template-columns:1fr;} }
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:26px 26px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.card.haven{border-top:4px solid var(--haven);}
+.card.midnight{border-top:4px solid var(--twilight);}
+
+.card .brand-eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.card.haven .brand-eyebrow{color:var(--haven);}
+.card.midnight .brand-eyebrow{color:var(--twilight);}
+
+.card h2{font-size:23px;font-weight:600;}
+.feat-list{
+  list-style:none;
+  margin:0;padding:0;
+  display:flex;flex-direction:column;gap:7px;
+  font-size:14.5px;
+}
+.feat-list li{display:flex;gap:9px;align-items:baseline;}
+.feat-list li::before{
+  content:"";
+  width:5px;height:5px;border-radius:50%;
+  background:var(--ink-soft);
+  flex:none;
+  transform:translateY(-2px);
+}
+
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.02em;
+  padding:2px 8px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+.chip.ok{background:var(--ok-soft);color:var(--ok);}
+.chip.warn{background:var(--warn-soft);color:var(--warn);}
+
+mark{
+  background:var(--highlight);
+  color:var(--highlight-ink);
+  padding:1px 6px;
+  border-radius:3px;
+  font-weight:600;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
+.price-block{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:start;
+}
+.table-scroll{overflow-x:auto;}
+.twilight-price table{min-width:620px;}
+.twilight-price table th, .twilight-price table td{padding-right:8px;}
+@media (max-width:720px){ .price-block{grid-template-columns:1fr;} }
+.price-table{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px 22px;
+}
+.price-table h3{font-size:16px;font-weight:600;margin-bottom:4px;}
+.price-table .note{font-size:12.5px;color:var(--ink-soft);margin-bottom:12px;}
+table{border-collapse:collapse;width:100%;font-size:14.5px;}
+.price-table table td, .price-table table th{
+  padding:7px 4px;
+  text-align:right;
+  border-bottom:1px solid var(--line);
+}
+.price-table table th:first-child, .price-table table td:first-child{text-align:left;}
+.price-table table th{
+  font-weight:600;color:var(--ink-soft);
+  font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;
+}
+.price-pending{
+  display:flex;flex-direction:column;gap:8px;
+  font-size:13.5px;color:var(--ink-soft);
+  background:var(--surface-sunk);
+  border-radius:10px;padding:14px 16px;
+}
+
+.stacks-head{display:flex;flex-direction:column;gap:6px;margin-bottom:4px;}
+.stacks-head .dek{font-size:14.5px;}
+.stacks{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:16px;
+}
+.stack-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px 20px 18px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.stack-card.deluxe{border-top:4px solid var(--haven);}
+.stack-card.newmoon{border-top:4px solid var(--newmoon);}
+.stack-card.halfmoon{border-top:4px solid var(--halfmoon);}
+.stack-card.fullmoon{border-top:4px solid var(--fullmoon);}
+.stack-card h4{font-family:'Fraunces',Georgia,serif;font-size:17px;font-weight:600;}
+.stack-card .count{font-size:11.5px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;}
+.stack-card .tagline{font-size:12px;color:var(--ink-soft);font-style:italic;}
+.layer-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.layer-list li{display:flex;gap:9px;font-size:13px;line-height:1.4;}
+.layer-list .idx{
+  flex:none;width:19px;height:19px;border-radius:50%;
+  background:var(--surface-sunk);
+  color:var(--ink-soft);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;
+}
+.layer-list .mat{font-weight:600;}
+.layer-list .desc{color:var(--ink-soft);font-size:12px;display:block;}
+.layer-list li.diff .idx{background:var(--diff-c,var(--twilight-soft));color:var(--diff-ink,var(--twilight));}
+.layer-list li.diff .mat{color:var(--diff-ink,var(--twilight));}
+.stack-card.newmoon li.diff{--diff-c:var(--newmoon-soft);--diff-ink:var(--newmoon);}
+.stack-card.halfmoon li.diff{--diff-c:var(--halfmoon-soft);--diff-ink:var(--halfmoon);}
+.stack-card.fullmoon li.diff{--diff-c:var(--fullmoon-soft);--diff-ink:var(--fullmoon);}
+.diff-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.03em;}
+
+.matrix-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);}
+.matrix{width:100%;border-collapse:collapse;min-width:640px;font-size:14px;}
+.matrix th, .matrix td{
+  padding:14px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.matrix thead th{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
+  background:var(--surface-sunk);
+}
+.matrix tbody th{
+  font-weight:600;
+  width:120px;
+  color:var(--ink-soft);
+  font-size:13px;
+  background:var(--surface-sunk);
+}
+.matrix td.haven-col{border-left:3px solid var(--haven-soft);}
+.matrix td.midnight-col{border-left:3px solid var(--twilight-soft);}
+.matrix tr:last-child td, .matrix tr:last-child th{border-bottom:none;}
+.tip-row td{
+  background:var(--surface-sunk);
+  border-left:3px solid var(--ink-soft);
+  font-size:13px;
+  color:var(--ink-soft);
+  padding:14px 16px;
+}
+.tip-row .tip-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:.06em;
+  color:var(--ink);
+  font-weight:600;
+  margin-right:6px;
+}
+.matrix ul{margin:0;padding-left:16px;}
+.matrix li{margin-bottom:2px;}
+
+.flow-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:28px 28px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.flow-card h2{font-size:22px;font-weight:600;}
+.flow-card .dek{font-size:14.5px;margin:0;}
+.flow-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+.flow-steps > li{display:flex;gap:18px;position:relative;padding-bottom:26px;}
+.flow-steps > li:last-child{padding-bottom:0;}
+.step-num{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--ink);
+  color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:15px;
+  position:relative;z-index:1;
+}
+.flow-steps > li:not(:last-child)::before{
+  content:"";
+  position:absolute;
+  left:16px;
+  top:36px;
+  bottom:-2px;
+  width:2px;
+  background:var(--line);
+}
+.step-body{flex:1;padding-top:5px;}
+.step-body h4{font-family:'Fraunces',Georgia,serif;font-size:16.5px;font-weight:600;margin:0 0 6px;}
+.step-body p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.6;}
+.step-body ul{padding-left:18px;display:flex;flex-direction:column;gap:7px;margin:6px 0 0;}
+.step-body ul li{list-style:disc;font-size:14px;color:var(--ink-soft);line-height:1.55;}
+.step-body b{color:var(--ink);}
+.step-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:.04em;
+  color:var(--twilight);
+  text-transform:uppercase;
+}
+
+.moon-table{margin:0;}
+.moon-table table{font-size:13.5px;}
+.moon-table th, .moon-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;}
+
+footer{
+  font-size:12.5px;
+  color:var(--ink-soft);
+  border-top:1px solid var(--line);
+  padding-top:18px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+footer .legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:4px;}
+footer .legend span{display:flex;align-items:center;gap:6px;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<div class="page">
+
+  <div class="masthead">
+    <div class="eyebrow">대전둔산 컬렉티브 · 매트리스 비교 노트</div>
+    <h1>헤이븐 디럭스 × 미드나잇</h1>
+    <div class="ticking"></div>
+    <p class="dek">고객이 "헤이븐 디럭스랑 슬로우베드 미드나잇이랑 뭐가 달라요?" 물을 때 펼쳐보는 한 장. 일룸 헤이븐 디럭스와 슬로우베드 미드나잇 시리즈(뉴문·하프문·풀문)만 비교합니다 — 시그니처, 트와일라잇 등 다른 라인은 제외.</p>
+  </div>
+
+  <div class="profiles">
+    <div class="card haven">
+      <div class="brand-eyebrow">iloom · 침실 통합</div>
+      <h2>헤이븐 디럭스 Haven Deluxe</h2>
+      <ul class="feat-list">
+        <li>상단이 민자(퀼팅 없음) — 분리형 오코텍스 1등급 상단커버, 탈부착 세탁 가능</li>
+        <li>새니타이즈 항균 패딩 — 양모패딩은 시그니처 전용, 디럭스엔 없음</li>
+        <li>7조닝 올인원폼(저·중·고탄성 일체형 성형, 이음새 없음)</li>
+        <li>프로그레시브 큐알루마 독립 스프링(1단) — 구리+알루미늄 도금, 56만회 내구 테스트</li>
+        <li>매트리스 본품 5년 무상보증 <span class="chip ok">확인됨</span></li>
+        <li>하드·미디엄·소프트 3단계 중 선택 (경도 무관 동일가)</li>
+      </ul>
+    </div>
+
+    <div class="card midnight">
+      <div class="brand-eyebrow">SLOU BED · 수면 전문</div>
+      <h2>미드나잇 Midnight</h2>
+      <ul class="feat-list">
+        <li>상단이 퀼팅 — 뉴문·하프문·풀문마다 다른 퀼팅 원단(그레이 멜란지 니트)</li>
+        <li>302H 스테인리스 포켓스프링(프로그레시브) — 원소재 자체가 내식성, 56만회 내구 테스트</li>
+        <li>뉴문·하프문은 7존 S-M-H 조닝, 풀문은 1조닝(전면 균일 지지)</li>
+        <li>獨 ADVANSA 항균 + EU Ecolabel + 해양 리사이클 소재(Plastic Bank 협업)</li>
+        <li>SS 기준 1,880,000~2,180,000원(모델별, 정가) <span class="chip ok">확인됨</span> · 매트리스 5년 무상 A/S <span class="chip ok">확인됨</span></li>
+        <li>뉴문(Medium-Soft)·하프문(Medium)·풀문(Medium-Firm) 3종 중 선택</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="price-block">
+    <div class="price-table">
+      <h3>헤이븐 디럭스 사이즈별 가격</h3>
+      <div class="note">경도 무관 동일가 · iloom.com 2026-10-08 기준 <span class="chip ok">확인됨</span></div>
+      <table>
+        <thead><tr><th>사이즈</th><th>가격</th></tr></thead>
+        <tbody>
+          <tr><td>SS</td><td class="num"><mark>1,590,000</mark></td></tr>
+          <tr><td>Q</td><td class="num"><mark>1,850,000</mark></td></tr>
+          <tr><td>K</td><td class="num"><mark>2,050,000</mark></td></tr>
+          <tr><td>KK</td><td class="num"><mark>2,390,000</mark></td></tr>
+        </tbody>
+      </table>
+      <div class="note" style="margin-top:10px;margin-bottom:0;">참고: 2024-06-18자 매장 POP 자료엔 SS 1,490,000 등 더 낮은 가격이 적혀있었음 — 구버전이므로 위 2026-10-08 공식몰 가격을 기준으로 안내.</div>
+    </div>
+
+    <div class="price-table twilight-price">
+      <h3>미드나잇 사이즈별 가격</h3>
+      <div class="note">담당자 제공 품목 가격표 스크린샷(2026-10-16) · 30% 할인가 역산 정가 <span class="chip ok">확인됨</span></div>
+      <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th rowspan="2">사이즈</th><th colspan="2">뉴문</th><th colspan="2">하프문</th><th colspan="2">풀문</th></tr>
+          <tr><th>정가</th><th>30%할인가</th><th>정가</th><th>30%할인가</th><th>정가</th><th>30%할인가</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SS</td><td class="num">2,180,000</td><td class="num"><mark>1,526,000</mark></td><td class="num">2,070,000</td><td class="num"><mark>1,449,000</mark></td><td class="num">1,880,000</td><td class="num"><mark>1,316,000</mark></td></tr>
+          <tr><td>Q</td><td class="num">2,920,000</td><td class="num"><mark>2,044,000</mark></td><td class="num">2,780,000</td><td class="num"><mark>1,946,000</mark></td><td class="num">2,630,000</td><td class="num"><mark>1,841,000</mark></td></tr>
+          <tr><td>K</td><td class="num">3,580,000</td><td class="num"><mark>2,506,000</mark></td><td class="num">3,420,000</td><td class="num"><mark>2,394,000</mark></td><td class="num">3,250,000</td><td class="num"><mark>2,275,000</mark></td></tr>
+          <tr><td>KK</td><td class="num">3,930,000</td><td class="num"><mark>2,751,000</mark></td><td class="num">3,740,000</td><td class="num"><mark>2,618,000</mark></td><td class="num">3,550,000</td><td class="num"><mark>2,485,000</mark></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note" style="margin-top:10px;margin-bottom:0;">품목코드: 뉴문 SLMM0110L~0180L · 하프문 SLMM0110N~0180N · 풀문 SLMM0110P~0180P. KK는 비재고 — 주문 전 재고 확인 필요.</div>
+    </div>
+  </div>
+
+  <div class="stacks-head">
+    <div class="eyebrow">레이어 구조 상세 — 내부 구성 단면도 기준</div>
+    <p class="dek">위에서 아래로 쌓이는 순서 그대로. 헤이븐 디럭스는 6겹, 미드나잇 시리즈는 뉴문·하프문·풀문 모두 7겹 — 세 모델은 7겹 중 단 2겹(최상단 커버 원단, 최하단 스프링 조닝 방식)만 다르고(<span class="diff-tag" style="color:var(--newmoon);">●</span> 표시) 나머지 5겹은 완전히 동일합니다.</p>
+  </div>
+
+  <div class="stacks">
+    <div class="stack-card deluxe">
+      <div>
+        <h4>헤이븐 디럭스</h4>
+        <div class="count">6 LAYERS</div>
+      </div>
+      <ol class="layer-list">
+        <li><span class="idx">1</span><span><span class="mat">오코텍스 1등급 분리형 상단커버</span><span class="desc">벨기에 Heritage社 LAVA원단, 세탁 가능</span></span></li>
+        <li><span class="idx">2</span><span><span class="mat">새니타이즈 항균 패딩</span><span class="desc">사선이중직B 원단 + 새니타이즈 8oz</span></span></li>
+        <li><span class="idx">3</span><span><span class="mat">레코텍폼(상)</span><span class="desc">체압 1차 분산</span></span></li>
+        <li><span class="idx">4</span><span><span class="mat">7조닝 올인원폼(하)</span><span class="desc">저·중·고탄성 일체형, 부위별 지지력 차등</span></span></li>
+        <li><span class="idx">5</span><span><span class="mat">프로그레시브 큐알루마 포켓스프링</span><span class="desc">구리+알루미늄 도금, 체중감응형 지지·항균, 56만회 내구</span></span></li>
+        <li><span class="idx">6</span><span><span class="mat">폼케이스</span><span class="desc">스프링 보호, 형태 안정</span></span></li>
+      </ol>
+    </div>
+
+    <div class="stack-card newmoon">
+      <div>
+        <h4>미드나잇 뉴문</h4>
+        <div class="count">7 LAYERS · MEDIUM-SOFT</div>
+        <div class="tagline">for the daydreamer</div>
+      </div>
+      <ol class="layer-list">
+        <li class="diff"><span class="idx">1</span><span><span class="mat">퀼팅 커버 (뉴문 전용 원단)</span><span class="desc">그레이 멜란지 니트</span></span></li>
+        <li><span class="idx">2</span><span><span class="mat">울트라 리사이클 패딩</span><span class="desc">해양 플라스틱 유래, Plastic Bank 협업</span></span></li>
+        <li><span class="idx">3</span><span><span class="mat">스마트셀 패딩</span><span class="desc">통기성</span></span></li>
+        <li><span class="idx">4</span><span><span class="mat">에센셜폼</span><span class="desc">완충</span></span></li>
+        <li><span class="idx">5</span><span><span class="mat">3D 서스펜션폼</span><span class="desc">충격 흡수</span></span></li>
+        <li><span class="idx">6</span><span><span class="mat">레코텍 메모리폼</span><span class="desc">Pillow층, 체압 분산</span></span></li>
+        <li class="diff"><span class="idx">7</span><span><span class="mat">302H 스테인리스 포켓스프링 · 7존 S-M-H</span><span class="desc">어깨·골반 결림 완화 설계</span></span></li>
+      </ol>
+    </div>
+
+    <div class="stack-card halfmoon">
+      <div>
+        <h4>미드나잇 하프문</h4>
+        <div class="count">7 LAYERS · MEDIUM</div>
+        <div class="tagline">for the philosopher</div>
+      </div>
+      <ol class="layer-list">
+        <li class="diff"><span class="idx">1</span><span><span class="mat">퀼팅 커버 (하프문 전용 원단)</span><span class="desc">그레이 멜란지 니트</span></span></li>
+        <li><span class="idx">2</span><span><span class="mat">울트라 리사이클 패딩</span><span class="desc">해양 플라스틱 유래, Plastic Bank 협업</span></span></li>
+        <li><span class="idx">3</span><span><span class="mat">스마트셀 패딩</span><span class="desc">통기성</span></span></li>
+        <li><span class="idx">4</span><span><span class="mat">에센셜폼</span><span class="desc">완충</span></span></li>
+        <li><span class="idx">5</span><span><span class="mat">3D 서스펜션폼</span><span class="desc">충격 흡수</span></span></li>
+        <li><span class="idx">6</span><span><span class="mat">레코텍 메모리폼</span><span class="desc">Pillow층, 체압 분산</span></span></li>
+        <li class="diff"><span class="idx">7</span><span><span class="mat">302H 스테인리스 포켓스프링 · 7존 S-M-H</span><span class="desc">신체 이완 돕는 부드러움</span></span></li>
+      </ol>
+    </div>
+
+    <div class="stack-card fullmoon">
+      <div>
+        <h4>미드나잇 풀문</h4>
+        <div class="count">7 LAYERS · MEDIUM-FIRM</div>
+        <div class="tagline">for the explorer</div>
+      </div>
+      <ol class="layer-list">
+        <li class="diff"><span class="idx">1</span><span><span class="mat">퀼팅 커버 (풀문 전용 원단)</span><span class="desc">그레이 멜란지 니트</span></span></li>
+        <li><span class="idx">2</span><span><span class="mat">울트라 리사이클 패딩</span><span class="desc">해양 플라스틱 유래, Plastic Bank 협업</span></span></li>
+        <li><span class="idx">3</span><span><span class="mat">스마트셀 패딩</span><span class="desc">통기성</span></span></li>
+        <li><span class="idx">4</span><span><span class="mat">에센셜폼</span><span class="desc">완충</span></span></li>
+        <li><span class="idx">5</span><span><span class="mat">3D 서스펜션폼</span><span class="desc">충격 흡수</span></span></li>
+        <li><span class="idx">6</span><span><span class="mat">레코텍 메모리폼</span><span class="desc">Pillow층, 체압 분산</span></span></li>
+        <li class="diff"><span class="idx">7</span><span><span class="mat">302H 스테인리스 포켓스프링 · 1조닝 균일지지</span><span class="desc">전면 고른 탄성·지지력</span></span></li>
+      </ol>
+    </div>
+  </div>
+  <p class="dek" style="font-size:12px;">* 뉴문·하프문·풀문 컨셉명(daydreamer·philosopher·explorer)은 touchclass 교육자료 표기 그대로이며, 품목명은 각각 SLMM0110L·SLMM0110N·SLMM0110P.</p>
+
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr><th>구분</th><th>헤이븐 디럭스</th><th>미드나잇 (뉴문·하프문·풀문)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>스프링 기술</th>
+          <td class="haven-col">큐알루마 독립 스프링(1단) — 구리+알루미늄 <b>도금</b>, 항균·내식성(제조사 표기). 100kg·56만회 내구 테스트 통과<br><span style="font-size:12px;color:var(--ink-soft);">※ 도금은 표면처리라 장기간 압축·마찰로 손상되면 이론적으로 그 부위부터 부식 가능성 있음</span></td>
+          <td class="midnight-col">302H 포켓스프링 — 소재 자체가 <b>스테인리스(합금 원소재)</b>. 동일하게 100kg·56만회 수직압축시험 통과<br><span style="font-size:12px;color:var(--ink-soft);">소재 전체가 내식성이라 도금 벗겨짐 리스크가 구조적으로 없음 — 다만 항균은 스프링이 아니라 ADVANSA 패딩층이 담당</span></td>
+        </tr>
+        <tr class="tip-row">
+          <td colspan="3"><span class="tip-label">현장 멘트 가이드</span>도금 vs 합금 얘기는 먼저 꺼내지 마세요 — 대부분 고객에겐 불필요한 불안만 줍니다. 고객이 직접 캐물을 때만 답하되, "단점 고백"이 아니라 "설계 철학"으로 포지셔닝하세요. <b>헤이븐</b>: "구리 도금 자체가 항균 효과를 주려고 넣은 거예요, 보증 안에선 문제없게 설계·테스트됐고요." <b>미드나잇</b>: "오래 쓰시는 걸 염두에 두고 스프링 자체를 스테인리스로 만든 거예요." 그래도 더 캐물으면 — "이론적으로 아주 장기간·심한 마모 시 가능하지만 문제 사례는 없다" 선에서 솔직하되 불안을 키우지 않게 답하세요.</td>
+        </tr>
+        <tr>
+          <th>조닝 설계</th>
+          <td class="haven-col">7조닝 올인원폼 — 저·중·고탄성 폼을 이음새 없이 일체 성형</td>
+          <td class="midnight-col">뉴문·하프문: 7존 S-M-H 포켓스프링(부위별 경도 차등) / 풀문: 1조닝 — 전면 균일 지지 (제품 설계 철학 자체가 다름)</td>
+        </tr>
+        <tr>
+          <th>레이어 수</th>
+          <td class="haven-col">6겹 — 분리형 커버, 새니타이즈 패딩, 레코텍폼, 7조닝 올인원폼, 큐알루마 스프링, 폼케이스. 양모패딩·3D프로파일폼·에어플로우폼 없음(시그니처 전용)</td>
+          <td class="midnight-col">7겹(3종 공통) — 퀼팅, 울트라리사이클패딩, 스마트셀패딩, 에센셜폼, 3D서스펜션폼, 레코텍 메모리폼, 302H 스테인리스 스프링. 위 "레이어 구조 상세" 참고</td>
+        </tr>
+        <tr>
+          <th>표면 촉감</th>
+          <td class="haven-col">상단 민자(퀼팅 없음) — 바로 단단하게 받쳐주는 지지감</td>
+          <td class="midnight-col">상단 퀼팅 — 누웠을 때 몸을 감싸는 느낌. 뉴문&lt;하프문&lt;풀문 순으로 단단함 증가</td>
+        </tr>
+        <tr>
+          <th>친환경 · 인증</th>
+          <td class="haven-col">Oeko-Tex Class 1(원단), 한일원자력 라돈·토론 매년 시험(일반 권고기준 10배 미만)</td>
+          <td class="midnight-col">獨 ADVANSA 항균(NF G30-013 방충시험), EU Ecolabel(원재료~제조~유통 전과정), 해양플라스틱 리사이클(Plastic Bank 협업), 42가지 품질테스트</td>
+        </tr>
+        <tr>
+          <th>보증</th>
+          <td class="haven-col">매트리스 본품: 스프링·폼·부자재 전체 5년 무상보증 <span class="chip ok">확인됨</span></td>
+          <td class="midnight-col">매트리스 5년 무상 A/S <span class="chip ok">확인됨</span> — 슬로우베드 공식 AS 적용기준 문서 기준<br><span style="font-size:12px;color:var(--ink-soft);">조건: 공식 홈페이지 정품인증 완료 상품에 한함(납기 후 6개월 내 미인증 시 1년으로 축소), 부품 단위 조치 원칙, 3cm 이상 영구적 꺼짐 등 판정 가능한 하자만 해당(고객 부주의는 무상기간 내도 별도 비용)</span></td>
+        </tr>
+        <tr>
+          <th>사이즈 · 높이</th>
+          <td class="haven-col">SS·Q·K·KK, 높이 330mm(디럭스 등급 전 사이즈 공통) <span class="chip ok">확인됨</span></td>
+          <td class="midnight-col">SS 1100×2000 · Q 1500×2000 · K 1650×2000 · KK 1800×2075(비재고), 전 사이즈 H340mm(커버 포함) <span class="chip warn">touchclass 자료 기준 — 공식몰 재확인 권장</span></td>
+        </tr>
+        <tr>
+          <th>가격대 (SS)</th>
+          <td class="haven-col"><mark>1,590,000</mark></td>
+          <td class="midnight-col">뉴문 2,180,000 / 하프문 2,070,000 / 풀문 <mark>1,880,000</mark> <span class="mono" style="font-size:12px;color:var(--ink-soft);">(30%할인가: 1,526,000 / 1,449,000 / 1,316,000)</span> <span class="chip ok">확인됨</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="moon-table">
+    <div class="eyebrow" style="margin-bottom:8px;">미드나잇 3종 간단 비교</div>
+    <table>
+      <thead><tr><th>모델</th><th>경도</th><th>조닝</th><th>컨셉</th><th>한 줄 세일즈 포인트</th></tr></thead>
+      <tbody>
+        <tr><td>뉴문</td><td>Medium-Soft</td><td>7존 S-M-H</td><td>daydreamer</td><td>"어깨와 골반 결림 없는 유연함"</td></tr>
+        <tr><td>하프문</td><td>Medium</td><td>7존 S-M-H</td><td>philosopher</td><td>"신체 이완을 돕는 촉직한 부드러움"</td></tr>
+        <tr><td>풀문</td><td>Medium-Firm</td><td>1조닝 균일</td><td>explorer</td><td>"뛰어난 탄성과 고른 지지력"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flow-card">
+    <div>
+      <div class="eyebrow">체험 기반 세일즈 플로우</div>
+      <h2>누워보기 전에, 왜 왔는지부터</h2>
+    </div>
+    <p class="dek">헤이븐 디럭스와 미드나잇은 가만히 누워서 비교하면 비슷하게 느껴집니다. 체험을 고객 니즈에 맞는 능동적 테스트로 설계해야 진짜 차이가 드러납니다.</p>
+
+    <ol class="flow-steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-tag">Probe</div>
+          <h4>눕기 전에 니즈부터 확인</h4>
+          <p>"같이 주무시나요?" "허리나 어깨 불편하신가요?" "환경·친환경 소재에 관심 있으신가요?" — 답에 따라 헤이븐과 미드나잇 중 방향을 잡고, 미드나잇이라면 뉴문·하프문·풀문 중 어디로 좁힐지가 정해집니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-tag">Active Trial</div>
+          <h4>순서: 헤이븐 디럭스 먼저 → 미드나잇 나중에</h4>
+          <p>단단한 쪽을 먼저 체험시켜야 그 다음 미드나잇의 포근함이 대비로 또렷하게 느껴집니다.</p>
+          <ul>
+            <li><b>허리 밑 손 넣기 테스트 (신뢰 확인용)</b> — 둘 다 들뜸 없이 받쳐주는지 먼저 확인시키세요.</li>
+            <li><b>상단 눌러보기 테스트 (촉감 차이)</b> — 헤이븐은 상단이 민자라 바로 단단한 반발감, 미드나잇은 퀼팅 때문에 손이 폭 들어가는 포근함.</li>
+            <li><b>동반수면이 걱정인 고객</b> — 두 분이 동시에 누워 한 분이 뒤척이게 하고 비교. 미드나잇 중에서도 하프문(7존 분리)과 풀문(1조닝 균일)의 흔들림 전달 차이가 이 테스트에서 체감됩니다.</li>
+          </ul>
+          <p style="margin-top:4px;">테스트가 끝나면 "단단하게 받쳐주는 느낌이 좋으세요, 포근하게 감싸는 느낌이 더 좋으세요?"로 큰 방향을, 미드나잇 쪽이면 "결 좋은 부드러움이세요, 고르게 탄탄한 느낌이세요?"로 세부 모델을 좁히세요.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-tag">Show, Don't Tell</div>
+          <h4>안 보이는 차이는 보여주기</h4>
+          <p>촉감으로 잘 안 느껴지는 내장재 차이(6겹 vs 7겹, 조닝 방식)는 위 "레이어 구조 상세" 단면도를 고객이 누워있는 상태에서 직접 짚어가며 보여주세요.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-tag">Offer</div>
+          <h4>가격을 "품질"이 아니라 "용도·가치관"으로 설명</h4>
+          <p>친환경·ESG에 관심 있는 고객에겐 미드나잇의 해양플라스틱 리사이클·EU Ecolabel 스토리를, 품질관리 신뢰를 중시하는 고객에겐 헤이븐의 한일원자력 라돈 자체 시험·자사 공장 생산 스토리를 1단계에서 확인한 니즈로 되돌아가 마무리하세요. 두 제품 다 우열이 아니라 서로 다른 답이라는 톤을 유지하세요.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <footer>
+    <div class="legend">
+      <span class="chip ok">확인됨</span> 공식 채널 또는 2026-10-08 확인 자료 기준
+      <span class="chip warn">확인필요</span> 출처 간 불일치, 숫자 미기재, 또는 매장 최신 자료 재확인 권장
+    </div>
+    <div>출처: 240618 헤이븐 매트리스 한눈에보기 POP · 헤이븐 매트리스 세일즈화법.pdf · 매트리스 품질관리_정리자료.pdf · 매트리스 비교(쿠시노,헤이븐).xlsx · 슬로우베드 미드나잇 touchclass 교육자료 및 품목 가격표 스크린샷(2026-10-16) · 슬로우베드 AS 적용기준 문서(Confidential, 2026-10-16) · iloom.com 제품페이지(2026-10-08 확인) · 대전둔산 컬렉티브 세일즈톡 아티팩트</div>
+    <div>가격·보증 조건은 수시 개정됩니다 — 실제 상담 전 매장 최신 가격표·보증 안내문으로 반드시 재확인하세요.</div>
+  </footer>
+
+</div>
+
+</body></html>
