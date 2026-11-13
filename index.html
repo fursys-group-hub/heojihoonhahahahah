@@ -50,45 +50,42 @@
     margin: 0 auto;
     padding: 0 24px 64px;
   }
-  section { margin-top: 40px; }
+  section { margin-top: 44px; }
   section h2 {
-    font-size: 1.05rem;
-    color: var(--accent);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
     margin-bottom: 16px;
+    letter-spacing: -.01em;
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
   }
   a.card {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 18px;
+    border-radius: 8px;
+    padding: 8px 10px;
     text-decoration: none;
     color: var(--text);
-    transition: border-color .15s ease, transform .15s ease;
+    transition: border-color .15s ease, background .15s ease;
   }
   a.card:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
+    background: var(--bg);
   }
-  .card .emoji { font-size: 1.4rem; }
+  .card .emoji { font-size: 0.85rem; flex: none; }
   .card .title {
-    display: block;
-    margin-top: 8px;
     font-weight: 600;
-    font-size: 0.95rem;
-  }
-  .card .desc {
-    display: block;
-    margin-top: 4px;
-    font-size: 0.8rem;
-    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.3;
   }
   footer {
     max-width: 960px;
@@ -164,43 +161,37 @@
     <div class="sub">
       <h3>매트리스</h3>
       <div class="grid">
-        <a class="card" href="pages/haven-midnight.html">
+        <a class="card" href="pages/haven-midnight.html" title="헤이븐 디럭스 vs 슬로우베드 미드나잇(뉴문/하프문/풀문)">
           <span class="emoji">🌙</span>
           <span class="title">헤이븐 디럭스 × 미드나잇</span>
-          <span class="desc">헤이븐 디럭스 vs 슬로우베드 미드나잇(뉴문/하프문/풀문)</span>
         </a>
-        <a class="card" href="pages/haven-twilight.html">
+        <a class="card" href="pages/haven-twilight.html" title="헤이븐과 트와일라잇 매트리스 비교">
           <span class="emoji">🌗</span>
           <span class="title">헤이븐 × 트와일라잇</span>
-          <span class="desc">헤이븐과 트와일라잇 매트리스 비교</span>
         </a>
-        <a class="card" href="pages/daily-moonray.html">
+        <a class="card" href="pages/daily-moonray.html" title="일룸 데일리(1년 보증) vs 슬로우베드 이브닝 시리즈 문레이(5년 보증)">
           <span class="emoji">🌇</span>
           <span class="title">데일리 × 이브닝 문레이</span>
-          <span class="desc">일룸 데일리(1년 보증) vs 슬로우베드 이브닝 시리즈 문레이(5년 보증)</span>
         </a>
       </div>
 
       <h3>토퍼</h3>
       <div class="grid">
-        <a class="card" href="pages/topper-haven-allround-maximum.html">
+        <a class="card" href="pages/topper-haven-allround-maximum.html" title="헤이븐 멀티토퍼 vs 슬로우베드 올라운드/그라운드밸런스/맥시멈">
           <span class="emoji">🧺</span>
           <span class="title">헤이븐 멀티 × 올라운드 × 맥시멈</span>
-          <span class="desc">헤이븐 멀티토퍼 vs 슬로우베드 올라운드/그라운드밸런스/맥시멈</span>
         </a>
       </div>
 
       <h3>모션베드</h3>
       <div class="grid">
-        <a class="card" href="pages/motion-casual-draw-evening.html">
+        <a class="card" href="pages/motion-casual-draw-evening.html" title="모션베드 라인업 비교 (1/2)">
           <span class="emoji">🛏️</span>
           <span class="title">캐주얼 × 드로우 × 이브닝모션</span>
-          <span class="desc">모션베드 라인업 비교 (1/2)</span>
         </a>
-        <a class="card" href="pages/motion-arjian-basel-more-moonray-halfmoon.html">
+        <a class="card" href="pages/motion-arjian-basel-more-moonray-halfmoon.html" title="모션베드 라인업 비교 (2/2)">
           <span class="emoji">🛏️</span>
           <span class="title">아르지안 × 바젤 × 모어 × 문레이 × 하프문</span>
-          <span class="desc">모션베드 라인업 비교 (2/2)</span>
         </a>
       </div>
     </div>
@@ -211,11 +202,10 @@
   <section id="study">
     <h2>🪑 스터디</h2>
     <div class="grid">
-      <a class="card" href="pages/motion-desk-roy-newt-vs-desker.html">
-        <span class="emoji">🪑</span>
-        <span class="title">로이 · 뉴트 × 데스커 모션데스크</span>
-        <span class="desc">iloom 로이·뉴트 vs DESKER 스마트·플러스·알파2.0·프리미엄 라인업 비교</span>
-      </a>
+      <a class="card" href="pages/motion-desk-roy-newt-vs-desker.html" title="iloom 로이·뉴트 vs DESKER 스마트·플러스·알파2.0·프리미엄 라인업 비교">
+          <span class="emoji">🪑</span>
+          <span class="title">로이 · 뉴트 × 데스커 모션데스크</span>
+        </a>
     </div>
   </section>
 
@@ -238,11 +228,10 @@
   <section id="kids">
     <h2>🧸 키즈</h2>
     <div class="grid">
-      <a class="card" href="pages/kids-mattress-nuk-daily-coco-cushino.html">
-        <span class="emoji">🧸</span>
-        <span class="title">누크 × 데일리 × 코코 × 쿠시노</span>
-        <span class="desc">키즈 매트리스 라인업 비교</span>
-      </a>
+      <a class="card" href="pages/kids-mattress-nuk-daily-coco-cushino.html" title="키즈 매트리스 라인업 비교">
+          <span class="emoji">🧸</span>
+          <span class="title">누크 × 데일리 × 코코 × 쿠시노</span>
+        </a>
     </div>
   </section>
 
@@ -254,15 +243,13 @@
     <div class="sub">
       <h3>소재 · 패브릭</h3>
       <div class="grid">
-        <a class="card" href="pages/alloso-leather-swatch.html">
+        <a class="card" href="pages/alloso-leather-swatch.html" title="3등급 · 6품번 · 30컬러 가죽 스와치">
           <span class="emoji">🤎</span>
           <span class="title">알로소 레더 스와치</span>
-          <span class="desc">3등급 · 6품번 · 30컬러 가죽 스와치</span>
         </a>
-        <a class="card" href="pages/fabric-swatch-sheet.html">
+        <a class="card" href="pages/fabric-swatch-sheet.html" title="패브릭 소재 스와치 모음">
           <span class="emoji">🧵</span>
           <span class="title">패브릭 스와치 시트</span>
-          <span class="desc">패브릭 소재 스와치 모음</span>
         </a>
       </div>
     </div>
