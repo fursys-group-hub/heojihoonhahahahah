@@ -97,33 +97,147 @@
     color: var(--muted);
     font-size: 0.8rem;
   }
+  nav.catnav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  nav.catnav a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  nav.catnav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  section.sub h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin: 18px 0 10px;
+    letter-spacing: .02em;
+  }
+  section.sub h3:first-of-type { margin-top: 0; }
+  .empty-note {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  hr.divider {
+    max-width: 960px;
+    margin: 44px auto 0;
+    border: none;
+    border-top: 1px solid var(--border);
+  }
 </style>
 </head>
 <body>
 <header>
   <h1>일룸 Collective 교육 자료실</h1>
-  <p>매장 교육용 비교·안내 자료 모음입니다. 항목을 눌러 내용을 확인하세요.</p>
+  <p>매장 교육용 비교·안내 자료 모음입니다. 가구 카테고리별로 모아뒀어요 — 아래 태그를 눌러 바로 이동하세요.</p>
 </header>
+<nav class="catnav">
+  <a href="#living">🏠 리빙</a>
+  <a href="#study">🪑 스터디</a>
+  <a href="#dining">🍽️ 다이닝</a>
+  <a href="#sofa">🛋️ 소파</a>
+  <a href="#kids">🧸 키즈</a>
+  <a href="#etc">🗂️ 기타 자료</a>
+</nav>
 <main>
 
-  <section>
-    <h2>매트리스 비교</h2>
+  <section id="living">
+    <h2>🏠 리빙</h2>
+
+    <div class="sub">
+      <h3>매트리스</h3>
+      <div class="grid">
+        <a class="card" href="pages/haven-midnight.html">
+          <span class="emoji">🌙</span>
+          <span class="title">헤이븐 디럭스 × 미드나잇</span>
+          <span class="desc">헤이븐 디럭스 vs 슬로우베드 미드나잇(뉴문/하프문/풀문)</span>
+        </a>
+        <a class="card" href="pages/haven-twilight.html">
+          <span class="emoji">🌗</span>
+          <span class="title">헤이븐 × 트와일라잇</span>
+          <span class="desc">헤이븐과 트와일라잇 매트리스 비교</span>
+        </a>
+        <a class="card" href="pages/daily-moonray.html">
+          <span class="emoji">🌇</span>
+          <span class="title">데일리 × 이브닝 문레이</span>
+          <span class="desc">일룸 데일리(1년 보증) vs 슬로우베드 이브닝 시리즈 문레이(5년 보증)</span>
+        </a>
+      </div>
+
+      <h3>토퍼</h3>
+      <div class="grid">
+        <a class="card" href="pages/topper-haven-allround-maximum.html">
+          <span class="emoji">🧺</span>
+          <span class="title">헤이븐 멀티 × 올라운드 × 맥시멈</span>
+          <span class="desc">헤이븐 멀티토퍼 vs 슬로우베드 올라운드/그라운드밸런스/맥시멈</span>
+        </a>
+      </div>
+
+      <h3>모션베드</h3>
+      <div class="grid">
+        <a class="card" href="pages/motion-casual-draw-evening.html">
+          <span class="emoji">🛏️</span>
+          <span class="title">캐주얼 × 드로우 × 이브닝모션</span>
+          <span class="desc">모션베드 라인업 비교 (1/2)</span>
+        </a>
+        <a class="card" href="pages/motion-arjian-basel-more-moonray-halfmoon.html">
+          <span class="emoji">🛏️</span>
+          <span class="title">아르지안 × 바젤 × 모어 × 문레이 × 하프문</span>
+          <span class="desc">모션베드 라인업 비교 (2/2)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="study">
+    <h2>🪑 스터디</h2>
     <div class="grid">
-      <a class="card" href="pages/haven-midnight.html">
-        <span class="emoji">🌙</span>
-        <span class="title">헤이븐 디럭스 × 미드나잇</span>
-        <span class="desc">헤이븐 디럭스 vs 슬로우베드 미드나잇(뉴문/하프문/풀문)</span>
+      <a class="card" href="pages/motion-desk-roy-newt-vs-desker.html">
+        <span class="emoji">🪑</span>
+        <span class="title">로이 · 뉴트 × 데스커 모션데스크</span>
+        <span class="desc">iloom 로이·뉴트 vs DESKER 스마트·플러스·알파2.0·프리미엄 라인업 비교</span>
       </a>
-      <a class="card" href="pages/haven-twilight.html">
-        <span class="emoji">🛏️</span>
-        <span class="title">헤이븐 × 트와일라잇</span>
-        <span class="desc">헤이븐과 트와일라잇 매트리스 비교</span>
-      </a>
-      <a class="card" href="pages/daily-moonray.html">
-        <span class="emoji">🌇</span>
-        <span class="title">데일리 × 이브닝 문레이</span>
-        <span class="desc">일룸 데일리(1년 보증) vs 슬로우베드 이브닝 시리즈 문레이(5년 보증)</span>
-      </a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="dining">
+    <h2>🍽️ 다이닝</h2>
+    <p class="empty-note">아직 등록된 자료가 없습니다. 다이닝 관련 비교 자료가 생기면 여기 추가됩니다.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="sofa">
+    <h2>🛋️ 소파</h2>
+    <p class="empty-note">아직 등록된 자료가 없습니다. 소파 관련 비교 자료가 생기면 여기 추가됩니다.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="kids">
+    <h2>🧸 키즈</h2>
+    <div class="grid">
       <a class="card" href="pages/kids-mattress-nuk-daily-coco-cushino.html">
         <span class="emoji">🧸</span>
         <span class="title">누크 × 데일리 × 코코 × 쿠시노</span>
@@ -132,57 +246,34 @@
     </div>
   </section>
 
-  <section>
-    <h2>토퍼 비교</h2>
-    <div class="grid">
-      <a class="card" href="pages/topper-haven-allround-maximum.html">
-        <span class="emoji">🛏️</span>
-        <span class="title">헤이븐 멀티 × 올라운드 × 맥시멈</span>
-        <span class="desc">헤이븐 멀티토퍼 vs 슬로우베드 올라운드/그라운드밸런스/맥시멈</span>
-      </a>
-    </div>
-  </section>
+  <hr class="divider">
 
-  <section>
-    <h2>모션베드 비교</h2>
-    <div class="grid">
-      <a class="card" href="pages/motion-casual-draw-evening.html">
-        <span class="emoji">🛏️</span>
-        <span class="title">캐주얼 × 드로우 × 이브닝모션</span>
-        <span class="desc">모션베드 라인업 비교 (1/2)</span>
-      </a>
-      <a class="card" href="pages/motion-arjian-basel-more-moonray-halfmoon.html">
-        <span class="emoji">🛏️</span>
-        <span class="title">아르지안 × 바젤 × 모어 × 문레이 × 하프문</span>
-        <span class="desc">모션베드 라인업 비교 (2/2)</span>
-      </a>
-    </div>
-  </section>
+  <section id="etc">
+    <h2>🗂️ 기타 자료</h2>
 
-  <section>
-    <h2>소재 · 패브릭</h2>
-    <div class="grid">
-      <a class="card" href="pages/alloso-leather-swatch.html">
-        <span class="emoji">🤎</span>
-        <span class="title">알로소 레더 스와치</span>
-        <span class="desc">3등급 · 6품번 · 30컬러 가죽 스와치</span>
-      </a>
-      <a class="card" href="pages/fabric-swatch-sheet.html">
-        <span class="emoji">🧵</span>
-        <span class="title">패브릭 스와치 시트</span>
-        <span class="desc">패브릭 소재 스와치 모음</span>
-      </a>
-    </div>
-  </section>
+    <div class="sub">
+      <h3>소재 · 패브릭</h3>
+      <div class="grid">
+        <a class="card" href="pages/alloso-leather-swatch.html">
+          <span class="emoji">🤎</span>
+          <span class="title">알로소 레더 스와치</span>
+          <span class="desc">3등급 · 6품번 · 30컬러 가죽 스와치</span>
+        </a>
+        <a class="card" href="pages/fabric-swatch-sheet.html">
+          <span class="emoji">🧵</span>
+          <span class="title">패브릭 스와치 시트</span>
+          <span class="desc">패브릭 소재 스와치 모음</span>
+        </a>
+      </div>
 
-  <section>
-    <h2>세일즈톡</h2>
-    <div class="grid">
-      <a class="card" href="pages/salestalk.html">
-        <span class="emoji">🛋️</span>
-        <span class="title">주간 세일즈톡</span>
-        <span class="desc">주간 세일즈톡 허브</span>
-      </a>
+      <h3>세일즈톡</h3>
+      <div class="grid">
+        <a class="card" href="pages/salestalk.html">
+          <span class="emoji">💬</span>
+          <span class="title">주간 세일즈톡</span>
+          <span class="desc">주간 세일즈톡 허브</span>
+        </a>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,286 @@
+<title>로이·뉴트 vs 데스커 모션데스크</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root{
+    --bg:#f6f4ee;
+    --surface:#ffffff;
+    --surface-muted:#edeadf;
+    --line:#ccc6b6;
+    --ink:#211f1a;
+    --ink-2:#55503f;
+    --ink-3:#8c8572;
+    --head-bg:#211f1a;
+    --head-ink:#f5f3ee;
+    --missing:#9a5a22;
+    --iloom:#0e9268;
+    --iloom-soft:#e7f4ee;
+    --desker:#3657c7;
+    --shadow: 0 1px 2px rgba(33,31,26,.04), 0 8px 24px -12px rgba(33,31,26,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17181b; --surface:#1f2024; --surface-muted:#27282c; --line:#3c3d41;
+      --ink:#efece4; --ink-2:#bcb8ab; --ink-3:#847f70;
+      --head-bg:#0c0d0f; --head-ink:#f1efe8;
+      --missing:#d99a5c;
+      --iloom:#2a9b73; --iloom-soft:#16271f; --desker:#6b7eea;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17181b; --surface:#1f2024; --surface-muted:#27282c; --line:#3c3d41;
+    --ink:#efece4; --ink-2:#bcb8ab; --ink-3:#847f70;
+    --head-bg:#0c0d0f; --head-ink:#f1efe8;
+    --missing:#d99a5c;
+    --iloom:#2a9b73; --iloom-soft:#16271f; --desker:#6b7eea;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR","Pretendard",-apple-system,sans-serif;line-height:1.45;}
+  .wrap{max-width:1440px;margin:0 auto;padding:22px 12px 44px;}
+  h1{font-family:"Gothic A1","Noto Sans KR",sans-serif;text-wrap:balance;margin:0;}
+  .mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+
+  header{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+  .eyebrow{font-family:"Gothic A1",sans-serif;font-weight:700;font-size:13px;letter-spacing:.13em;color:var(--ink-3);text-transform:uppercase;}
+  h1{font-size:clamp(24px,3.2vw,32px);font-weight:900;}
+  .sub{color:var(--ink-2);font-size:15px;max-width:80ch;}
+
+  .table-wrap{
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  .scroll{overflow-x:auto;}
+
+  table{border-collapse:collapse;width:100%;min-width:720px;}
+  col.lbl{width:92px;}
+
+  thead th{
+    background:var(--head-bg);color:var(--head-ink);
+    font-family:"Gothic A1";font-weight:900;font-size:14.5px;letter-spacing:.01em;
+    padding:9px 6px;text-align:center;border:1px solid var(--head-bg);
+  }
+  thead th:first-child{background:var(--head-bg);}
+
+  tbody th{
+    background:var(--surface-muted);color:var(--ink-2);
+    font-weight:700;font-size:12.5px;text-align:left;padding:8px 9px;
+    border:1px solid var(--line);white-space:nowrap;
+  }
+  tbody th small{display:block;font-weight:400;color:var(--ink-3);font-size:10.5px;}
+
+  tbody td{
+    border:1px solid var(--line);padding:8px 7px;text-align:center;
+    font-size:12.5px;vertical-align:middle;color:var(--ink);background:var(--surface);
+  }
+  thead th.col-iloom{background:var(--iloom-soft);color:var(--ink);}
+  td.missing{color:var(--missing);font-size:12px;}
+
+  /* image row */
+  .imgbox{display:flex;align-items:center;justify-content:center;padding:6px;}
+  .imgbox img{display:block;max-width:115px;max-height:95px;width:auto;height:auto;object-fit:contain;}
+  .imgbox-pair{display:flex;flex-direction:row;gap:2px;align-items:center;justify-content:center;}
+  .imgbox-pair .imgbox{padding:3px;}
+  .imgbox-pair .imgbox img{max-width:80px;max-height:72px;}
+  :root:not([data-theme="light"]) .imgbox img,:root[data-theme="dark"] .imgbox img{filter:brightness(.95);}
+
+  /* color row */
+  .swrow{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;}
+  .swrow .sw{display:flex;flex-direction:column;align-items:center;gap:2px;}
+  .swrow .sw i{width:20px;height:20px;border-radius:5px;border:1px solid var(--line);display:block;}
+  .swrow .sw span{font-family:"IBM Plex Mono";font-size:9.5px;font-weight:600;color:var(--ink-3);letter-spacing:.01em;white-space:nowrap;}
+
+  .numspec{font-family:"IBM Plex Mono";font-weight:600;font-size:12.5px;}
+  .motor-logo{height:18px;width:auto;display:inline-block;vertical-align:middle;}
+  mark.hl{background:#fff1a8;color:var(--ink);padding:0 2px;border-radius:3px;}
+  :root:not([data-theme="light"]) mark.hl,:root[data-theme="dark"] mark.hl{background:#8a7a1f;color:#fdf6d8;}
+  .feat{font-size:11.5px;color:var(--ink-2);line-height:1.5;text-align:left;}
+
+  .guide-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-top:14px;box-shadow:var(--shadow);}
+  .guide-card h2{font-size:14px;font-weight:900;margin-bottom:10px;font-family:"Gothic A1";}
+  .guide-row{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12.5px;align-items:flex-start;}
+  .guide-row:last-child{border-bottom:none;}
+  .guide-row .who{min-width:118px;font-weight:700;flex:none;color:var(--ink);}
+  .guide-row .what{color:var(--ink-2);}
+  .guide-row .what b{color:var(--ink);font-weight:700;}
+
+  footer{margin-top:16px;font-size:12.5px;color:var(--ink-3);text-align:center;}
+
+  @media (max-width:700px){
+    .wrap{padding:20px 14px 44px;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">iloom × DESKER · 전동 높이조절 책상 비교</div>
+    <h1>모션데스크 라인업 비교표</h1>
+    <p class="sub">로이 · 뉴트(iloom)와 스마트 · 플러스 · 알파2.0 · 프리미엄(DESKER)을 한 장의 표로 정리했습니다. 자료가 없는 항목은 "확인 필요"로 표시했습니다.</p>
+  </header>
+
+  <div class="table-wrap">
+    <div class="scroll">
+      <table>
+        <colgroup>
+          <col class="lbl"><col><col><col><col><col><col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th class="col-iloom">로이</th>
+            <th class="col-iloom">뉴트</th>
+            <th class="col-desker">스마트</th>
+            <th class="col-desker">플러스</th>
+            <th class="col-desker">알파2.0</th>
+            <th class="col-desker">프리미엄</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <th>이미지</th>
+            <td class="ci"><div class="imgbox-pair"><div class="imgbox"><img src="img/roy-set.png" alt="로이 세트형"></div><div class="imgbox"><img src="img/roy-motion.png" alt="로이 모션데스크 단품"></div></div></td>
+            <td class="ci"><div class="imgbox-pair"><div class="imgbox"><img src="img/newt-set.png" alt="뉴트 세트형"></div><div class="imgbox"><img src="img/newt-homeoffice.png" alt="뉴트 홈오피스 단품"></div></div></td>
+            <td><div class="imgbox-pair"><div class="imgbox"><img src="img/smart.png" alt="스마트 세트형"></div><div class="imgbox"><img src="img/smart-solo.png" alt="스마트 단품"></div></div></td>
+            <td><div class="imgbox"><img src="img/plus.png" alt="플러스"></div></td>
+            <td><div class="imgbox"><img src="img/alpha.png" alt="알파2.0"></div></td>
+            <td><div class="imgbox"><img src="img/premium.png" alt="프리미엄"></div></td>
+          </tr>
+
+          <tr>
+            <th>색상</th>
+            <td class="ci">
+              <div class="swrow">
+                <div class="sw"><i style="background:linear-gradient(180deg,#e9e8e2 50%,#cfcbc8 50%);"></i><span>SPGY</span></div>
+                <div class="sw"><i style="background:linear-gradient(180deg,#cdc0a9 50%,#cfcbc8 50%);"></i><span>OSGY</span></div>
+                <div class="sw"><i style="background:linear-gradient(180deg,#cdc0a9 50%,#3c3f50 50%);"></i><span>OSDN</span></div>
+                <div class="sw"><i style="background:linear-gradient(180deg,#cdc0a9 50%,#d0c0cc 50%);"></i><span>OSLU</span></div>
+              </div>
+            </td>
+            <td class="ci">
+              <div class="swrow">
+                <div class="sw"><i style="background:#f1eee7;"></i><span>WWWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#f1eee7 50%,#d4b182 50%);"></i><span>NKWW</span></div>
+              </div>
+            </td>
+            <td>
+              <div class="swrow">
+                <div class="sw"><i style="background:#f4f2ec;"></i><span>WWWW</span></div>
+                <div class="sw"><i style="background:#d9bc99;"></i><span>OSWW</span></div>
+              </div>
+            </td>
+            <td>
+              <div class="swrow">
+                <div class="sw"><i style="background:#f4f2ec;"></i><span>WWWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#f4f2ec 50%,#c79b6e 50%);"></i><span>MLWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#6b5947 50%,#1c1b19 50%);"></i><span>MACFK</span></div>
+                <div class="sw"><i style="background:#1c1b19;"></i><span>FKFK</span></div>
+              </div>
+            </td>
+            <td>
+              <div class="swrow">
+                <div class="sw"><i style="background:#f4f2ec;"></i><span>WWWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#f4f2ec 50%,#c79b6e 50%);"></i><span>MLWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#c79b6e 50%,#1c1b19 50%);"></i><span>MLBK</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#6b5947 50%,#1c1b19 50%);"></i><span>MACBK</span></div>
+                <div class="sw"><i style="background:#1c1b19;"></i><span>FKBK</span></div>
+              </div>
+            </td>
+            <td>
+              <div class="swrow">
+                <div class="sw"><i style="background:#f4f2ec;"></i><span>WWWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#f4f2ec 50%,#c79b6e 50%);"></i><span>MLWW</span></div>
+                <div class="sw"><i style="background:linear-gradient(135deg,#6b5947 50%,#1c1b19 50%);"></i><span>MACBK</span></div>
+                <div class="sw"><i style="background:#1c1b19;"></i><span>FKBK</span></div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>모터 제조사</th>
+            <td class="ci" colspan="2"><img class="motor-logo" src="img/linak-logo.png" alt="LINAK"></td>
+            <td colspan="2"><img class="motor-logo" src="img/linak-logo.png" alt="LINAK"></td>
+            <td>JIECHANG</td>
+            <td><img class="motor-logo" src="img/linak-logo.png" alt="LINAK"></td>
+          </tr>
+
+          <tr>
+            <th>모터 개수</th>
+            <td class="ci" colspan="2">듀얼모터</td>
+            <td colspan="2">싱글모터</td>
+            <td colspan="2">듀얼모터</td>
+          </tr>
+
+          <tr>
+            <th>베이스 타입</th>
+            <td class="ci" colspan="2">글라이드</td>
+            <td>글라이드</td>
+            <td colspan="2">글라이드 / 캐스터</td>
+            <td>글라이드</td>
+          </tr>
+
+          <tr>
+            <th>적정하중<small>최대분포하중</small></th>
+            <td class="ci"><span class="numspec">160kg</span> <small>(80/다리)</small></td>
+            <td class="ci"><span class="numspec">100kg (130kg)</span> <small>상판무게 제외</small></td>
+            <td colspan="2"><span class="numspec">50kg (70kg)</span></td>
+            <td><span class="numspec">70kg (120kg)</span></td>
+            <td><span class="numspec">100kg (130kg)</span></td>
+          </tr>
+
+          <tr>
+            <th>높이조절범위</th>
+            <td class="ci"><span class="numspec">680~1140</span></td>
+            <td class="ci"><span class="numspec"><mark class="hl">612</mark>~1152</span></td>
+            <td><span class="numspec">680~1150</span></td>
+            <td><span class="numspec">686~1151</span></td>
+            <td><span class="numspec">695~1143</span></td>
+            <td><span class="numspec">630~1280</span></td>
+          </tr>
+
+          <tr>
+            <th>사이즈<small>폭×깊이</small></th>
+            <td class="ci"><span class="numspec">1200/1400<br>×D770</span></td>
+            <td class="ci"><span class="numspec">1200/1400<br>×D740</span> <small>(홈오피스 D789)</small></td>
+            <td><span class="numspec">1200/1400/1600<br>×D600</span></td>
+            <td><span class="numspec">1200/1400/1600<br>×D700</span></td>
+            <td><span class="numspec">1190/1390/1590/1790<br>×D695</span></td>
+            <td><span class="numspec">1400/1600/1800<br>×D700/800</span></td>
+          </tr>
+
+          <tr>
+            <th>특징</th>
+            <td class="feat ci">책상+책상장 세트, 벽고정형 수납, 사선방향 높이조절</td>
+            <td class="feat ci">프레임 구분 없는 모션/일반 혼합 라인</td>
+            <td class="feat">2가지 높이저장, 컴팩트 D600, 원룸·재택에 인기</td>
+            <td class="feat">2가지 높이저장, 배선트레이, 이동형 옵션</td>
+            <td class="feat">3가지 높이저장, 모니터암 체결, 사무용으로 인기</td>
+            <td class="feat">4가지 높이저장, 조명형 옵션, 게이밍데스크로 인기</td>
+          </tr>
+
+          <tr>
+            <th>A/S<small>모터/컨트롤박스·컨트롤러</small></th>
+            <td class="ci" colspan="2">5년 / 3년</td>
+            <td colspan="2">5 / 5 / 1년</td>
+            <td colspan="2">5 / 3 / 1년</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="guide-card">
+    <h2>상담 추천 포인트</h2>
+    <div class="guide-row"><div class="who">학생방 · 자녀방</div><div class="what"><b>로이 · 뉴트 · 스마트</b> — 로이(넓은 책상+수납), 뉴트(독서대 패널+수납) 둘 다 상판 라운드 디테일로 모서리 사고 걱정 없음. 스마트는 심플한 디자인에 1200~1600까지 사이즈 유연, 성장기 자녀방 확장에도 대응</div></div>
+    <div class="guide-row"><div class="who">넓은 작업면 필요</div><div class="what"><b>로이</b> — 책상 폭이 넓어 자료·모니터·노트북 동시 사용에 유리</div></div>
+    <div class="guide-row"><div class="who">독서·필기 병행</div><div class="what"><b>뉴트</b> — 독서대 패널이 있어 책을 세워 보며 필기하는 학습자에게 적합</div></div>
+    <div class="guide-row"><div class="who">전문 워크스테이션 · 사무</div><div class="what"><b>플러스 · 알파2.0 · 프리미엄</b> — 액세서리·스크린 자유 조합, 고하중/확장성 필요한 1인 오피스·기업 구매</div></div>
+  </div>
+
+  <footer>DESKER 수치는 사내 교육자료(II.모션데스크 01~07) 기준 · iloom 수치는 제품 페이지·매장 확인 자료 기준 · 매장 상담용 내부 참고자료</footer>
+
+</div>
