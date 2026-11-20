@@ -1,0 +1,714 @@
+<title>학생방 침대 비교</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#EDEAE1;
+  --surface:#F8F6EF;
+  --surface-alt:#E3DECE;
+  --ink:#2A2520;
+  --ink-soft:#655D50;
+  --ink-faint:#8A8070;
+  --rule:#D7D0BE;
+  --accent:#9C5F2E;
+  --accent-ink:#7A4A24;
+  --accent-soft:#EAD6BC;
+  --teal:#4C7367;
+  --teal-soft:#DCE7E0;
+  --good:#3F7D53;
+  --good-soft:#DDEBE0;
+  --warn:#B4792A;
+  --warn-soft:#F1E2CB;
+  --bad:#AE4A36;
+  --bad-soft:#F2DED9;
+  --iloom:#6B5636;
+  --iloom-soft:#E6DCC9;
+  --slowbed:#355C63;
+  --slowbed-soft:#D9E5E6;
+  --desker:#564F77;
+  --desker-soft:#E1DEEC;
+  --shadow:0 10px 30px -18px rgba(42,37,32,.45);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1B1813;
+    --surface:#231F19;
+    --surface-alt:#2C271F;
+    --ink:#EFE9DC;
+    --ink-soft:#BBAF9B;
+    --ink-faint:#8D8370;
+    --rule:#3B3428;
+    --accent:#D89A5E;
+    --accent-ink:#F0B57F;
+    --accent-soft:#4A3722;
+    --teal:#8FB6A7;
+    --teal-soft:#2A3A34;
+    --good:#7FC094;
+    --good-soft:#243930;
+    --warn:#E0A755;
+    --warn-soft:#3D3122;
+    --bad:#E18E7B;
+    --bad-soft:#402922;
+    --iloom:#CBB389;
+    --iloom-soft:#34301F;
+    --slowbed:#8FB9C0;
+    --slowbed-soft:#1F3236;
+    --desker:#AFA6D4;
+    --desker-soft:#2A2736;
+    --shadow:0 10px 30px -16px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1B1813;
+  --surface:#231F19;
+  --surface-alt:#2C271F;
+  --ink:#EFE9DC;
+  --ink-soft:#BBAF9B;
+  --ink-faint:#8D8370;
+  --rule:#3B3428;
+  --accent:#D89A5E;
+  --accent-ink:#F0B57F;
+  --accent-soft:#4A3722;
+  --teal:#8FB6A7;
+  --teal-soft:#2A3A34;
+  --good:#7FC094;
+  --good-soft:#243930;
+  --warn:#E0A755;
+  --warn-soft:#3D3122;
+  --bad:#E18E7B;
+  --bad-soft:#402922;
+  --iloom:#CBB389;
+  --iloom-soft:#34301F;
+  --slowbed:#8FB9C0;
+  --slowbed-soft:#1F3236;
+  --desker:#AFA6D4;
+  --desker-soft:#2A2736;
+  --shadow:0 10px 30px -16px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box;}
+html{background:var(--bg);}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"IBM Plex Sans KR","Noto Sans KR",sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent-soft);color:var(--accent-ink);}
+
+.wrap{max-width:1920px;margin:0 auto;padding:0 22px 48px;}
+
+/* header */
+header.hero{
+  padding:26px 22px 18px;
+  background:
+    radial-gradient(1200px 320px at 12% -10%, var(--accent-soft) 0%, transparent 60%),
+    var(--surface);
+  border-bottom:1px solid var(--rule);
+}
+.hero-inner{max-width:1920px;margin:0 auto;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-ink);
+  background:var(--accent-soft);
+  padding:4px 10px;border-radius:99px;
+  margin-bottom:10px;
+}
+h1{
+  font-family:"Gowun Batang","Noto Serif KR",serif;
+  font-weight:700;
+  font-size:clamp(17px,1.4vw,21px);
+  margin:0 0 7px;
+  text-wrap:balance;
+  letter-spacing:-.01em;
+}
+.hero p.lede{
+  font-size:12.5px;color:var(--ink-soft);
+  max-width:900px;margin:0 0 12px;
+  text-wrap:pretty;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px 20px;
+  font-size:11.5px;color:var(--ink-faint);
+  border-top:1px solid var(--rule);
+  padding-top:10px;
+}
+.hero-meta b{color:var(--ink-soft);font-weight:600;}
+
+/* summary cards */
+section.summary{padding:20px 0 4px;}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:10px;flex-wrap:wrap;}
+.section-head h2{
+  font-family:"Gowun Batang",serif;font-size:15.5px;margin:0;font-weight:700;
+}
+.section-head .hint{font-size:11px;color:var(--ink-faint);}
+
+.card-row{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:2px 0 10px;
+}
+.brand-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.card-row .pcard{flex:0 0 calc((100% - 8*8px)/9);}
+.brand-label{
+  flex:0 0 100%;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:-2px;
+}
+.brand-row--mixed{
+  align-items:flex-start;
+  gap:20px;
+}
+.brand-group{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.brand-group-cards{
+  display:flex;
+  gap:8px;
+}
+.brand-group-cards .pcard{flex:1 1 0;min-width:0;}
+.brand-divider{
+  align-self:stretch;
+  width:1px;
+  margin-top:18px;
+  background:var(--rule);
+  flex:0 0 1px;
+}
+
+.pcard{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:10px;
+  padding:9px 9px 8px;
+  display:flex;flex-direction:column;gap:5px;
+  box-shadow:var(--shadow);
+  min-width:0;
+}
+.pshot{
+  width:100%;aspect-ratio:4/3;object-fit:contain;object-position:center bottom;
+  border-radius:7px;background:#ffffff;display:block;
+  border:1px solid var(--rule);
+  padding:8px 6px 4px;
+}
+.brand-tag{
+  align-self:flex-start;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 6px;border-radius:99px;font-weight:600;
+}
+.brand-tag.iloom{background:var(--iloom-soft);color:var(--iloom);}
+.brand-tag.slowbed{background:var(--slowbed-soft);color:var(--slowbed);}
+.brand-tag.desker{background:var(--desker-soft);color:var(--desker);}
+
+.pcard h3{font-size:12.5px;margin:0;font-weight:700;letter-spacing:-.01em;}
+.pcard .headline{font-size:10px;color:var(--ink-soft);min-height:40px;line-height:1.35;}
+.price-block{margin-top:auto;padding-top:6px;border-top:1px dashed var(--rule);}
+.price-strike{font-size:9.5px;color:var(--ink-faint);text-decoration:line-through;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+.price-now{font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;}
+.discount-chip{
+  display:inline-block;margin-left:5px;font-size:9px;font-weight:600;
+  color:var(--bad);background:var(--bad-soft);padding:1px 5px;border-radius:5px;
+  font-family:"IBM Plex Mono",monospace;
+}
+.badge-row{display:flex;gap:4px;flex-wrap:wrap;}
+.badge{
+  font-size:9px;padding:1px 6px;border-radius:6px;
+  background:var(--surface-alt);color:var(--ink-soft);
+  border:1px solid var(--rule);
+  white-space:nowrap;
+}
+.badge.on{background:var(--good-soft);color:var(--good);border-color:transparent;}
+
+/* compare table */
+section.compare{padding:22px 0 4px;}
+.table-scroll{
+  overflow-x:auto;
+  border:1px solid var(--rule);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+table.compare-table{
+  border-collapse:separate;border-spacing:0;
+  width:100%;table-layout:fixed;
+  background:var(--surface);
+}
+.compare-table th,.compare-table td{
+  text-align:left;
+  padding:6px 7px;
+  border-bottom:1px solid var(--rule);
+  font-size:12.5px;
+  line-height:1.4;
+  vertical-align:top;
+  overflow-wrap:break-word;
+}
+.compare-table thead th{
+  position:sticky;top:0;z-index:3;
+  background:var(--surface);
+  padding-top:8px;
+  border-bottom:2px solid var(--rule);
+}
+.compare-table thead tr.brandrow th{padding-bottom:2px;border-bottom:none;}
+.compare-table thead tr.pricerow th{padding-top:3px;}
+.rowlabel{
+  position:sticky;left:0;z-index:2;
+  background:var(--surface-alt);
+  font-weight:600;color:var(--ink-soft);
+  font-size:12.5px;
+  border-right:1px solid var(--rule);
+}
+.compare-table thead th.rowlabel{z-index:4;background:var(--surface-alt);}
+.compare-table td{color:var(--ink);}
+.group-sep td,.group-sep th{
+  background:var(--teal-soft);
+  color:var(--teal);
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:600;
+  padding:4px 7px;
+  position:sticky;left:0;
+}
+.group-sep .rowlabel{background:var(--teal-soft);}
+tr:hover td:not(.rowlabel){background:color-mix(in srgb, var(--accent-soft) 35%, transparent);}
+.model-name{font-weight:700;font-size:13px;}
+.model-code{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-faint);margin-top:1px;}
+.cell-price{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+.cell-note{font-size:11px;color:var(--ink-faint);display:block;margin-top:2px;}
+.tag{
+  display:inline-block;font-size:10.5px;padding:1px 5px;border-radius:4px;
+  background:var(--accent-soft);color:var(--accent-ink);margin:1px 2px 1px 0;
+  white-space:normal;
+}
+
+/* guide */
+section.guide{padding:26px 0 0;}
+.guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;}
+.gcard{
+  background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 13px;
+  box-shadow:var(--shadow);
+  min-width:0;
+}
+.gcard .gtag{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--teal);letter-spacing:.07em;text-transform:uppercase;}
+.gcard h4{margin:4px 0 5px;font-size:13px;font-family:"Gowun Batang",serif;}
+.gcard p{margin:0;font-size:11px;color:var(--ink-soft);line-height:1.5;}
+.gcard .picks{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px;}
+
+footer.note{
+  margin-top:28px;padding-top:14px;border-top:1px solid var(--rule);
+  font-size:10.5px;color:var(--ink-faint);
+}
+footer.note p{margin:3px 0;}
+
+@media (max-width:900px){
+  header.hero{padding:22px 16px 16px;}
+  .wrap{padding:0 14px 40px;}
+  .card-row .pcard{flex:1 1 150px;}
+  .brand-row--mixed{flex-wrap:wrap;}
+  .brand-divider{display:none;}
+  .guide-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  table.compare-table{table-layout:auto;min-width:1100px;}
+}
+</style>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">일룸 대전둔산2F · 세일즈 참고자료</span>
+    <h1>학생방 침대, 브랜드별 한눈에 비교</h1>
+    <p class="lede">일룸 6종(다리형·수납형 기본/조명헤드·뉴트·반트·헤이즐R), 슬로우베드 2종(아몬드·아티초크), 데스커 1종까지 — 가격부터 수납 구조, 전원·조명, 소재, 하중까지 SS 사이즈 기준으로 정리했습니다.</p>
+    <div class="hero-meta">
+      <span><b>기준일</b> 2026-11-20 매장 견적 자료</span>
+      <span><b>기준 사이즈</b> SS(슈퍼싱글)</span>
+      <span><b>미확인</b> 보증기간 — 브랜드별 별도 확인 필요</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="summary">
+  <div class="section-head">
+    <h2>9종 한눈에</h2>
+    <span class="hint">9종을 한 화면에서 바로 비교하세요</span>
+  </div>
+  <div class="card-row">
+
+    <div class="brand-row">
+      <span class="brand-label">iloom · 6종</span>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-dari.png" alt="일룸 다리형 침대">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>다리형 침대</h3>
+        <p class="headline">수납 없이 가장 가볍고 저렴한 입문형. 하부 개방으로 로봇청소기 활용 쉬움.</p>
+        <div class="badge-row">
+          <span class="badge">수납 없음</span>
+          <span class="badge">조명 없음</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">489,000원</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-storage-basic.png" alt="일룸 수납형 침대(기본헤드)">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>수납형(기본헤드)</h3>
+        <p class="headline">서랍 3칸 수납 + 심플한 무수납 헤드. 조명·USB 없이 실속형.</p>
+        <div class="badge-row">
+          <span class="badge on">서랍 3칸</span>
+          <span class="badge">조명 없음</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">559,000원</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-storage-light.png" alt="일룸 수납형 침대(조명헤드)">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>수납형(조명헤드)</h3>
+        <p class="headline">서랍 3칸 + LED 취침등 + USB 2구. 공부·취침 루틴에 맞춘 구성.</p>
+        <div class="badge-row">
+          <span class="badge on">서랍 3칸</span>
+          <span class="badge on">LED+USB</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">739,000원</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-neut.png" alt="일룸 뉴트 수납형 침대">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>뉴트 수납형</h3>
+        <p class="headline">패브릭 헤드쿠션 세로수납형. 크바드라트/스테인프리 패브릭 2종 중 선택.</p>
+        <div class="badge-row">
+          <span class="badge on">패브릭 헤드쿠션</span>
+          <span class="badge">조명 없음</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">939,000원 ~</div>
+          <span class="cell-note">크바드라트 939,000 / 스테인프리 1,019,000원</span>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-bant.png" alt="일룸 반트 침대">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>반트(조명형)</h3>
+        <p class="headline">양옆 책장형 헤드수납 + 벙커·서랍까지, 9종 중 수납력 최강.</p>
+        <div class="badge-row">
+          <span class="badge on">벙커+서랍</span>
+          <span class="badge on">LED+USB</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">659,000원</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <img class="pshot" src="img/iloom-hazel.png" alt="일룸 헤이즐R 침대">
+        <span class="brand-tag iloom">iloom</span>
+        <h3>헤이즐R</h3>
+        <p class="headline">평상형 감성 침대. 우드·패브릭·무헤드 3종 헤드 중 취향대로 교체.</p>
+        <div class="badge-row">
+          <span class="badge">수납 없음</span>
+          <span class="badge on">LED+USB</span>
+        </div>
+        <div class="price-block">
+          <div class="price-now">717,000원</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-row brand-row--mixed">
+      <div class="brand-group" style="flex:0 0 calc(((100% - 64px)/9)*2 + 8px)">
+        <span class="brand-label">SLOW BED · 2종</span>
+        <div class="brand-group-cards">
+
+          <div class="pcard">
+            <img class="pshot" src="img/slowbed-almond.png" alt="슬로우베드 아몬드 침대">
+            <span class="brand-tag slowbed">SLOW BED</span>
+            <h3>아몬드</h3>
+            <p class="headline">헤드·무헤드 + 선반/서랍 패널을 조합하는 모듈형. 콘센트 2구 내장.</p>
+            <div class="badge-row">
+              <span class="badge on">콘센트+USB</span>
+              <span class="badge">패널 별매</span>
+            </div>
+            <div class="price-block">
+              <span class="price-strike">880,000원</span>
+              <span class="discount-chip">14% ↓</span>
+              <div class="price-now">756,800원</div>
+            </div>
+          </div>
+
+          <div class="pcard">
+            <img class="pshot" src="img/slowbed-artichoke.png" alt="슬로우베드 아티초크 침대">
+            <span class="brand-tag slowbed">SLOW BED</span>
+            <h3>아티초크</h3>
+            <p class="headline">95도 각도 우드슬랫 헤드의 내추럴 무드. 2025년 리뉴얼로 내구성 보강.</p>
+            <div class="badge-row">
+              <span class="badge">수납 없음</span>
+              <span class="badge">전원 없음</span>
+            </div>
+            <div class="price-block">
+              <span class="price-strike">794,500원</span>
+              <span class="discount-chip">8% ↓</span>
+              <div class="price-now">730,940원</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="brand-divider" aria-hidden="true"></div>
+
+      <div class="brand-group" style="flex:0 0 calc((100% - 64px)/9)">
+        <span class="brand-label">DESKER · 1종</span>
+        <div class="brand-group-cards">
+
+          <div class="pcard">
+            <img class="pshot" src="img/desker-bed.png" alt="데스커 W1100 수납침대">
+            <span class="brand-tag desker">DESKER</span>
+            <h3>W1100 수납침대</h3>
+            <p class="headline">서랍 3개 + 헤드 선반 + USB-C 30W 고속충전. 9종 중 체감가 최저.</p>
+            <div class="badge-row">
+              <span class="badge on">서랍 3개</span>
+              <span class="badge on">LED+USB-C</span>
+            </div>
+            <div class="price-block">
+              <span class="price-strike">631,000원</span>
+              <span class="discount-chip">21% ↓</span>
+              <div class="price-now">499,000원</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="compare">
+  <div class="section-head">
+    <h2>전체 스펙 비교표</h2>
+    <span class="hint">모든 수치는 SS 기준 · 한 화면에서 비교</span>
+  </div>
+  <div class="table-scroll">
+    <table class="compare-table">
+      <colgroup>
+        <col style="width:8.5%">
+        <col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%"><col style="width:10.17%">
+      </colgroup>
+      <thead>
+        <tr class="brandrow">
+          <th class="rowlabel"></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag iloom">iloom</span></th>
+          <th><span class="brand-tag slowbed">SLOW BED</span></th>
+          <th><span class="brand-tag slowbed">SLOW BED</span></th>
+          <th><span class="brand-tag desker">DESKER</span></th>
+        </tr>
+        <tr class="pricerow">
+          <th class="rowlabel">모델</th>
+          <th><span class="model-name">다리형</span><span class="model-code">HSSE270</span></th>
+          <th><span class="model-name">수납형(기본헤드)</span><span class="model-code">HSSE280</span></th>
+          <th><span class="model-name">수납형(조명헤드)</span><span class="model-code">HSSE280PM</span></th>
+          <th><span class="model-name">뉴트 수납형</span><span class="model-code">IBS0021A / IBS0052A</span></th>
+          <th><span class="model-name">반트(조명형)</span><span class="model-code">HBA401102</span></th>
+          <th><span class="model-name">헤이즐R</span><span class="model-code">IBL0014A</span></th>
+          <th><span class="model-name">아몬드</span><span class="model-code">SLFE110HR</span></th>
+          <th><span class="model-name">아티초크</span><span class="model-code">SLFN110</span></th>
+          <th><span class="model-name">W1100</span><span class="model-code">DSEAB2209G</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="group-sep"><td class="rowlabel" colspan="10">가격 · 분류</td></tr>
+        <tr>
+          <td class="rowlabel">SS 가격</td>
+          <td class="cell-price">489,000원</td>
+          <td class="cell-price">559,000원</td>
+          <td class="cell-price">739,000원</td>
+          <td class="cell-price">939,000~1,019,000원<span class="cell-note">크바드라트/스테인프리 패브릭 차이</span></td>
+          <td class="cell-price">659,000원</td>
+          <td class="cell-price">717,000원</td>
+          <td class="cell-price">880,000원 → <b>756,800원</b><span class="cell-note">14% 할인</span></td>
+          <td class="cell-price">794,500원 → <b>730,940원</b><span class="cell-note">8% 할인</span></td>
+          <td class="cell-price">631,000원 → <b>499,000원</b><span class="cell-note">21% 할인</span></td>
+        </tr>
+        <tr>
+          <td class="rowlabel">타입</td>
+          <td>다리형(수납 無)</td>
+          <td>수납형(기본헤드)</td>
+          <td>수납형(조명헤드)</td>
+          <td>수납형(헤드쿠션)</td>
+          <td>수납형(수납헤드+벙커)</td>
+          <td>평상형(헤드 선택형)</td>
+          <td>모듈형(헤드/무헤드+패널)</td>
+          <td>평상형(헤드/무헤드)</td>
+          <td>수납형(헤드선반)</td>
+        </tr>
+        <tr>
+          <td class="rowlabel">사이즈 라인업</td>
+          <td>SS 단일</td>
+          <td>SS 단일</td>
+          <td>SS 단일</td>
+          <td>SS 단일</td>
+          <td>SS/Q</td>
+          <td>SS/Q/K·KK공용/LKK</td>
+          <td>SS/Q/K/KK</td>
+          <td>SS/Q/K</td>
+          <td>W1100 단일</td>
+        </tr>
+        <tr>
+          <td class="rowlabel">SS 규격(mm)</td>
+          <td>W1149×D2041×H915</td>
+          <td>W1100×D2038×H915</td>
+          <td>W1100×D2140×H916</td>
+          <td>W1139×D2149×H900</td>
+          <td>2192×1105×906<span class="cell-note">축 순서 매장 재확인</span></td>
+          <td>W1110×D2175×H985</td>
+          <td>W1140×D2057×H1009</td>
+          <td>W1110×D2110×H976</td>
+          <td>W1100×D2169×H913</td>
+        </tr>
+
+        <tr class="group-sep"><td class="rowlabel" colspan="10">헤드 디자인 · 전원/조명</td></tr>
+        <tr>
+          <td class="rowlabel">헤드 디자인</td>
+          <td>기본헤드(무수납)</td>
+          <td>기본헤드(무수납)</td>
+          <td>수납헤드(포인트컬러)</td>
+          <td>패브릭 헤드쿠션<span class="cell-note">탈부착, 매트 높이 260mm까지</span></td>
+          <td>책장형 수납헤드<span class="cell-note">3칸, 하부 2단 높이조절</span></td>
+          <td>우드/패브릭/무헤드 택1<span class="cell-note">헤드형끼리 부분교체 가능</span></td>
+          <td>헤드/무헤드 택1<span class="cell-note">패널은 헤드보드와만 결합</span></td>
+          <td>우드슬랫 헤드(95˚)/무헤드</td>
+          <td>헤드보드+선반</td>
+        </tr>
+        <tr>
+          <td class="rowlabel">전원 · 조명</td>
+          <td><span class="tag">없음</span></td>
+          <td><span class="tag">없음</span></td>
+          <td><span class="tag">LED 2700~3300K</span><span class="tag">USB 2구</span></td>
+          <td><span class="tag">없음</span><span class="cell-note">옵션: 멀티탭 연장선 4m</span></td>
+          <td><span class="tag">거치형 LED</span><span class="tag">USB 1구(5V/4A)</span></td>
+          <td><span class="tag">LED 3단계</span><span class="tag">USB 고속</span></td>
+          <td><span class="tag">콘센트 2구</span><span class="tag">USB 2구</span><span class="cell-note">조명은 패널 옵션(L/R)</span></td>
+          <td><span class="tag">없음</span></td>
+          <td><span class="tag">LED 24W·3000K</span><span class="tag">USB-C 30W</span></td>
+        </tr>
+
+        <tr class="group-sep"><td class="rowlabel" colspan="10">하부 수납 · 하중</td></tr>
+        <tr>
+          <td class="rowlabel">하부 수납</td>
+          <td>없음<span class="cell-note">다리형, 하부 전체 개방</span></td>
+          <td>서랍 3칸(한방향)</td>
+          <td>서랍 3칸(한방향)</td>
+          <td>세로수납형<span class="cell-note">서랍+벙커 구성</span></td>
+          <td>벙커(덮개식)+서랍 3칸</td>
+          <td>없음<span class="cell-note">평상형, 벤치 활용 가능</span></td>
+          <td>없음(기본)<span class="cell-note">선반·1단·2단서랍 패널 별매</span></td>
+          <td>없음<span class="cell-note">하부 170mm, 로봇청소기 가능</span></td>
+          <td>서랍 3개<span class="cell-note">FULL-EXTENSION 레일</span></td>
+        </tr>
+        <tr>
+          <td class="rowlabel">하중 · 주의</td>
+          <td>별도 표기 없음</td>
+          <td>별도 표기 없음</td>
+          <td>별도 표기 없음</td>
+          <td>SS 기준 100kg</td>
+          <td>SS 200kg·Q 300kg<span class="cell-note">서랍 7.5kg·벙커 30kg, 헤드 위 탑승 금지</span></td>
+          <td>로봇청소기 통과고 135mm</td>
+          <td>패널 결합부 10kg 이하 소품만</td>
+          <td>다리 교체 가능성(리뉴얼 전후 혼용 비권장)</td>
+          <td>국소 135kg(최대 150kg)<span class="cell-note">서랍 8kg·선반 20kg, 인출방향 46.5cm 여유</span></td>
+        </tr>
+
+        <tr class="group-sep"><td class="rowlabel" colspan="10">소재 · 색상</td></tr>
+        <tr>
+          <td class="rowlabel">소재</td>
+          <td>PB+LPM</td>
+          <td>PB+LPM</td>
+          <td>PB+LPM, 조명 AL+PC</td>
+          <td>PB+LPM+ABS엣지, 프레임 STEEL</td>
+          <td>PB+LPM</td>
+          <td>PB+LPM, 다리 ASH원목+STEEL</td>
+          <td>E0 3.7t PB+LPM</td>
+          <td>원목다리(ASH)+PB+LPM, E0등급</td>
+          <td>E0 PB+LPM+ABS엣지</td>
+        </tr>
+        <tr>
+          <td class="rowlabel">색상</td>
+          <td>시리즈 팔레트<span class="cell-note">링키플러스·로이·이타카네오</span></td>
+          <td>시리즈 팔레트 동일</td>
+          <td>시리즈 팔레트 동일</td>
+          <td>화이트 단일</td>
+          <td>SP(화이트톤)/NCC(우드톤)</td>
+          <td>헤이즐넛월넛(HW)/오트밀(OAT)</td>
+          <td>내추럴/화이트/블랙 3색</td>
+          <td>오크우드(OCY) 단일</td>
+          <td>화이트(WWWW)/오크(OSOS)</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="guide">
+  <div class="section-head">
+    <h2>상황별 추천 포인트</h2>
+  </div>
+  <div class="guide-grid">
+    <div class="gcard">
+      <span class="gtag">예산 우선</span>
+      <h4>최저가로 시작하고 싶다면</h4>
+      <p>데스커 W1100(할인가 499,000원)이 9종 중 가장 저렴하면서도 서랍·조명·USB를 모두 갖췄습니다. 수납이 꼭 필요 없다면 일룸 다리형(489,000원)이 최저가입니다.</p>
+      <div class="picks"><span class="tag">데스커 W1100</span><span class="tag">일룸 다리형</span></div>
+    </div>
+    <div class="gcard">
+      <span class="gtag">수납력 우선</span>
+      <h4>짐이 많은 방이라면</h4>
+      <p>반트는 헤드 책장형 수납 + 벙커 + 서랍 3칸까지, 9종 중 수납 구조가 가장 촘촘합니다. 패브릭 헤드쿠션형 세로수납인 뉴트도 대안입니다.</p>
+      <div class="picks"><span class="tag">일룸 반트</span><span class="tag">일룸 뉴트</span></div>
+    </div>
+    <div class="gcard">
+      <span class="gtag">충전 · 조명 편의</span>
+      <h4>스마트폰 충전·취침등이 중요하다면</h4>
+      <p>일룸 수납형(조명헤드)·반트·헤이즐R, 데스커, 슬로우베드 아몬드(패널 옵션 포함)는 모두 USB 포트와 조명을 갖췄습니다. 반대로 다리형·수납형(기본헤드)·아티초크는 전원 기능이 없습니다.</p>
+      <div class="picks"><span class="tag">조명헤드</span><span class="tag">반트</span><span class="tag">헤이즐R</span><span class="tag">데스커</span></div>
+    </div>
+    <div class="gcard">
+      <span class="gtag">톤앤매너 · 감성</span>
+      <h4>인테리어 완성도가 중요하다면</h4>
+      <p>헤이즐R은 우드·패브릭 헤드를 교체하며 톤을 바꿀 수 있고, 아티초크는 95도 각도 우드슬랫으로 내추럴한 무드를 냅니다. 둘 다 조명·수납보다 공간 분위기에 강점이 있습니다.</p>
+      <div class="picks"><span class="tag">헤이즐R</span><span class="tag">아티초크</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="note">
+  <p>· 가격은 2026-11-20 기준 매장 견적 자료(소비자가/할인적용가)이며 변동될 수 있습니다. 보증기간은 자료에 없어 브랜드별 확인이 필요합니다.</p>
+  <p>· 뉴트 수납형 가격차(939,000/1,019,000원)는 수납 방향이 아니라 헤드쿠션 패브릭 등급 차이입니다 — 크바드라트(939,000원)가 스테인프리(1,019,000원)보다 저렴합니다.</p>
+  <p>· 반트 SS 규격(2192×1105×906)은 엑셀 견적서 표기를 그대로 옮긴 값으로, 가로/세로 축 순서가 다른 모델과 다를 수 있어 실측 확인을 권장합니다.</p>
+</footer>
+
+</div>
